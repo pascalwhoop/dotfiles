@@ -1,0 +1,46 @@
+<keymap version="1" name="pascalwhoop_Linux" parent="$default">
+  <action id="Console.TableResult.EditValueMaximized">
+    <keyboard-shortcut first-keystroke="shift enter" />
+  </action>
+  <action id="DatabaseView.SqlGenerator" />
+  <action id="EditorSelectWord">
+    <keyboard-shortcut first-keystroke="shift ctrl q" />
+  </action>
+  <action id="ExpressionTypeInfo" />
+  <action id="Generate">
+    <keyboard-shortcut first-keystroke="alt insert" />
+    <keyboard-shortcut first-keystroke="ctrl alt g" />
+  </action>
+  <action id="MoveTabDown">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="s" />
+  </action>
+  <action id="MoveTabRight">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="v" />
+  </action>
+  <action id="Mvc.RunTarget" />
+  <action id="NewElementInMenuGroup">
+    <keyboard-shortcut first-keystroke="shift alt enter" />
+  </action>
+  <action id="NextSplitter">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="w" />
+  </action>
+  <action id="PrevSplitter">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="p" />
+  </action>
+  <action id="Rerun">
+    <keyboard-shortcut first-keystroke="shift f5" />
+  </action>
+  <action id="SearchEverywhere">
+    <keyboard-shortcut first-keystroke="shift ctrl p" />
+  </action>
+  <action id="ShowSettings">
+    <keyboard-shortcut first-keystroke="ctrl alt s" />
+    <keyboard-shortcut first-keystroke="ctrl comma" />
+  </action>
+  <action id="ToggleSideMode">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="e" />
+  </action>
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="q" />
+  </action>
+</keymap>

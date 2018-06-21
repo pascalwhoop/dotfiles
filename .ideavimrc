@@ -1,0 +1,4 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set relativenumber
+nnoremap <space> za
