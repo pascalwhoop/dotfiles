@@ -1,0 +1,14 @@
+  pool: tank
+ state: ONLINE
+  scan: scrub repaired 0 in 18h34m with 0 errors on Sun Mar 11 18:58:12 2018
+config:
+
+	NAME                                        STATE     READ WRITE CKSUM
+	tank                                        ONLINE       0     0     0
+	  raidz2-0                                  ONLINE       0     0     0
+	    ata-Hitachi_HUA723020ALA641_YGG2T6JA    ONLINE       0     0     0
+	    ata-SAMSUNG_HD204UI_S2H7J9JB916642      ONLINE       0     0     0
+	    ata-Hitachi_HUA723020ALA641_YGHYKL7A    ONLINE       0     0     0
+	    ata-ST2000DL004_HD204UI_S2H7J90C569555  ONLINE       0     0     0
+
+errors: No known data errors
