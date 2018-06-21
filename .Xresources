@@ -1,0 +1,60 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                    130
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+URxvt.keysym.Control-Mod4-C: eval:selection_to_clipboard
+URxvt.keysym.Control-Mod4-V: eval:paste_clipboard
+URxvt.perl-ext-common:       default,resize-font
+URxvt.keysym.C-minus:        resize-font:smaller
+URxvt.keysym.C-plus:         resize-font:bigger
+URxvt.keysym.C-equal:        resize-font:reset
+URxvt.keysym.C-question:     resize-font:show
+URxvt*saveLines:             65535
+!Font settings
+URxvt.depth:                 32
+URxvt.geometry:              90x30
+URxvt.transparent:           false
+URxvt.fading:                0
+!icon
+URxvt.iconFile:              /usr/share/icons/breeze-dark/apps/64/utilities-terminal.svg
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:            true
+URxvt.internalBorder:        3
+URxvt.lineSpace:             0
+! Fonts
+URxvt.allow_bold:            true
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+!URxvt*font:              xft:monospace:size=14
+!URxvt*boldFont:          xft:monospace:size=14
+URxvt*font:                  xft:Fantasque Sans Mono NF:size=11
+URxvt*boldFont:              xft:Fantasque Sans Mono NF:size=11
+! Fix font space
+!URxvt*letterSpace:       -1
+URxvt*letterSpace:           -1
+! Scrollbar
+URxvt.scrollStyle:           rxvt
+URxvt.scrollBar:             false
+! Perl extensions
+URxvt.perl-ext-common:       default,matcher
+URxvt.matcher.button:        1
+URxvt.urlLauncher:           firefox
+! Cursor
+URxvt.cursorBlink:           false
+!URxvt.cursorColor:          #657b83
+URxvt.cursorColor:           #dc1315
+URxvt.cursorUnderline:       false
+! Pointer
+URxvt.pointerBlank:          true
