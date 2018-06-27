@@ -105,7 +105,7 @@ bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+q kill
 
 # screenshotting ability
-bindsym $mod+Ctrl+4 exec $term --no-startup-id import -silent "/tmp/$(date '+%Y-%m-%d-%T')-screenshot.png"
+#bindsym --release $mod+Ctrl+4 exec --no-startup-id getss
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -307,10 +307,6 @@ bindsym $mod+r mode "resize"
 # starting any third part applications
 # compositor
 exec --no-startup-id compton
-# my variant of the dmenu
-exec --no-startup-id QT_SCALE_FACTOR=1 albert
-exec --no-startup-id copyq
-exec --no-startup-id blueman-applet
 # system info
 # loading data for urxvt and others
 exec --no-startup-id "xrdb ~/.Xresources"
@@ -329,3 +325,8 @@ exec --no-startup-id dunst
 exec --no-startup-id sleep 3 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
 exec --no-startup-id ~/.scripts/remaps
 exec trello
+# my variant of the dmenu
+exec --no-startup-id QT_SCALE_FACTOR=1 albert
+exec --no-startup-id copyq
+exec --no-startup-id blueman-applet
+

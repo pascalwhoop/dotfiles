@@ -169,3 +169,16 @@ dotfiles
 snap/
 tank/
 .Xauthority
+.config/conky/pascalwhoop/zpool_status
+.bundle
+.config/Gitter
+.config/Meltytech
+.config/Trello
+.config/av-caster
+.config/chromium
+.config/dconf
+.config/gconf
+.config/mpd/database
+.config/mpd/database_
+.config/mpd/playlists
+.config/mpd/log

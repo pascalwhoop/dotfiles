@@ -35,10 +35,8 @@ export PS1="$HC$FGRN[\u]$FRED \W \\$ $RS"
 #disable Ctrl-S for freezing the shell
 stty -ixon
 
-#NODE VERSION MANAGER
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 #making python 3 default
 #alias python2=/usr/bin/python
@@ -47,11 +45,8 @@ export NVM_DIR="$HOME/.nvm"
 #PIP INSTALLED PACKAGES
 export PATH=home/pascalwhoop/.local/bin:$PATH
 
-#RUBY VERSION MANAGER
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-#source /home/pascalwhoop/.rvm/scripts/rvm
-## Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#export PATH="$PATH:$HOME/.rvm/bin"
+#Ruby packages
+export PATH="$PATH:/home/pascalwhoop/.gem/ruby/2.5.0/bin"
 
 function cd() {
             builtin cd "$@" && ls
@@ -75,8 +70,8 @@ do
 done
 
 #add all linux specific files
-UBUNTU_FILES=~/.scripts/bash/linux/*
-for f in $UBUNTU_FILES
+LINUX_FILES=~/.scripts/bash/linux/*
+for f in $LINUX_FILES
 do
   # take action on each file. $f store current file name
   source $f

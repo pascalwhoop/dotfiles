@@ -9,6 +9,7 @@ alias plexdown="docker container stop plex"
 alias jnbup="docker container start tensorflow-notebook"
 alias goagent="cd ~/Documents/Code/University/powerTAC/python-agent && activate"
 alias makesmartpl="~/.config/mpd/generate_playlists.sh"
+alias getss="xfce4-screenshooter -r -s ~/Desktop"
 
 # cd to specific directories
 ###############################
