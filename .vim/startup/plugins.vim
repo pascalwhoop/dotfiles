@@ -22,11 +22,12 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
 Plugin 'ctrlp.vim'
-"Plugin 'dbmrq/vim-ditto'
+Plugin 'dbmrq/vim-ditto'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'lervag/vimtex'
+Plugin 'Konfekt/FastFold'
 Plugin 'powerman/vim-plugin-autosess'
 "Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
@@ -106,6 +107,19 @@ map <C-n> :NERDTreeToggle<CR>
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+"------------------------------------------------------------
+" FastFold LUGIN SETUP
+"------------------------------------------------------------
+nmap zuz <Plug>(FastFoldUpdate)
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
+let g:markdown_folding = 1
+let g:tex_fold_enabled = 1
+let g:vimsyn_folding = 'af'
+let g:xml_syntax_folding = 1
+let g:javaScript_fold = 1
+let g:sh_fold_enabled= 7
 
 "------------------------------------------------------------
 " ctrlp PLUGIN SETUP
