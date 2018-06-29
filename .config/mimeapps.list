@@ -33,3 +33,4 @@ message/rfc822=thunderbird.desktop;
 x-scheme-handler/feed=thunderbird.desktop;
 application/rss+xml=thunderbird.desktop;
 application/x-extension-rss=thunderbird.desktop;
+image/png=viewnior.desktop;
