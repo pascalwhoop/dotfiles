@@ -30,17 +30,10 @@ set $gaps_norm_outer -10
 set $gaps_wide_inner 50
 set $gaps_wide_outer 50
 
-for_window [class="^.*"] border pixel 3 
+for_window [class="^.*"] border pixel 1 
 # minimal space waste but clear separation
-gaps inner 20                            
-gaps outer -10                          
-# last three I allow more gaps
-workspace 5 gaps inner $gaps_wide_inner
-workspace 5 gaps outer $gaps_wide_outer
-workspace 7 gaps inner $gaps_wide_inner
-workspace 7 gaps outer $gaps_wide_outer
-workspace 9 gaps inner $gaps_wide_inner
-workspace 9 gaps outer $gaps_wide_outer
+#gaps inner 5                            
+#gaps outer -3                        
 smart_borders on
 
 #font
@@ -72,34 +65,39 @@ for_window [class="phone-cam"] floating_maximum_size 670 x 378
 no_focus   [class="phone-cam"] 
 
 #assign [class="URxvt"]            2:comm
-assign [class="TelegramDesktop"]  2:comm
-assign [class="Trello"]           9:org
-assign [class="Signal"]  2:comm
-assign [class="WhatsApp"]         2:comm
-assign [class="Mail"]             2:comm
-assign [class="discord"]          2:comm
-assign [class="Gitter"]           2:comm
-assign [class="Slack"]            2:comm
-assign [class="pycharm"]          3:work1
-assign [class="intellij"]         4:work2
-assign [class="music"]            5:media
+assign [class="TelegramDesktop"] 2:comm
+assign [class="Trello"]          9:org
+assign [class="Signal"]          2:comm
+assign [class="WhatsApp"]        2:comm
+assign [class="Mail"]            2:comm
+assign [class="discord"]         2:comm
+assign [class="Gitter"]          2:comm
+assign [class="Slack"]           2:comm
+assign [class="pycharm"]         3:work1
+assign [class="intellij"]        4:work2
+assign [class="music"]           5:media
 
 
 # ----------------------------------------------------------------------------------------------------------------------
 # bindings keys
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mod Mod4
+set $mod mod1
 set $app 133
 set $term --no-startup-id urxvt
 floating_modifier $mod
 
 #media keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -10%
-bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 1 toggle
-bindsym $mod+q         kill 
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume 1 +10%
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume 1 -10%
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   1 toggle
+#bindsym XF86AudioPlay         exec --no-startup-id 
+#bindsym XF86AudioPrev
+#bindsym XF86AudioNext
+bindsym XF86MonBrightnessDown exec xbacklight      -dec  20
+bindsym XF86MonBrightnessUp   exec xbacklight      -inc  20
+bindsym $mod+q                kill
+bindsym $mod+Return           exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -229,7 +227,7 @@ mode         "$mode_launcher" {
 
 }
 #albert GUI quick start apps, tools etc. might be redundant...
-bindsym Mod1+space exec --no-startup-id albert toggle 
+bindsym Mod4+space exec --no-startup-id albert toggle 
 #clipboard history manager
 bindsym control+$mod+space exec copyq toggle
 for_window [class="copyq"] floating enable
@@ -322,9 +320,8 @@ exec --no-startup-id copyq
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
-exec --no-startup-id sleep 3 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
+#exec --no-startup-id sleep 3 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
 exec --no-startup-id ~/.scripts/remaps
-exec trello
 # my variant of the dmenu
 exec --no-startup-id QT_SCALE_FACTOR=1 albert
 exec --no-startup-id copyq

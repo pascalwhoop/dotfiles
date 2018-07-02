@@ -1,2 +1,2 @@
 #bin/bash
-cat ~/.config/urxvt/colors.Xresources >> ~/.Xdefaults
+cat ~/.config/urxvt/colors.Xresources > ~/.Xdefaults

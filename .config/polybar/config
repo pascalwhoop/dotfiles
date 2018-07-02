@@ -1,4 +1,4 @@
-;=====================================================
+
 ;
 ;   To learn more about how to configure Polybar
 ;   go to https://github.com/jaagr/polybar
@@ -42,14 +42,14 @@ alert          = ${colors.color3}
 ;monitor                            = "DP-2"
 bottom                             = false
 width                              = 100%
-height                             = 30
+height                             = 25
 ;offset-x = 1%
 ;offset-y = 1%
 radius                             = 0.0
 fixed-center                       = true
 background                         = ${colors.background}
 foreground                         = ${colors.foreground}
-line-size                          = 3
+line-size                          = 1
 line-color                         = #f00
 border-size                        = 0
 border-color                       = #00000000
@@ -57,14 +57,14 @@ padding-left                       = 1
 padding-right                      = 1
 module-margin-left                 = 1
 module-margin-right                = 2
-font-0                             = FantasqueSansMono NF:weight=Regular:size=15
-font-1                             = FantasqueSansMono NF:weight=Regular:size=15
-font-2                             = FantasqueSansMono NF:weight=Regular:size=12
+font-0                             = FantasqueSansMono NF:weight=Regular:size=13
+font-1                             = FantasqueSansMono NF:weight=Regular:size=13
+font-2                             = FantasqueSansMono NF:weight=Regular:size=10
 ;modules-left = xwindow
 modules-center                     = i3
 ;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-left                       = powermenu wlan xkeyboard memory cpu filesystem 
-modules-right                      = mpd volume date
+modules-left                       = powermenu xkeyboard  battery temperature memory cpu
+modules-right                      = xbacklight mpd volume date
 tray-position                      = right
 tray-padding                       = 2
 tray-transparent                   = false
@@ -98,7 +98,6 @@ label-indicator-background         = ${colors.secondary}
 type                               = internal/fs
 interval                           = 25
 mount-0                            = /
-mount-1                            = /home/pascalwhoop/tank
 label-mounted                      = %fsname%%{F-}: %percentage_used%%
 label-unmounted                    = %mountpoint% not mounted
 label-unmounted-foreground         = ${colors.foreground-alt}
@@ -111,19 +110,19 @@ format                             = <label-state> <label-mode>
 index-sort                         = true
 wrapping-scroll                    = false
 ;strip-wsnumbers = true
-label-mode-padding                 = 2
+label-mode-padding                 = 1
 label-mode-foreground              = ${colors.background}
 label-mode-background              = ${colors.foreground}
 ;label-focused = F %index%
-label-focused-background           = ${colors.background}
-label-focused-underline            = ${colors.foreground}
-label-focused-padding              = 3
+label-focused-background           = ${colors.color1}
+label-focused-underline            = ${colors.color1}
+label-focused-padding              = 1
 ;label-unfocused = U %index%
-label-unfocused-padding            = 3
+label-unfocused-padding            = 1
 ;label-visible = V %index%
-;label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-background}
-label-visible-padding              = 3
+;label-visible-background           = ${colors.foreground}
+;label-visible-underline            = ${colors.background}
+label-visible-padding              = 1
 ;label-urgent = %index%!
 ;label-urgent-background = ${module/bspwm.label-urgent-background}
 ;label-urgent-padding = ${module/bspwm.label-urgent-padding}
@@ -138,9 +137,9 @@ icon-next                          = 怜
 label-song-maxlen                  = 35
 label-song-ellipsis                = true
 bar-progress-width                 = 20
-bar-progress-indicator = |
-bar-progress-fill = =
-bar-progress-empty = ─
+bar-progress-indicator             = |
+bar-progress-fill                  = =
+bar-progress-empty                 = ─
 [module/xbacklight]
 type                               = internal/xbacklight
 format                             = <label> <bar>
@@ -177,7 +176,7 @@ label                              = %percentage_used%%
 label-connected                    = " %essid% "
 label-disconnected                 = "睊 not connected"
 type                               = internal/network
-interface                          = wlp7s0
+interface                          = wlp2s0
 interval                           = 10.0
 format-connected                   = <label-connected><ramp-signal>
 ;format-connected-underline         = ${colors.foreground}
@@ -261,7 +260,11 @@ animation-charging-framerate       = 750
 [module/temperature]
 type                               = internal/temperature
 thermal-zone                       = 1
-warn-temperature                   = 60
+warn-temperature                   = 80
+hwmon-path                         = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+ramp-0                             = A
+ramp-1                             = B
+ramp-2                             = C
 format                             = <label>
 format-underline                   = #f50a4d
 format-warn                        = <ramp> <label-warn>
