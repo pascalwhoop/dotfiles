@@ -88,9 +88,9 @@ set $term --no-startup-id urxvt
 floating_modifier $mod
 
 #media keys
-bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume 1 +10%
-bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume 1 -10%
-bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   1 toggle
+bindsym XF86AudioRaiseVolume  exec --no-startup-id ~/.scripts/higher_volume.sh
+bindsym XF86AudioLowerVolume  exec --no-startup-id ~/.scripts/lower_volume.sh
+bindsym XF86AudioMute         exec --no-startup-id ~/.scripts/volume_toggle.sh
 #bindsym XF86AudioPlay         exec --no-startup-id 
 #bindsym XF86AudioPrev
 #bindsym XF86AudioNext
@@ -233,6 +233,24 @@ bindsym control+$mod+space exec copyq toggle
 for_window [class="copyq"] floating enable
 
 # ----------------------------------------------------------------------------------------------------------------------
+# quick launch many applications
+# ----------------------------------------------------------------------------------------------------------------------
+#
+set $mode_system System [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]owerdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym p exec --no-startup-id i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+P mode "$mode_system"
+
+# ----------------------------------------------------------------------------------------------------------------------
 # workspaces
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -320,7 +338,7 @@ exec --no-startup-id copyq
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
-#exec --no-startup-id sleep 3 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
+exec --no-startup-id sleep 1 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
 exec --no-startup-id ~/.scripts/remaps
 # my variant of the dmenu
 exec --no-startup-id QT_SCALE_FACTOR=1 albert
