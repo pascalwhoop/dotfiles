@@ -1,11 +1,10 @@
 #/bin/bash
-#copy current colors into dotfiles
-cp ~/.cache/wal/colors.Xresources ~/dotfiles/.Xdefaults
+#copy current colors into Xdefaults
+cp ~/.cache/wal/colors.Xresources ~/.Xdefaults
 #keep urxvt highlights aligned to solarized
-cat ~/dotfiles/.config/urxvt/colors.Xresources >> ~/dotfiles/.Xdefaults
+cat ~/.config/urxvt/colors.Xresources >> ~/.Xdefaults
+cat ~/.cache/wal/colors-rofi-dark.rasi > ~/.config/rofi/mytheme.rasi
 
-#bootstrap dotfiles
-~/dotfiles/bootstrap.sh --force
 
 #read any new values from XResources
 xrdb ~/.Xresources
@@ -17,9 +16,3 @@ killall dunst && dunst &
 
 #applying new conky colors
 python3 ~/.config/conky/pascalwhoop/pywal_conky.py
-
-#kill polybar and give it a sec
-killall polybar
-sleep 1
-polybar --reload pascalwhoop &
-
