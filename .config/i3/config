@@ -73,8 +73,8 @@ assign [class="Mail"]            2:comm
 assign [class="discord"]         2:comm
 assign [class="Gitter"]          2:comm
 assign [class="Slack"]           2:comm
-assign [class="pycharm"]         3:work1
-assign [class="intellij"]        4:work2
+#assign [class="pycharm"]         3:work1
+#assign [class="intellij"]        4:work2
 assign [class="music"]           5:media
 
 
@@ -82,7 +82,7 @@ assign [class="music"]           5:media
 # bindings keys
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mod mod1
+set $mod mod4
 set $app 133
 set $term --no-startup-id urxvt
 floating_modifier $mod
@@ -114,7 +114,7 @@ bindsym --release $mod+Ctrl+4 exec --no-startup-id teiler
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym Mod4+space exec dmenu_extended_run
+bindsym Mod1+space exec dmenu_extended_run
 bindsym $mod+d exec rofi -show combi
 
 
@@ -193,18 +193,23 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Monitor configuration 2 montiors
 # ----------------------------------------------------------------------------------------------------------------------
 
-workspace 0 output HDMI1
-set $monitor_config Monitor Config: [m]irror [l]eft [r]ight [L]eft 4k [R]ight 4k [o]ff
+#workspace "10" output HDMI1
+workspace "4:work2" output VIRTUAL1 
+workspace "4:work2" output HDMI1 
+
+set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [A]bove [L]eft 4k [R]ight 4k [o]ff
 bindsym $mod+m mode "$monitor_config"
 
 mode "$monitor_config" {
 
-    bindsym m exec xrandr --output HDMI1 --mode 1920x1080 --same-as  eDP1  ;mode "default"
-    bindsym l exec xrandr --output HDMI1 --mode 1920x1080 --left-of  eDP1  ;mode "default"
-    bindsym r exec xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1  ;mode "default"
-    bindsym L exec xrandr --output DP1   --mode 3840x2160 --left-of  eDP1  ;mode "default"
-    bindsym R exec xrandr --output DP1   --mode 3840x2160 --right-of eDP1  ;mode "default"
-    bindsym o exec xrandr --output HDMI1 --off  --output  DP1        --off ;mode "default"
+    bindsym g exec arandr                        ;mode      "default"
+    bindsym m exec ~/.scripts/connect_display.sh --same-as  1     ;mode "default"
+    bindsym l exec ~/.scripts/connect_display.sh --left-of  1     ;mode "default"
+    bindsym r exec ~/.scripts/connect_display.sh --right-of 1     ;mode "default"
+    bindsym A exec ~/.scripts/connect_display.sh --above    1     ;mode "default"
+    bindsym L exec ~/.scripts/connect_display.sh --left-of  0.75  ;mode "default"
+    bindsym R exec ~/.scripts/connect_display.sh --right-of 0.75  ;mode "default"
+    bindsym o exec xrandr --output                      HDMI1      --off ;mode "default"
 
     bindsym Escape mode "default" ;mode    "default"
     bindsym Return mode "default" ;mode    "default"

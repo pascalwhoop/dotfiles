@@ -149,18 +149,18 @@ let g:ctrlp_show_hidden=1
 "------------------------------------------------------------
 " Wordy PLUGIN SETUP
 "------------------------------------------------------------
-"noremap <silent> <F8> :<C-u>NextWordy<cr>
-"let g:wordy#ring = [
-"  \ ['weak', 'weasel', 'opinion', 'adverbs', 'adjectives'],
-"  \ 'weak',
-"  \ ['being', 'passive-voice', ],
-"  \ 'business-jargon',
-"  \ 'weasel',
-"  \ 'puffery',
-"  \ ['problematic', 'redundant', ],
-"  \ ['colloquial', 'idiomatic', 'similies', ],
-"  \ 'art-jargon',
-"  \ ['contractions', 'opinion', 'vague-time', 'said-synonyms', ],
-"  \ 'adjectives',
-"  \ 'adverbs',
-"  \ ]
+noremap <silent> <F8> :<C-u>NextWordy<cr>
+let g:wordy#ring = [
+  \ ['weak', 'weasel', 'opinion', 'adverbs', 'adjectives'],
+  \ 'weak',
+  \ ['being', 'passive-voice', ],
+  \ 'business-jargon',
+  \ 'weasel',
+  \ 'puffery',
+  \ ['problematic', 'redundant', ],
+  \ ['colloquial', 'idiomatic', 'similies', ],
+  \ 'art-jargon',
+  \ ['contractions', 'opinion', 'vague-time', 'said-synonyms', ],
+  \ 'adjectives',
+  \ 'adverbs',
+  \ ]

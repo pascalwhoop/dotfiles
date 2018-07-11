@@ -31,7 +31,9 @@ BBLE="\[\033[44m\]" # background blue
 BMAG="\[\033[45m\]" # background magenta
 BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
-export PS1="$HC$FGRN[\u]$FRED \W \\$ $RS"
+
+NICK=XPS
+export PS1="$HC$FGRN[\u@$NICK]$FRED \W \\$ $RS"
 
 #disable Ctrl-S for freezing the shell
 stty -ixon
