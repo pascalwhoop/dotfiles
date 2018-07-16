@@ -131,8 +131,8 @@ let g:ctrlp_show_hidden=1
 "------------------------------------------------------------
 " Use autocmds to check your text automatically and keep the highlighting
 " up to date (easier):
-"au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
-"nmap <leader>di <Plug>ToggleDitto      " Turn Ditto on and off
+au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
+nmap <leader>di <Plug>ToggleDitto      " Turn Ditto on and off
 
 " If you don't want the autocmds, you can also use an operator to check
 " specific parts of your text:

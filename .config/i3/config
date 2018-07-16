@@ -57,6 +57,8 @@ client.background       $ac
 # behavior and assignment
 # ----------------------------------------------------------------------------------------------------------------------
 
+workspace_auto_back_and_forth yes
+
 for_window [class="phone-cam"] border pixel 0
 for_window [class="phone-cam"] floating enable
 for_window [class="phone-cam"] sticky enable
@@ -83,7 +85,7 @@ assign [class="music"]           5:media
 # ----------------------------------------------------------------------------------------------------------------------
 
 set $mod mod4
-set $app 133
+#set $app 133
 set $term --no-startup-id urxvt
 floating_modifier $mod
 
@@ -106,6 +108,7 @@ bindsym $mod+Shift+q kill
 
 # screenshotting ability
 bindsym --release $mod+Ctrl+4 exec --no-startup-id teiler
+bindsym           Shift+$mod+p exec --no-startup-id passmenu
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -136,11 +139,11 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# moving windows with the arrow keys will move them between outputs
+bindsym $mod+Shift+Left  move workspace to output left
+bindsym $mod+Shift+Down  move workspace to output down
+bindsym $mod+Shift+Up    move workspace to output up
+bindsym $mod+Shift+Right move workspace to output right
 
 
 # split in horizontal orientation
@@ -194,10 +197,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # ----------------------------------------------------------------------------------------------------------------------
 
 #workspace "10" output HDMI1
-workspace "4:work2" output VIRTUAL1 
-workspace "4:work2" output HDMI1 
+workspace "3:work1" output VIRTUAL1
+workspace "4:work2" output VIRTUAL1
+workspace "3:work1" output HDMI1
+workspace "4:work2" output HDMI1
+workspace "2:comm"  output eDP1
+workspace "5:media"  output eDP1
 
-set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [A]bove [L]eft 4k [R]ight 4k [o]ff
+set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [a]bove [L]eft 4k [R]ight 4k [o]ff
 bindsym $mod+m mode "$monitor_config"
 
 mode "$monitor_config" {
@@ -206,7 +213,7 @@ mode "$monitor_config" {
     bindsym m exec ~/.scripts/connect_display.sh --same-as  1     ;mode "default"
     bindsym l exec ~/.scripts/connect_display.sh --left-of  1     ;mode "default"
     bindsym r exec ~/.scripts/connect_display.sh --right-of 1     ;mode "default"
-    bindsym A exec ~/.scripts/connect_display.sh --above    1     ;mode "default"
+    bindsym a exec ~/.scripts/connect_display.sh --above    0.75  ;mode "default"
     bindsym L exec ~/.scripts/connect_display.sh --left-of  0.75  ;mode "default"
     bindsym R exec ~/.scripts/connect_display.sh --right-of 0.75  ;mode "default"
     bindsym o exec xrandr --output                      HDMI1      --off ;mode "default"
@@ -354,7 +361,7 @@ bindsym $mod+r mode "resize"
 
 # starting any third part applications
 # compositor
-exec --no-startup-id compton
+#exec --no-startup-id compton
 # system info
 # loading data for urxvt and others
 exec --no-startup-id "xrdb ~/.Xresources"
@@ -370,10 +377,9 @@ exec --no-startup-id copyq
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id jetbrains-toolbox
 exec --no-startup-id sleep 1 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
 exec --no-startup-id ~/.scripts/remaps
-# my variant of the dmenu
-#exec --no-startup-id QT_SCALE_FACTOR=1 albert
 exec --no-startup-id copyq
 exec --no-startup-id blueman-applet
 

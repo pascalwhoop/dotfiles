@@ -1,7 +1,9 @@
 #alias and shortcuts
 ###############################
 #alias kub="kubectl"
-#alias todo="cd ~/Documents/Syncthing/Notes && vim ./"
+alias t="cd ~/Documents/Syncthing/Notes && vim ./todo.txt"
+alias n="cd ~/Documents/Syncthing/Notes/daily && vim ./`date +%Y-%m-%d-%A`.md"
+alias isodate="date +%Y-%m-%d"
 alias rmswp='find ./ -name "*.swp" -exec rm {} \;'
 #alias jupystart="nvidia-docker start jupyter && docker exec -it jupyter bash -c \"jupyter notebook list\""
 #alias editconky="vim ~/.config/conky/pascalwhoop/conky.conf"
