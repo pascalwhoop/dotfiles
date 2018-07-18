@@ -42,7 +42,7 @@ alert          = ${colors.color3}
 monitor                            = "eDP1"
 bottom                             = false
 width                              = 100%
-height                             = 20 
+height                             = 30
 ;offset-x = 3%
 ;offset-y = 3%
 radius                             = 0.0
@@ -54,17 +54,17 @@ line-color                         = #f00
 border-size                        = 0
 border-color                       = #00000000
 padding-left                       = 2
-padding-right                      = 0
+padding-right                      = 2
 module-margin-left                 = 1
 module-margin-right                = 2
-font-0                             = FantasqueSansMono NF:weight=Regular:size=11
-font-1                             = FantasqueSansMono NF:weight=Regular:size=11
-font-2                             = FantasqueSansMono NF:weight=Regular:size=10
+font-0                             = FantasqueSansMono:weight=Regular:size=11
+font-1                             = FantasqueSansMono NF:weight=Regular:size=15
+font-2                             = FantasqueSansMono NF:weight=Regular:size=20;3
 ;modules-left = xwindow
 modules-center                     = i3
 ;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-left                       = powermenu xkeyboard  battery temperature memory cpu xbacklight 
-modules-right                      = mpd volume date
+modules-left                       = powermenu mpd xkeyboard  battery temperature memory cpu xbacklight volume 
+modules-right                      = wlan date
 tray-position                      = right
 tray-padding                       = 2
 tray-transparent                   = false
@@ -85,11 +85,10 @@ label                              = %title:0:50:...%
 [module/xkeyboard]
 type                               = internal/xkeyboard
 blacklist-0                        = num lock
-format-prefix                      = " "
 format-prefix-foreground           = ${colors.foreground-alt}
-format-prefix-underline            = ${colors.color1}
+format-prefix-underline            = ${colors.foreground}
 label-layout                       = %layout%
-label-layout-underline             = ${colors.color1}
+;label-layout-underline             = ${colors.foreground}
 label-indicator-padding            = 2
 label-indicator-margin             = 1
 label-indicator-background         = ${colors.secondary}
@@ -101,23 +100,42 @@ mount-0                            = /
 label-mounted                      = %fsname%%{F-}: %percentage_used%%
 label-unmounted                    = %mountpoint% not mounted
 label-unmounted-foreground         = ${colors.foreground-alt}
-format-prefix-underline            = ${colors.color2}
+format-prefix-underline            = ${colors.foreground}
 format-underline                   = ${colors.foreground}
-label-indicator-underline          = ${colors.color2}
+label-indicator-underline          = ${colors.foreground}
 [module/i3]
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+
+;style for display
+label-focused   = %{T3}%icon%
+label-unfocused = %{T3}%icon%
+label-visible   = %{T3}%icon%
+label-urgent    = %{T3}%icon%
+label-empty    = %{T3}%icon%
+
 type                               = internal/i3
 format                             = <label-state> <label-mode>
 index-sort                         = true
 wrapping-scroll                    = false
-;strip-wsnumbers = true
+strip-wsnumbers = true
+
 label-mode-padding                 = 1
 label-mode-foreground              = ${colors.background}
 label-mode-background              = ${colors.foreground}
 ;label-focused = F %index%
-label-focused-background           = ${colors.background}
-label-focused-foreground           = ${colors.primary}
-label-focused-underline            = ${colors.primary}
-label-focused-padding              = 1
+label-focused-background           = ${colors.foreground}
+label-focused-foreground           = ${colors.background}
+;label-focused-underline            = ${colors.primary}
+label-focused-padding              = 2
 ;label-unfocused = U %index%
 label-unfocused-padding            = 1
 ;label-visible = V %index%
@@ -127,9 +145,10 @@ label-visible-padding              = 1
 ;label-urgent = %index%!
 ;label-urgent-background = ${module/bspwm.label-urgent-background}
 ;label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
 [module/mpd]
 type                               = internal/mpd
-format-online                      = <bar-progress> <icon-prev> <toggle> <icon-next>
+format-online                      = %{T3}<icon-prev> %{T3}<toggle> %{T3}<icon-next>
 icon-prev                          = 玲
 icon-stop                          = 栗
 icon-play                          = 
@@ -141,10 +160,11 @@ bar-progress-width                 = 10
 bar-progress-indicator             = |
 bar-progress-fill                  = =
 bar-progress-empty                 = ─
+
 [module/xbacklight]
 type                               = internal/xbacklight
-format                             = <label> <bar>
-label                              = BL
+format                             = <label> 
+label                              =  %percentage%
 bar-width                          = 10
 bar-indicator                      = |
 bar-indicator-foreground           = #ff
@@ -163,15 +183,15 @@ card                               = intel_backlight
 type                               = internal/cpu
 interval                           = 2
 format-prefix                      = " "
-format-prefix-foreground           = ${colors.foreground-alt}
-format-underline                   = ${colors.color2}
+format-prefix-foreground           = ${colors.foreground}
+;format-underline                   = ${colors.foreground}
 label                              = %percentage%%
 [module/memory]
 type                               = internal/memory
 interval                           = 2
 format-prefix                      = " "
-format-prefix-foreground           = ${colors.foreground-alt}
-format-underline                   = ${colors.color3}
+format-prefix-foreground           = ${colors.foreground}
+;format-underline                   = ${colors.foreground}
 label                              = %percentage_used%%
 [module/wlan]
 label-connected                    = " %essid% "
@@ -188,12 +208,12 @@ ramp-signal-1                      = 
 ramp-signal-2                      = 
 ramp-signal-3                      = 
 ramp-signal-4                      = 
-ramp-signal-foreground             = ${colors.foreground-alt}
+ramp-signal-foreground             = ${colors.foreground}
 [module/eth]
 type                               = internal/network
 interface                          = net0
 interval                           = 3.0
-format-connected-underline         = #55aa55
+format-connected-underline         = $colors.foreground}
 format-connected-prefix            = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected                    = %local_ip%
@@ -202,53 +222,68 @@ format-disconnected                =
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
+
 [module/date]
-type                               = internal/date
-interval                           = 5
-date                               =
-date-alt                           = " %Y-%m-%d"
-time                               = %H:%M
-time-alt                           = %H:%M:%S
-format-prefix                      = ""
-format-prefix-foreground           = ${colors.foreground-alt}
-format-underline                   = ${colors.foreground}
-label                              = %date% %time%
+type = internal/date
+; Seconds to sleep between updates
+interval = 1.0
+; See "man date" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %a %b %d, 
+; Optional time format
+time = %H:%M
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+label = %date% %time%
+format = %{T3}%{T-} <label>
+;format-background = #ddffffff
+;format-background = #88000000
+;format-foreground = #333
+;format-padding = 3
+
 [module/volume]
-type                               = internal/volume
-format-volume                      = <label-volume> <bar-volume>
-label-volume                       = VOL
-label-volume-foreground            = ${root.foreground}
-format-muted-prefix                = "ﱝ "
-format-muted-foreground            = ${colors.foreground-alt}
-label-muted                        = sound muted
-bar-volume-width                   = 10
-bar-volume-foreground-0            = #55aa55
-bar-volume-foreground-1            = #55aa55
-bar-volume-foreground-2            = #55aa55
-bar-volume-foreground-3            = #55aa55
-bar-volume-foreground-4            = #55aa55
-bar-volume-foreground-5            = #f5a70a
-bar-volume-foreground-6            = #ff5555
-bar-volume-gradient                = false
-bar-volume-indicator               = |
-bar-volume-indicator-font          = 2
-bar-volume-fill                    = ─
-bar-volume-fill-font               = 2
-bar-volume-empty                   = ─
-bar-volume-empty-font              = 2
-bar-volume-empty-foreground        = ${colors.foreground-alt}
+type                    = internal/volume
+format-volume           = <ramp-volume> <label-volume>
+label-volume            = %percentage%
+label-volume-foreground = ${root.foreground}
+format-muted-foreground = ${colors.foreground-alt}
+label-muted             = "ﱝ sound muted"
+ramp-volume-0           = 
+ramp-volume-1           = 墳
+ramp-volume-2           = 
+ramp-headphones-0       = 
+;bar-volume-width                   = 10
+;bar-volume-foreground-0            = #55aa55
+;bar-volume-foreground-1            = #55aa55
+;bar-volume-foreground-2            = #55aa55
+;bar-volume-foreground-3            = #55aa55
+;bar-volume-foreground-4            = #55aa55
+;bar-volume-foreground-5            = #f5a70a
+;bar-volume-foreground-6            = #ff5555
+;bar-volume-gradient                = false
+;bar-volume-indicator               = |
+;bar-volume-indicator-font          = 2
+;bar-volume-fill                    = ─
+;bar-volume-fill-font               = 2
+;bar-volume-empty                   = ─
+;bar-volume-empty-font              = 2
+;bar-volume-empty-foreground        = ${colors.foreground-alt}
+
 [module/battery]
 type                               = internal/battery
 battery                            = BAT0
 adapter                            = ADP1
 full-at                            = 98
 format-charging                    = <animation-charging> <label-charging>
-format-charging-underline          = #ffb52a
+;format-charging-underline          = ${colors.foreground}
 format-discharging                 = <ramp-capacity> <label-discharging>
-format-discharging-underline       = ${self.format-charging-underline}
+;format-discharging-underline       = ${self.format-charging-underline}
 format-full-prefix                 = " "
 format-full-prefix-foreground      = ${colors.foreground}
-format-full-underline              = ${self.format-charging-underline}
+;format-full-underline              = ${self.format-charging-underline}
 ramp-capacity-0                    = 
 ramp-capacity-1                    = 
 ramp-capacity-2                    = 
@@ -271,9 +306,9 @@ ramp-0                             = A
 ramp-1                             = B
 ramp-2                             = C
 format                             = <label>
-format-underline                   = #f50a4d
+;format-underline                   = ${colors.foreground}
 format-warn                        = <ramp> <label-warn>
-format-warn-underline              = ${self.format-underline}
+;format-warn-underline              = ${self.format-underline}
 label                              = %temperature%
 label-warn                         = %temperature%
 label-warn-foreground              = ${colors.secondary}

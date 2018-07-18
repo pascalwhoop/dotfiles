@@ -30,7 +30,7 @@ set $gaps_norm_outer -10
 set $gaps_wide_inner 50
 set $gaps_wide_outer 50
 
-for_window [class="^.*"] border pixel 1 
+for_window [class="^.*"] border pixel 2 
 # minimal space waste but clear separation
 #gaps inner 5                            
 #gaps outer -3                        
@@ -42,7 +42,7 @@ for_window [floating] border none
 
 #taking over the colors from the .Xresources file
 set_from_resource $in i3wm.background #ffffff
-set_from_resource $ac i3wm.foreground #000000   
+set_from_resource $ac i3wm.color2 #000000   
 
 # class                 border  backgr. text indicator child_border
 client.focused          $ac     $ac $in $ac $ac
@@ -66,18 +66,18 @@ for_window [class="phone-cam"] floating_minimum_size 670 x 378
 for_window [class="phone-cam"] floating_maximum_size 670 x 378
 no_focus   [class="phone-cam"] 
 
-#assign [class="URxvt"]            2:comm
-assign [class="TelegramDesktop"] 2:comm
-assign [class="Trello"]          9:org
-assign [class="Signal"]          2:comm
-assign [class="WhatsApp"]        2:comm
-assign [class="Mail"]            2:comm
-assign [class="discord"]         2:comm
-assign [class="Gitter"]          2:comm
-assign [class="Slack"]           2:comm
-#assign [class="pycharm"]         3:work1
-#assign [class="intellij"]        4:work2
-assign [class="music"]           5:media
+#assign [class="URxvt"]          2
+assign [class="TelegramDesktop"] 2
+assign [class="Trello"]          9
+assign [class="Signal"]          2
+assign [class="WhatsApp"]        2
+assign [class="Mail"]            2
+assign [class="discord"]         2
+assign [class="Gitter"]          2
+assign [class="Slack"]           2
+#assign [class="pycharm"]        3
+#assign [class="intellij"]       4
+assign [class="music"]           5
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -197,12 +197,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # ----------------------------------------------------------------------------------------------------------------------
 
 #workspace "10" output HDMI1
-workspace "3:work1" output VIRTUAL1
-workspace "4:work2" output VIRTUAL1
-workspace "3:work1" output HDMI1
-workspace "4:work2" output HDMI1
-workspace "2:comm"  output eDP1
-workspace "5:media"  output eDP1
+workspace 3 output VIRTUAL1
+workspace 4 output VIRTUAL1
+workspace 3 output HDMI1
+workspace 4 output HDMI1
+workspace 2 output eDP1
+workspace 5 output eDP1
 
 set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [a]bove [L]eft 4k [R]ight 4k [o]ff
 bindsym $mod+m mode "$monitor_config"
@@ -294,15 +294,15 @@ bindsym $mod+P mode "$mode_system"
 # ----------------------------------------------------------------------------------------------------------------------
 
 # switch to workspace
-bindsym $mod+1 workspace 1:system
-bindsym $mod+2 workspace 2:comm
-bindsym $mod+3 workspace 3:work1
-bindsym $mod+4 workspace 4:work2
-bindsym $mod+5 workspace 5:media
-bindsym $mod+6 workspace 6:vm
-bindsym $mod+7 workspace 7:play
-bindsym $mod+8 workspace 8:thesis
-bindsym $mod+9 workspace 9:org
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -311,15 +311,15 @@ bindsym $mod+0 workspace 10
 
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:system
-bindsym $mod+Shift+2 move container to workspace 2:comm
-bindsym $mod+Shift+3 move container to workspace 3:work1
-bindsym $mod+Shift+4 move container to workspace 4:work2
-bindsym $mod+Shift+5 move container to workspace 5:media
-bindsym $mod+Shift+6 move container to workspace 6:vm
-bindsym $mod+Shift+7 move container to workspace 7:play
-bindsym $mod+Shift+8 move container to workspace 8:thesis
-bindsym $mod+Shift+9 move container to workspace 9:org
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # resize window (you can also use the mouse for that)

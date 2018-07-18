@@ -20,8 +20,8 @@ URxvt*borderColor:  [95]#1f170e
 ! Colors 0-15.
 *.color0: #1f170e
 *color0:  #1f170e
-*.color1: #aa8c7f
-*color1:  #aa8c7f
+*.color1: #aa8c80
+*color1:  #aa8c80
 *.color2: #aa681f
 *color2:  #aa681f
 *.color3: #aa8352
@@ -30,14 +30,14 @@ URxvt*borderColor:  [95]#1f170e
 *color4:  #6d5fa9
 *.color5: #8477aa
 *color5:  #8477aa
-*.color6: #a291a6
-*color6:  #a291a6
+*.color6: #a290a6
+*color6:  #a290a6
 *.color7: #c7c5c2
 *color7:  #c7c5c2
 *.color8: #57514a
 *color8:  #57514a
-*.color9: #aa8c7f
-*color9:  #aa8c7f
+*.color9: #aa8c80
+*color9:  #aa8c80
 *.color10: #aa681f
 *color10:  #aa681f
 *.color11: #aa8352
@@ -46,8 +46,8 @@ URxvt*borderColor:  [95]#1f170e
 *color12:  #6d5fa9
 *.color13: #8477aa
 *color13:  #8477aa
-*.color14: #a291a6
-*color14:  #a291a6
+*.color14: #a290a6
+*color14:  #a290a6
 *.color15: #c7c5c2
 *color15:  #c7c5c2
 
