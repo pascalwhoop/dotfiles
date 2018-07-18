@@ -38,7 +38,7 @@ alert          = ${colors.color3}
 ;menu-1 = item 2;command
 ;menu-1-0 = sub-item 2.1;command
 ;menu-1-1 = sub-item 2.2;command
-[bar/pascalwhoop]
+[bar/top]
 monitor                            = "eDP1"
 bottom                             = false
 width                              = 100%
@@ -47,8 +47,8 @@ height                             = 30
 ;offset-y = 3%
 radius                             = 0.0
 fixed-center                       = true
-background                         = ${colors.background}
-foreground                         = ${colors.foreground}
+background                         = #d80d0d0d
+foreground                         = #eee8d5
 line-size                          = 1
 line-color                         = #f00
 border-size                        = 0
@@ -62,12 +62,13 @@ font-1                             = FantasqueSansMono NF:weight=Regular:size=15
 font-2                             = FantasqueSansMono NF:weight=Regular:size=20;3
 ;modules-left = xwindow
 modules-center                     = i3
-;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-left                       = powermenu mpd xkeyboard  battery temperature memory cpu xbacklight volume 
+;modules-right = filesystem xbacklight alsa xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-left                       = powermenu mpd xkeyboard  battery temperature memory cpu xbacklight alsa 
 modules-right                      = wlan date
-tray-position                      = right
-tray-padding                       = 2
-tray-transparent                   = false
+;tray-position                      = right
+;tray-padding                       = 2
+;tray-transparent                   = false
+;tray-background                    = #d80d0d0d
 ;tray-background = #0063ff
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -109,7 +110,7 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;
+ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
@@ -244,8 +245,8 @@ format = %{T3}%{T-} <label>
 ;format-foreground = #333
 ;format-padding = 3
 
-[module/volume]
-type                    = internal/volume
+[module/alsa]
+type                    = internal/alsa
 format-volume           = <ramp-volume> <label-volume>
 label-volume            = %percentage%
 label-volume-foreground = ${root.foreground}
@@ -309,8 +310,8 @@ format                             = <label>
 ;format-underline                   = ${colors.foreground}
 format-warn                        = <ramp> <label-warn>
 ;format-warn-underline              = ${self.format-underline}
-label                              = %temperature%
-label-warn                         = %temperature%
+label                              = %temperature-c%
+label-warn                         = %temperature-c%
 label-warn-foreground              = ${colors.secondary}
 ramp-foreground                    = ${colors.foreground-alt}
 [module/powermenu]
