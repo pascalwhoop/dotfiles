@@ -57,19 +57,21 @@ padding-left                       = 2
 padding-right                      = 2
 module-margin-left                 = 1
 module-margin-right                = 2
+; several fonts are used to make the icons be displayed by the NF font and the rest by a normal font
+; This allows for large icons and normal font size
+; the -3 font is used for the center i3 column to get extra big icons in the workspace switcher
 font-0                             = FantasqueSansMono:weight=Regular:size=11
 font-1                             = FantasqueSansMono NF:weight=Regular:size=15
 font-2                             = FantasqueSansMono NF:weight=Regular:size=20;3
-;modules-left = xwindow
+font-3                             = FantasqueSansMono NF:weight=Regular:size=28;6
+
 modules-center                     = i3
 ;modules-right = filesystem xbacklight alsa xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-left                       = powermenu mpd xkeyboard  battery temperature memory cpu xbacklight alsa 
 modules-right                      = wlan date
-;tray-position                      = right
-;tray-padding                       = 2
-;tray-transparent                   = false
-;tray-background                    = #d80d0d0d
-;tray-background = #0063ff
+
+tray-position                      = right
+tray-padding                       = 2
 ;wm-restack = bspwm
 ;wm-restack = i3
 ;override-redirect = true
@@ -117,11 +119,11 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 
 ;style for display
-label-focused   = %{T3}%icon%
-label-unfocused = %{T3}%icon%
-label-visible   = %{T3}%icon%
-label-urgent    = %{T3}%icon%
-label-empty    = %{T3}%icon%
+label-focused   = %{T4}%icon%
+label-unfocused = %{T4}%icon%
+label-visible   = %{T4}%icon%
+label-urgent    = %{T4}%icon%
+label-empty     = %{T4}%icon%
 
 type                               = internal/i3
 format                             = <label-state> <label-mode>
@@ -200,7 +202,7 @@ label-disconnected                 = "睊 not connected"
 type                               = internal/network
 interface                          = wlp2s0
 interval                           = 10.0
-format-connected                   = <label-connected><ramp-signal>
+format-connected                   = <label-connected>
 ;format-connected-underline         = ${colors.foreground}
 format-disconnected                = <label-disconnected>
 format-disconnected-underline      = ${colors.alert}
