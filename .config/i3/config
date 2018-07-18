@@ -42,7 +42,7 @@ for_window [floating] border none
 
 #taking over the colors from the .Xresources file
 set_from_resource $in i3wm.background #ffffff
-set_from_resource $ac i3wm.color2 #000000   
+set_from_resource $ac i3wm.foreground #000000   
 
 # class                 border  backgr. text indicator child_border
 client.focused          $ac     $ac $in $ac $ac
@@ -93,9 +93,9 @@ floating_modifier $mod
 bindsym XF86AudioRaiseVolume  exec --no-startup-id ~/.scripts/higher_volume.sh
 bindsym XF86AudioLowerVolume  exec --no-startup-id ~/.scripts/lower_volume.sh
 bindsym XF86AudioMute         exec --no-startup-id ~/.scripts/volume_toggle.sh
-bindsym XF86AudioPlay         exec --no-startup-id mpc  toggle
-bindsym XF86AudioPrev         exec --no-startup-id mpc  prev
-bindsym XF86AudioNext         exec --no-startup-id mpc  next
+bindsym XF86AudioPlay         exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev         exec --no-startup-id playerctl previous
+bindsym XF86AudioNext         exec --no-startup-id playerctl next
 bindsym XF86MonBrightnessDown exec xbacklight      -dec 5 
 bindsym XF86MonBrightnessUp   exec xbacklight      -inc 10
 bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set 1 
