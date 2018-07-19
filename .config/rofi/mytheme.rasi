@@ -29,14 +29,14 @@
 }
 
 #window {
-    background-color: #0d0d0dd8;
+    background-color: #2f343fda;
     border: 0;
     padding: 2.5ch;
 }
 
 #mainbox {
     border: 0;
-    padding: 0;
+    padding: 250px;
 }
 
 #message {

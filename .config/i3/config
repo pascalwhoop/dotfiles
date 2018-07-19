@@ -197,12 +197,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # ----------------------------------------------------------------------------------------------------------------------
 
 #workspace "10" output HDMI1
-workspace 3 output VIRTUAL1
-workspace 4 output VIRTUAL1
+#workspace 3 output VIRTUAL1
+#workspace 4 output VIRTUAL1
 workspace 3 output HDMI1
 workspace 4 output HDMI1
 workspace 2 output eDP1
 workspace 5 output eDP1
+workspace 9 output eDP1
 
 set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [a]bove [L]eft 4k [R]ight 4k [o]ff
 bindsym $mod+m mode "$monitor_config"
@@ -268,8 +269,9 @@ mode         "$mode_launcher" {
 #albert GUI quick start apps, tools etc. might be redundant...
 #bindsym Mod4+space exec --no-startup-id albert toggle 
 #clipboard history manager
-bindsym control+$mod+space exec copyq toggle
-for_window [class="copyq"] floating enable
+#bindsym control+$mod+space exec copyq toggle
+bindsym control+$mod+space exec clipmenu
+#for_window [class="copyq"] floating enable
 
 # ----------------------------------------------------------------------------------------------------------------------
 # quick launch many applications
@@ -361,7 +363,7 @@ bindsym $mod+r mode "resize"
 
 # starting any third part applications
 # compositor
-#exec --no-startup-id compton
+exec --no-startup-id compton
 # system info
 # loading data for urxvt and others
 exec --no-startup-id "xrdb ~/.Xresources"
@@ -369,11 +371,12 @@ exec --no-startup-id "xrdb ~/.Xresources"
 #exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
 exec --no-startup-id redshift
 #setting background
-exec --no-startup-id feh --bg-fill ~/.config/wall.png
+exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 #setting color schemes
 exec --no-startup-id wal -R
 exec_always --no-startup-id ~/.config/polybar/launch
-exec --no-startup-id copyq
+#exec --no-startup-id copyq
+exec --no-startup-id mpDris2
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
@@ -382,4 +385,5 @@ exec --no-startup-id sleep 1 && conky --config '/home/pascalwhoop/.config/conky/
 exec --no-startup-id ~/.scripts/remaps
 exec --no-startup-id copyq
 exec --no-startup-id blueman-applet
+exec --no-startup-id xrdb --merge ~/.Xdefaults
 
