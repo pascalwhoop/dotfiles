@@ -6,6 +6,37 @@
 # ======================================================================================================================
 
 # ----------------------------------------------------------------------------------------------------------------------
+# autostart applications
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# starting any third part applications
+# compositor
+exec --no-startup-id compton
+# system info
+# loading data for urxvt and others
+exec_always  --no-startup-id "xrdb -merge ~/.Xresources"
+# avoids tearing
+#exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
+exec --no-startup-id redshift
+#setting color schemes
+exec --no-startup-id wal -R
+exec_always --no-startup-id ~/.config/polybar/launch
+exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
+exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
+#exec --no-startup-id copyq
+exec --no-startup-id mpDris2
+exec --no-startup-id gnome-keyring-daemon
+exec --no-startup-id nm-applet
+exec --no-startup-id dunst
+exec --no-startup-id libinput-gestures
+#exec --no-startup-id jetbrains-toolbox
+exec --no-startup-id ~/.scripts/remaps
+exec --no-startup-id copyq
+exec --no-startup-id blueman-applet
+
+
+# ----------------------------------------------------------------------------------------------------------------------
 # gaps and styling
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -356,32 +387,4 @@ bindsym $mod+Ctrl+l  resize grow width 3 px or 3 ppt
 bindsym $mod+r mode "resize"
 
 
-# ----------------------------------------------------------------------------------------------------------------------
-# autostart applications
-# ----------------------------------------------------------------------------------------------------------------------
-
-
-# starting any third part applications
-# compositor
-exec --no-startup-id compton
-# system info
-# loading data for urxvt and others
-exec_always  --no-startup-id "xrdb -merge ~/.Xresources"
-# avoids tearing
-#exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
-exec --no-startup-id redshift
-#setting color schemes
-exec --no-startup-id wal -R
-exec_always --no-startup-id ~/.config/polybar/launch
-exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
-exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
-#exec --no-startup-id copyq
-exec --no-startup-id mpDris2
-exec --no-startup-id gnome-keyring-daemon
-exec --no-startup-id nm-applet
-exec --no-startup-id dunst
-exec --no-startup-id jetbrains-toolbox
-exec --no-startup-id ~/.scripts/remaps
-exec --no-startup-id copyq
-exec --no-startup-id blueman-applet
 

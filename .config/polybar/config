@@ -227,7 +227,7 @@ format-disconnected                =
 [module/date]
 type = internal/date
 ; Seconds to sleep between updates
-interval = 1.0
+interval = 5.0
 ; See "man date" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
 date = %a %b %d, 
