@@ -36,7 +36,7 @@
 
 #mainbox {
     border: 0;
-    padding: 250px;
+    padding: 20%;
 }
 
 #message {

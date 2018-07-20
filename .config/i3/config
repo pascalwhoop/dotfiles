@@ -211,13 +211,13 @@ bindsym $mod+m mode "$monitor_config"
 mode "$monitor_config" {
 
     bindsym g exec arandr                        ;mode      "default"
-    bindsym m exec ~/.scripts/connect_display.sh --same-as  1     ;mode "default"
-    bindsym l exec ~/.scripts/connect_display.sh --left-of  1     ;mode "default"
-    bindsym r exec ~/.scripts/connect_display.sh --right-of 1     ;mode "default"
-    bindsym a exec ~/.scripts/connect_display.sh --above    0.75  ;mode "default"
-    bindsym L exec ~/.scripts/connect_display.sh --left-of  0.75  ;mode "default"
-    bindsym R exec ~/.scripts/connect_display.sh --right-of 0.75  ;mode "default"
-    bindsym o exec xrandr --output                      HDMI1      --off ;mode "default"
+    bindsym m exec ~/.scripts/connect_display.sh --same-as  1     ;mode "default"; restart
+    bindsym l exec ~/.scripts/connect_display.sh --left-of  1     ;mode "default"; restart
+    bindsym r exec ~/.scripts/connect_display.sh --right-of 1     ;mode "default"; restart
+    bindsym a exec ~/.scripts/connect_display.sh --above    0.75  ;mode "default"; restart
+    bindsym L exec ~/.scripts/connect_display.sh --left-of  0.75  ;mode "default"; restart
+    bindsym R exec ~/.scripts/connect_display.sh --right-of 0.75  ;mode "default"; restart
+    bindsym o exec xrandr --output                      HDMI1      --off ;mode "default"; restart
 
     bindsym Escape mode "default" ;mode    "default"
     bindsym Return mode "default" ;mode    "default"
@@ -238,7 +238,7 @@ mode "$quick_config" {
     bindsym v exec $term -e vim ~/.vim/startup                         ;mode "default"
     bindsym i exec $term -e vim ~/.config/i3/config                    ;mode "default"
     bindsym x exec $term -e vim ~/.Xresources                          ;mode "default"
-    bindsym c exec $term -e vim ~/.config/conky/pascalwhoop/conky.conf ;mode "default"
+    bindsym c exec $term -e vim ~/.config/conky/pascalwhoop            ;mode "default"
     bindsym p exec $term -e vim ~/.config/polybar/config               ;mode "default"
     bindsym r exec $term -e vim ~/.config/ranger/rc.conf               ;mode "default"
     bindsym a exec ~/.config/i3/apply.sh ;mode "default"
@@ -366,24 +366,22 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id compton
 # system info
 # loading data for urxvt and others
-exec --no-startup-id "xrdb ~/.Xresources"
+exec_always  --no-startup-id "xrdb -merge ~/.Xresources"
 # avoids tearing
 #exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
 exec --no-startup-id redshift
-#setting background
-exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 #setting color schemes
 exec --no-startup-id wal -R
 exec_always --no-startup-id ~/.config/polybar/launch
+exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
+exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 #exec --no-startup-id copyq
 exec --no-startup-id mpDris2
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id jetbrains-toolbox
-exec --no-startup-id sleep 1 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
 exec --no-startup-id ~/.scripts/remaps
 exec --no-startup-id copyq
 exec --no-startup-id blueman-applet
-exec --no-startup-id xrdb --merge ~/.Xdefaults
 

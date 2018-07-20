@@ -107,7 +107,7 @@ URxvt*borderColor:  [85]#2F343F
 *color66:  #231f1d
 
 ! Xclock colors.
-XClock*foreground: #c8c7c6
+XClock*foreground: #ff00c6
 XClock*background: #231f1d
 XClock*majorColor:  rgba:c8/c7/c6/ff
 XClock*minorColor:  rgba:c8/c7/c6/ff
