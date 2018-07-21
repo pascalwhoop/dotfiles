@@ -72,8 +72,10 @@ font xft:FantasqueSansMono NF 11
 for_window [floating] border none       
 
 #taking over the colors from the .Xresources file
-set_from_resource $in i3wm.background #ffffff
-set_from_resource $ac i3wm.foreground #000000   
+#set_from_resource $in i3wm.background #2F343F
+#set_from_resource $ac i3wm.foreground #c7c8c8   
+set $in #2F343F
+set $ac #c7c8c8   
 
 # class                 border  backgr. text indicator child_border
 client.focused          $ac     $ac $in $ac $ac
