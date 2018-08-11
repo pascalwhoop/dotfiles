@@ -42,6 +42,10 @@ alias ll='ls -laGh'
 alias hi="history"
 alias open="xdg-open"
 
+#Display bright / dark theme
+###############################
+alias dark='~/.scripts/colors.sh dark'
+alias light='~/.scripts/colors.sh light'
 
 # development tools
 ###############################

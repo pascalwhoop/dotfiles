@@ -22,7 +22,7 @@ magenta="#d33682"  # magenta   #d33682  5/5 magenta   50  65 -05
    cyan="#2aa198"  # cyan      #2aa198  6/6 cyan      60 -35 -05
   green="#859900"  # green     #859900  2/2 green     60 -20  65
 
-background="[85]$base3"
+background="[93]#ffffff"
 foreground="$base00"
 cursor="$base01"
 mouse_background="$base2"
