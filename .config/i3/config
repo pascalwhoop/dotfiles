@@ -32,7 +32,6 @@ exec --no-startup-id dunst
 exec --no-startup-id libinput-gestures
 #exec --no-startup-id jetbrains-toolbox
 exec --no-startup-id ~/.scripts/remaps
-exec --no-startup-id copyq
 exec --no-startup-id blueman-applet
 
 
@@ -65,7 +64,7 @@ for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
 #gaps inner 5                            
 #gaps outer -3                        
-smart_borders on
+#smart_borders on
 
 #font
 font xft:FantasqueSansMono NF 11         
@@ -229,14 +228,16 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Monitor configuration 2 montiors
 # ----------------------------------------------------------------------------------------------------------------------
 
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output HDMI1
+workspace 4 output HDMI1
+workspace 5 output eDP1
+workspace 9 output eDP1
+
 #workspace "10" output HDMI1
 #workspace 3 output VIRTUAL1
 #workspace 4 output VIRTUAL1
-workspace 3 output HDMI1
-workspace 4 output HDMI1
-workspace 2 output eDP1
-workspace 5 output eDP1
-workspace 9 output eDP1
 
 set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [a]bove [L]eft 4k [R]ight 4k [o]ff
 bindsym $mod+m mode "$monitor_config"
@@ -262,12 +263,12 @@ mode "$monitor_config" {
 # quick edit many config settings
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $quick_config Quick Config: [b]ash [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
+set $quick_config Quick Config: [b]menu [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
 bindsym $mod+c mode "$quick_config"
 
 mode "$quick_config" {
 
-    bindsym b exec $term -e vim ~/bash                                 ;mode "default"
+    bindsym b exec $term -e bmenu                                      ;mode "default"
     bindsym v exec $term -e vim ~/.vim/startup                         ;mode "default"
     bindsym i exec $term -e vim ~/.config/i3/config                    ;mode "default"
     bindsym x exec $term -e vim ~/.Xresources                          ;mode "default"
@@ -284,13 +285,13 @@ mode "$quick_config" {
 # quick launch many applications
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mode_launcher Launch: [f]irefox [t]hunderbird [m]usic [p]ycharm [i]ntellij [r]anger [x]plorer
+set $mode_launcher Launch: [f]irefox [e]mail [m]usic [p]ycharm [i]ntellij [r]anger [x]plorer
 bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
 
     bindsym  f      exec firefox     ;mode "default"
-    bindsym  t      exec thunderbird ;mode "default"
+    bindsym  e      exec evolution   ;mode "default"
     bindsym  x      exec thunar      ;mode "default"
     bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
     #bindsym p
@@ -310,8 +311,9 @@ bindsym control+$mod+space exec clipmenu
 # quick launch many applications
 # ----------------------------------------------------------------------------------------------------------------------
 #
-set $mode_system System [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]owerdown
+set $mode_system System [d]ark [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]owerdown
 mode "$mode_system" {
+    bindsym d exec --no-startup-id xset dpms force off, mode "default"
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym s exec --no-startup-id mpc pause && i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"

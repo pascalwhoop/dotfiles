@@ -3,6 +3,7 @@ export XDG_DATA_HOME="/home/pascalwhoop/.local/share"
 export XDG_CONFIG_HOME="/home/pascalwhoop/.config"
 export JAVA_HOME="/usr/lib/jvm/default"
 export CM_DIR="/home/pascalwhoop/Documents/Syncthing/notebook/clipmenu"
+export DYNAMIC_COLORS_ROOT="/home/pascalwhoop/.config/dynamic-colors/"
 #setting display env variable for tmux
 export DISPLAY=":0"
 export QT_SCALE_FACTOR=1

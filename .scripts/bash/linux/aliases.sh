@@ -9,6 +9,7 @@ alias isodate="date +%Y-%m-%d"
 alias t="cd ~/Documents/Syncthing/Notebooks && vim ./todo.txt"
 alias o="cd ~/Documents/Syncthing/Notebooks && vim ./"
 alias n="cd ~/Documents/Syncthing/Notebooks/daily && vim ./`notedate`.md"
+alias d="cd ~/Documents/Syncthing/Notebooks/diary && vim ./`notedate`.md"
 alias remcomm="echo \"!!\" >> ~/Documents/Syncthing/Notes/daily/`notedate`.md"
 
 

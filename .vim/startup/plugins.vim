@@ -17,19 +17,21 @@ Plugin 'ap/vim-css-color'
 Plugin 'majutsushi/tagbar'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'plasticboy/vim-markdown',
+Plugin 'junegunn/goyo.vim',
 Plugin 'jceb/vim-orgmode'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
 Plugin 'ctrlp.vim'
-Plugin 'dbmrq/vim-ditto'
+"Plugin 'dbmrq/vim-ditto'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'lervag/vimtex'
 Plugin 'Konfekt/FastFold'
-Plugin 'powerman/vim-plugin-autosess'
+"Plugin 'powerman/vim-plugin-autosess'
 Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/nerdtree'
@@ -114,14 +116,14 @@ nmap ga <Plug>(EasyAlign)
 " FastFold LUGIN SETUP
 "------------------------------------------------------------
 nmap zuz <Plug>(FastFoldUpdate)
-let g:fastfold_savehook = 1
+let g:fastfold_savehook              = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
-let g:markdown_folding = 1
-let g:tex_fold_enabled = 1
-let g:vimsyn_folding = 'af'
-let g:xml_syntax_folding = 1
-let g:javaScript_fold = 1
-let g:sh_fold_enabled= 7
+let g:markdown_folding               = 1
+let g:tex_fold_enabled               = 1
+let g:vimsyn_folding                 = 'af'
+let g:xml_syntax_folding             = 1
+let g:javaScript_fold                = 1
+let g:sh_fold_enabled                = 7
 
 "------------------------------------------------------------
 " ctrlp PLUGIN SETUP
@@ -133,8 +135,8 @@ let g:ctrlp_show_hidden=1
 "------------------------------------------------------------
 " Use autocmds to check your text automatically and keep the highlighting
 " up to date (easier):
-au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
-nmap <leader>di <Plug>ToggleDitto      " Turn Ditto on and off
+"au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
+"nmap <leader>di <Plug>ToggleDitto      " Turn Ditto on and off
 
 " If you don't want the autocmds, you can also use an operator to check
 " specific parts of your text:
@@ -166,3 +168,11 @@ let g:wordy#ring = [
   \ 'adjectives',
   \ 'adverbs',
   \ ]
+
+"------------------------------------------------------------
+" Goyo PLUGIN SETUP
+"------------------------------------------------------------
+" Width
+let g:goyo_width = 120
+"autocmd BufRead, BufNewFile *.md,*.markdown Goyo
+"autocmd BufLeave, BufNewFile *.md,*.markdown Goyo!

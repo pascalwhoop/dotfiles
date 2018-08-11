@@ -1,4 +1,7 @@
 #/bin/bash
+
+#this script serves the application of several colors when using wal
+#I don't use it anymore though, I played around enough with colors
 COLOR=$1
 echo $COLOR
 sed -i "s/set background.*/set background=$COLOR/g" ~/.vimrc

@@ -53,7 +53,7 @@ line-size                          = 1
 line-color                         = #f00
 border-size                        = 0
 border-color                       = #00000000
-padding-left                       = 2
+padding-left                       = 0
 padding-right                      = 2
 module-margin-left                 = 1
 module-margin-right                = 2
@@ -163,6 +163,7 @@ bar-progress-fill                  = =
 bar-progress-empty                 = ─
 
 [module/xbacklight]
+output                             = eDP1
 type                               = internal/xbacklight
 format                             = <label> 
 label                              =  %percentage%
@@ -195,7 +196,7 @@ format-prefix-foreground           = ${colors.foreground}
 ;format-underline                   = ${colors.foreground}
 label                              = %percentage_used%%
 [module/wlan]
-label-connected                    = " %essid% "
+label-connected                    = "%{T3} %{T-}%essid% "
 label-disconnected                 = "睊 not connected"
 type                               = internal/network
 interface                          = wlp2s0
@@ -204,11 +205,6 @@ format-connected                   = <label-connected>
 ;format-connected-underline         = ${colors.foreground}
 format-disconnected                = <label-disconnected>
 format-disconnected-underline      = ${colors.alert}
-ramp-signal-0                      = 
-ramp-signal-1                      = 
-ramp-signal-2                      = 
-ramp-signal-3                      = 
-ramp-signal-4                      = 
 ramp-signal-foreground             = ${colors.foreground}
 [module/eth]
 type                               = internal/network
@@ -317,9 +313,9 @@ ramp-foreground                    = ${colors.foreground-alt}
 [module/powermenu]
 type                               = custom/menu
 format-spacing                     = 1
-label-open                         = 
+label-open                         = "%{T3} "
 label-open-foreground              = ${colors.foreground}
-label-close                        = ⭘
+label-close                        = "%{T3} ⭘"
 label-close-foreground             = ${colors.foreground}
 label-separator                    = |
 label-separator-foreground         = ${colors.foreground-alt}
