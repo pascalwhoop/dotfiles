@@ -14,11 +14,11 @@
 # compositor
 exec --no-startup-id compton
 # system info
-# loading data for urxvt and others
-exec_always  --no-startup-id "xrdb -merge ~/.Xresources"
 # avoids tearing
 #exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
 exec --no-startup-id redshift
+# loading data for urxvt and others
+exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
 #setting color schemes
 exec --no-startup-id wal -R
 exec_always --no-startup-id ~/.config/polybar/launch
@@ -33,6 +33,7 @@ exec --no-startup-id libinput-gestures
 #exec --no-startup-id jetbrains-toolbox
 exec --no-startup-id ~/.scripts/remaps
 exec --no-startup-id blueman-applet
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -91,6 +92,8 @@ client.background       $ac
 
 workspace_auto_back_and_forth yes
 
+for_window [class="Tor Browser"] floating enable
+
 for_window [class="phone-cam"] border pixel 0
 for_window [class="phone-cam"] floating enable
 for_window [class="phone-cam"] sticky enable
@@ -122,9 +125,9 @@ set $term --no-startup-id urxvt
 floating_modifier $mod
 
 #media keys
-bindsym XF86AudioRaiseVolume  exec --no-startup-id ~/.scripts/higher_volume.sh
-bindsym XF86AudioLowerVolume  exec --no-startup-id ~/.scripts/lower_volume.sh
-bindsym XF86AudioMute         exec --no-startup-id ~/.scripts/volume_toggle.sh
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
 bindsym XF86AudioPlay         exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPrev         exec --no-startup-id playerctl previous
 bindsym XF86AudioNext         exec --no-startup-id playerctl next
@@ -308,7 +311,7 @@ bindsym control+$mod+space exec clipmenu
 #for_window [class="copyq"] floating enable
 
 # ----------------------------------------------------------------------------------------------------------------------
-# quick launch many applications
+# quick power menu
 # ----------------------------------------------------------------------------------------------------------------------
 #
 set $mode_system System [d]ark [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]owerdown
@@ -325,6 +328,22 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+P mode "$mode_system"
+
+# ----------------------------------------------------------------------------------------------------------------------
+# quick power menu
+# ----------------------------------------------------------------------------------------------------------------------
+#
+set $mode_vm vm [w]indows [m]anjaro
+mode "$mode_vm" {
+    bindsym w exec --no-startup-id sudo virsh start win10, sudo virt-viewer -f win10, mode "default"
+    bindsym m exec --no-startup-id sudo virsh start manjaro, sudo virt-viewer -f manjaro, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+i mode "$mode_vm"
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # workspaces

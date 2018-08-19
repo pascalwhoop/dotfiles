@@ -41,6 +41,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
+Plugin 'dbeniamine/todo.txt-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -176,3 +177,8 @@ let g:wordy#ring = [
 let g:goyo_width = 120
 "autocmd BufRead, BufNewFile *.md,*.markdown Goyo
 "autocmd BufLeave, BufNewFile *.md,*.markdown Goyo!
+
+"------------------------------------------------------------
+" todo.txt-vim PLUGIN SETUP
+"------------------------------------------------------------
+"au filetype todo setlocal omnifunc=todo#complete
