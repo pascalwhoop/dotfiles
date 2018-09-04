@@ -35,3 +35,4 @@ text/x-vcard=userapp-Thunderbird.desktop;
 text/calendar=userapp-Thunderbird.desktop;
 application/x-extension-eml=org.gnome.Evolution.desktop;
 application/x-xpinstall=org.gnome.Evolution.desktop;
+application/vnd.rar=xarchiver.desktop;
