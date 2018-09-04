@@ -19,7 +19,6 @@ exec --no-startup-id compton
 exec --no-startup-id redshift
 # loading data for urxvt and others
 exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
-#setting color schemes
 exec --no-startup-id wal -R
 exec_always --no-startup-id ~/.config/polybar/launch
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
@@ -56,16 +55,16 @@ set_from_resource $color13    i3wm.color13    #979695
 set_from_resource $color14    i3wm.color14    #D5BE97
 set_from_resource $color15    i3wm.color15    #95B6DD
 
-set $gaps_norm_inner 20
-set $gaps_norm_outer -10
-set $gaps_wide_inner 50
-set $gaps_wide_outer 50
+#set $gaps_norm_inner 20
+#set $gaps_norm_outer -10
+#set $gaps_wide_inner 50
+#set $gaps_wide_outer 50
 
-for_window [class="^.*"] border pixel 2 
+for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-#gaps inner 5                            
-#gaps outer -3                        
-#smart_borders on
+gaps inner 8                            
+gaps outer -3                        
+smart_borders on
 
 #font
 font xft:FantasqueSansMono NF 11         
@@ -93,6 +92,10 @@ client.background       $ac
 workspace_auto_back_and_forth yes
 
 for_window [class="Tor Browser"] floating enable
+
+for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating enable
+for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating_maximum_size 801 x 601
+for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating_minimum_size 800 x 600
 
 for_window [class="phone-cam"] border pixel 0
 for_window [class="phone-cam"] floating enable
@@ -152,9 +155,10 @@ bindsym           Shift+$mod+p exec --no-startup-id passmenu
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym Mod1+space exec dmenu_extended_run
+bindsym $mod+Mod1+space exec dmenu_extended_run
 bindsym $mod+d exec rofi -show combi
-
+#clipboard history manager
+bindsym control+$mod+space exec ~/.config/clipmenu/run.sh
 
 # change focus
 bindsym $mod+h focus left
@@ -303,12 +307,6 @@ mode         "$mode_launcher" {
     bindsym  Return mode "default"
 
 }
-#albert GUI quick start apps, tools etc. might be redundant...
-#bindsym Mod4+space exec --no-startup-id albert toggle 
-#clipboard history manager
-#bindsym control+$mod+space exec copyq toggle
-bindsym control+$mod+space exec clipmenu
-#for_window [class="copyq"] floating enable
 
 # ----------------------------------------------------------------------------------------------------------------------
 # quick power menu
@@ -330,7 +328,7 @@ mode "$mode_system" {
 bindsym $mod+P mode "$mode_system"
 
 # ----------------------------------------------------------------------------------------------------------------------
-# quick power menu
+# quick VM menu... TODO 
 # ----------------------------------------------------------------------------------------------------------------------
 #
 set $mode_vm vm [w]indows [m]anjaro
