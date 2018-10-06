@@ -19,7 +19,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'plasticboy/vim-markdown',
 Plugin 'junegunn/goyo.vim',
-Plugin 'jceb/vim-orgmode'
+"Plugin 'jceb/vim-orgmode'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
@@ -131,6 +131,7 @@ let g:sh_fold_enabled                = 7
 "------------------------------------------------------------
 "ctrlp show hidden files
 let g:ctrlp_show_hidden=1
+let g:ctrlp_working_path_mode = '0'
 "------------------------------------------------------------
 " ditto.vim PLUGIN SETUP
 "------------------------------------------------------------
@@ -182,3 +183,5 @@ let g:goyo_width = 120
 " todo.txt-vim PLUGIN SETUP
 "------------------------------------------------------------
 "au filetype todo setlocal omnifunc=todo#complete
+let g:Todo_txt_prefix_creation_date=1
+

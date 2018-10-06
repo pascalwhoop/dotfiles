@@ -35,6 +35,7 @@ alias cdweb='cd ~/Documents/Code/website/pascalbrokmeier.de'
 alias cdbash='cd ~/dotfiles/bash'
 alias cdall='cd ~/Documents/Syncthing/Sync/_ALL'
 alias shot='import -silent "/tmp/$(date +%Y-%m-%d-%T)-screenshot.png"'
+
 #short hands for long cli tools
 ###############################
 alias ls='ls -al'
@@ -61,6 +62,7 @@ alias pushagent="rsync --exclude="venv/" --exclude=".git/" --exclude=".idea/" --
 
 #yaourt shortcuts
 alias y=yaourt
+alias pacmanclean="sudo pacman -Rsn $(pacman -Qqdt)"
 
 # old / unused aliases
 ###############################

@@ -28,8 +28,8 @@ export PS1="$HC$FGRN[\u@$NICK]$FRED \W \\$ $RS"
 #disable Ctrl-S for freezing the shell
 stty -ixon
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 #making python 3 default
 #alias python2=/usr/bin/python

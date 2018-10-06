@@ -18,6 +18,7 @@ application/x-extension-rss=thunderbird.desktop
 inode/directory=dde-file-manager.desktop
 application/x-extension-eml=org.gnome.Evolution.desktop
 application/x-xpinstall=org.gnome.Evolution.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=thunderbird.desktop;userapp-Evolution-8826MZ.desktop;org.gnome.Evolution.desktop;
@@ -36,3 +37,4 @@ text/calendar=userapp-Thunderbird.desktop;
 application/x-extension-eml=org.gnome.Evolution.desktop;
 application/x-xpinstall=org.gnome.Evolution.desktop;
 application/vnd.rar=xarchiver.desktop;
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
