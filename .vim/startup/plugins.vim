@@ -17,26 +17,31 @@ Plugin 'ap/vim-css-color'
 Plugin 'majutsushi/tagbar'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'plasticboy/vim-markdown',
+Plugin 'junegunn/goyo.vim',
+"Plugin 'jceb/vim-orgmode'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
 Plugin 'ctrlp.vim'
-Plugin 'dbmrq/vim-ditto'
+"Plugin 'dbmrq/vim-ditto'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'lervag/vimtex'
 Plugin 'Konfekt/FastFold'
-Plugin 'powerman/vim-plugin-autosess'
+"Plugin 'powerman/vim-plugin-autosess'
 Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'surround.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-speeddating'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
+Plugin 'dbeniamine/todo.txt-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -112,20 +117,21 @@ nmap ga <Plug>(EasyAlign)
 " FastFold LUGIN SETUP
 "------------------------------------------------------------
 nmap zuz <Plug>(FastFoldUpdate)
-let g:fastfold_savehook = 1
+let g:fastfold_savehook              = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
-let g:markdown_folding = 1
-let g:tex_fold_enabled = 1
-let g:vimsyn_folding = 'af'
-let g:xml_syntax_folding = 1
-let g:javaScript_fold = 1
-let g:sh_fold_enabled= 7
+let g:markdown_folding               = 1
+let g:tex_fold_enabled               = 1
+let g:vimsyn_folding                 = 'af'
+let g:xml_syntax_folding             = 1
+let g:javaScript_fold                = 1
+let g:sh_fold_enabled                = 7
 
 "------------------------------------------------------------
 " ctrlp PLUGIN SETUP
 "------------------------------------------------------------
 "ctrlp show hidden files
 let g:ctrlp_show_hidden=1
+let g:ctrlp_working_path_mode = '0'
 "------------------------------------------------------------
 " ditto.vim PLUGIN SETUP
 "------------------------------------------------------------
@@ -149,18 +155,33 @@ let g:ctrlp_show_hidden=1
 "------------------------------------------------------------
 " Wordy PLUGIN SETUP
 "------------------------------------------------------------
-"noremap <silent> <F8> :<C-u>NextWordy<cr>
-"let g:wordy#ring = [
-"  \ ['weak', 'weasel', 'opinion', 'adverbs', 'adjectives'],
-"  \ 'weak',
-"  \ ['being', 'passive-voice', ],
-"  \ 'business-jargon',
-"  \ 'weasel',
-"  \ 'puffery',
-"  \ ['problematic', 'redundant', ],
-"  \ ['colloquial', 'idiomatic', 'similies', ],
-"  \ 'art-jargon',
-"  \ ['contractions', 'opinion', 'vague-time', 'said-synonyms', ],
-"  \ 'adjectives',
-"  \ 'adverbs',
-"  \ ]
+noremap <silent> <F8> :<C-u>NextWordy<cr>
+let g:wordy#ring = [
+  \ ['weak', 'weasel', 'opinion', 'adverbs', 'adjectives'],
+  \ 'weak',
+  \ ['being', 'passive-voice', ],
+  \ 'business-jargon',
+  \ 'weasel',
+  \ 'puffery',
+  \ ['problematic', 'redundant', ],
+  \ ['colloquial', 'idiomatic', 'similies', ],
+  \ 'art-jargon',
+  \ ['contractions', 'opinion', 'vague-time', 'said-synonyms', ],
+  \ 'adjectives',
+  \ 'adverbs',
+  \ ]
+
+"------------------------------------------------------------
+" Goyo PLUGIN SETUP
+"------------------------------------------------------------
+" Width
+let g:goyo_width = 120
+"autocmd BufRead, BufNewFile *.md,*.markdown Goyo
+"autocmd BufLeave, BufNewFile *.md,*.markdown Goyo!
+
+"------------------------------------------------------------
+" todo.txt-vim PLUGIN SETUP
+"------------------------------------------------------------
+"au filetype todo setlocal omnifunc=todo#complete
+let g:Todo_txt_prefix_creation_date=1
+

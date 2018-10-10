@@ -6,6 +6,36 @@
 # ======================================================================================================================
 
 # ----------------------------------------------------------------------------------------------------------------------
+# autostart applications
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# starting any third part applications
+# compositor
+exec --no-startup-id compton
+# system info
+# avoids tearing
+#exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
+exec --no-startup-id redshift
+# loading data for urxvt and others
+exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
+exec --no-startup-id wal -R
+exec_always --no-startup-id ~/.config/polybar/launch
+exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
+exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
+#exec --no-startup-id copyq
+exec --no-startup-id mpDris2
+exec --no-startup-id gnome-keyring-daemon
+exec --no-startup-id nm-applet
+exec --no-startup-id dunst
+exec --no-startup-id libinput-gestures
+#exec --no-startup-id jetbrains-toolbox
+exec --no-startup-id ~/.scripts/remaps
+exec --no-startup-id blueman-applet
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+
+# ----------------------------------------------------------------------------------------------------------------------
 # gaps and styling
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -25,31 +55,26 @@ set_from_resource $color13    i3wm.color13    #979695
 set_from_resource $color14    i3wm.color14    #D5BE97
 set_from_resource $color15    i3wm.color15    #95B6DD
 
-set $gaps_norm_inner 20
-set $gaps_norm_outer -10
-set $gaps_wide_inner 50
-set $gaps_wide_outer 50
+#set $gaps_norm_inner 20
+#set $gaps_norm_outer -10
+#set $gaps_wide_inner 50
+#set $gaps_wide_outer 50
 
-for_window [class="^.*"] border pixel 3 
+for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-gaps inner 20                            
-gaps outer -10                          
-# last three I allow more gaps
-workspace 5 gaps inner $gaps_wide_inner
-workspace 5 gaps outer $gaps_wide_outer
-workspace 7 gaps inner $gaps_wide_inner
-workspace 7 gaps outer $gaps_wide_outer
-workspace 9 gaps inner $gaps_wide_inner
-workspace 9 gaps outer $gaps_wide_outer
+gaps inner 8                            
+gaps outer -3                        
 smart_borders on
 
 #font
-font xft:FantasqueSansMono NF 8         
+font xft:FantasqueSansMono NF 11         
 for_window [floating] border none       
 
 #taking over the colors from the .Xresources file
-set_from_resource $in i3wm.background #ffffff
-set_from_resource $ac i3wm.foreground #000000   
+#set_from_resource $in i3wm.background #2F343F
+#set_from_resource $ac i3wm.foreground #c7c8c8   
+set $in #2F343F
+set $ac #c7c8c8   
 
 # class                 border  backgr. text indicator child_border
 client.focused          $ac     $ac $in $ac $ac
@@ -64,6 +89,14 @@ client.background       $ac
 # behavior and assignment
 # ----------------------------------------------------------------------------------------------------------------------
 
+workspace_auto_back_and_forth yes
+
+for_window [class="Tor Browser"] floating enable
+
+for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating enable
+for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating_maximum_size 801 x 601
+for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating_minimum_size 800 x 600
+
 for_window [class="phone-cam"] border pixel 0
 for_window [class="phone-cam"] floating enable
 for_window [class="phone-cam"] sticky enable
@@ -71,41 +104,49 @@ for_window [class="phone-cam"] floating_minimum_size 670 x 378
 for_window [class="phone-cam"] floating_maximum_size 670 x 378
 no_focus   [class="phone-cam"] 
 
-#assign [class="URxvt"]            2:comm
-assign [class="TelegramDesktop"]  2:comm
-assign [class="Trello"]           9:org
-assign [class="Signal"]  2:comm
-assign [class="WhatsApp"]         2:comm
-assign [class="Mail"]             2:comm
-assign [class="discord"]          2:comm
-assign [class="Gitter"]           2:comm
-assign [class="Slack"]            2:comm
-assign [class="pycharm"]          3:work1
-assign [class="intellij"]         4:work2
-assign [class="music"]            5:media
+#assign [class="URxvt"]          2
+assign [class="TelegramDesktop"] 2
+assign [class="Trello"]          9
+assign [class="Signal"]          2
+assign [class="WhatsApp"]        2
+assign [class="Mail"]            2
+assign [class="discord"]         2
+assign [class="Gitter"]          2
+assign [class="Slack"]           2
+#assign [class="pycharm"]        3
+#assign [class="intellij"]       4
+assign [class="music"]           5
 
 
 # ----------------------------------------------------------------------------------------------------------------------
 # bindings keys
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mod Mod4
-set $app 133
+set $mod mod4
+#set $app 133
 set $term --no-startup-id urxvt
 floating_modifier $mod
 
 #media keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -10%
-bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 1 toggle
-bindsym $mod+q         kill 
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym XF86AudioPlay         exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev         exec --no-startup-id playerctl previous
+bindsym XF86AudioNext         exec --no-startup-id playerctl next
+bindsym XF86MonBrightnessDown exec xbacklight      -dec 5 
+bindsym XF86MonBrightnessUp   exec xbacklight      -inc 10
+bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set 1 
+bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set 100
+bindsym $mod+q                kill
+bindsym $mod+Return           exec --no-startup-id urxvt
 
 # kill focused window
-bindsym $mod+Shift+q kill
+#bindsym $mod+Shift+q kill
 
 # screenshotting ability
-#bindsym --release $mod+Ctrl+4 exec --no-startup-id getss
+bindsym --release $mod+Ctrl+4 exec --no-startup-id teiler
+bindsym           Shift+$mod+p exec --no-startup-id passmenu
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -113,7 +154,11 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Mod1+space exec dmenu_extended_run
+bindsym $mod+d exec rofi -show combi
+#clipboard history manager
+bindsym control+$mod+space exec ~/.config/clipmenu/run.sh
 
 # change focus
 bindsym $mod+h focus left
@@ -133,11 +178,11 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# moving windows with the arrow keys will move them between outputs
+bindsym $mod+Shift+Left  move workspace to output left
+bindsym $mod+Shift+Down  move workspace to output down
+bindsym $mod+Shift+Up    move workspace to output up
+bindsym $mod+Shift+Right move workspace to output right
 
 
 # split in horizontal orientation
@@ -186,21 +231,55 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #    bindsym Escape mode "default"
 #    bindsym Return mode "default"
 #}
+# ----------------------------------------------------------------------------------------------------------------------
+# Monitor configuration 2 montiors
+# ----------------------------------------------------------------------------------------------------------------------
+
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output HDMI1
+workspace 4 output HDMI1
+workspace 5 output eDP1
+workspace 9 output eDP1
+
+#workspace "10" output HDMI1
+#workspace 3 output VIRTUAL1
+#workspace 4 output VIRTUAL1
+
+set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [a]bove [L]eft 4k [R]ight 4k [o]ff
+bindsym $mod+m mode "$monitor_config"
+
+mode "$monitor_config" {
+
+    bindsym g exec arandr                        ;mode      "default"
+    bindsym m exec ~/.scripts/connect_display.sh --same-as  1     ;mode "default"; restart
+    bindsym l exec ~/.scripts/connect_display.sh --left-of  1     ;mode "default"; restart
+    bindsym r exec ~/.scripts/connect_display.sh --right-of 1     ;mode "default"; restart
+    bindsym a exec ~/.scripts/connect_display.sh --above    0.75  ;mode "default"; restart
+    bindsym L exec ~/.scripts/connect_display.sh --left-of  0.75  ;mode "default"; restart
+    bindsym R exec ~/.scripts/connect_display.sh --right-of 0.75  ;mode "default"; restart
+    bindsym o exec xrandr --output                      HDMI1      --off ;mode "default"; restart
+
+    bindsym Escape mode "default" ;mode    "default"
+    bindsym Return mode "default" ;mode    "default"
+
+}
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # quick edit many config settings
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $quick_config Quick Config: [b]ash [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
+set $quick_config Quick Config: [b]menu [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
 bindsym $mod+c mode "$quick_config"
 
 mode "$quick_config" {
 
-    bindsym b exec $term -e vim ~/bash                                 ;mode "default"
+    bindsym b exec $term -e bmenu                                      ;mode "default"
     bindsym v exec $term -e vim ~/.vim/startup                         ;mode "default"
     bindsym i exec $term -e vim ~/.config/i3/config                    ;mode "default"
     bindsym x exec $term -e vim ~/.Xresources                          ;mode "default"
-    bindsym c exec $term -e vim ~/.config/conky/pascalwhoop/conky.conf ;mode "default"
+    bindsym c exec $term -e vim ~/.config/conky/pascalwhoop            ;mode "default"
     bindsym p exec $term -e vim ~/.config/polybar/config               ;mode "default"
     bindsym r exec $term -e vim ~/.config/ranger/rc.conf               ;mode "default"
     bindsym a exec ~/.config/i3/apply.sh ;mode "default"
@@ -213,13 +292,13 @@ mode "$quick_config" {
 # quick launch many applications
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mode_launcher Launch: [f]irefox [t]hunderbird [m]usic [p]ycharm [i]ntellij [r]anger [x]plorer
+set $mode_launcher Launch: [f]irefox [e]mail [m]usic [p]ycharm [i]ntellij [r]anger [x]plorer
 bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
 
     bindsym  f      exec firefox     ;mode "default"
-    bindsym  t      exec thunderbird ;mode "default"
+    bindsym  e      exec evolution   ;mode "default"
     bindsym  x      exec thunar      ;mode "default"
     bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
     #bindsym p
@@ -228,26 +307,56 @@ mode         "$mode_launcher" {
     bindsym  Return mode "default"
 
 }
-#albert GUI quick start apps, tools etc. might be redundant...
-bindsym Mod1+space exec --no-startup-id albert toggle 
-#clipboard history manager
-bindsym control+$mod+space exec copyq toggle
-for_window [class="copyq"] floating enable
+
+# ----------------------------------------------------------------------------------------------------------------------
+# quick power menu
+# ----------------------------------------------------------------------------------------------------------------------
+#
+set $mode_system System [d]ark [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]owerdown
+mode "$mode_system" {
+    bindsym d exec --no-startup-id xset dpms force off, mode "default"
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id mpc pause && i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym p exec --no-startup-id i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+P mode "$mode_system"
+
+# ----------------------------------------------------------------------------------------------------------------------
+# quick VM menu... TODO 
+# ----------------------------------------------------------------------------------------------------------------------
+#
+set $mode_vm vm [w]indows [m]anjaro
+mode "$mode_vm" {
+    bindsym w exec --no-startup-id sudo virsh start win10, sudo virt-viewer -f win10, mode "default"
+    bindsym m exec --no-startup-id sudo virsh start manjaro, sudo virt-viewer -f manjaro, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+i mode "$mode_vm"
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # workspaces
 # ----------------------------------------------------------------------------------------------------------------------
 
 # switch to workspace
-bindsym $mod+1 workspace 1:system
-bindsym $mod+2 workspace 2:comm
-bindsym $mod+3 workspace 3:work1
-bindsym $mod+4 workspace 4:work2
-bindsym $mod+5 workspace 5:media
-bindsym $mod+6 workspace 6:vm
-bindsym $mod+7 workspace 7:play
-bindsym $mod+8 workspace 8:thesis
-bindsym $mod+9 workspace 9:org
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -256,15 +365,15 @@ bindsym $mod+0 workspace 10
 
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:system
-bindsym $mod+Shift+2 move container to workspace 2:comm
-bindsym $mod+Shift+3 move container to workspace 3:work1
-bindsym $mod+Shift+4 move container to workspace 4:work2
-bindsym $mod+Shift+5 move container to workspace 5:media
-bindsym $mod+Shift+6 move container to workspace 6:vm
-bindsym $mod+Shift+7 move container to workspace 7:play
-bindsym $mod+Shift+8 move container to workspace 8:thesis
-bindsym $mod+Shift+9 move container to workspace 9:org
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # resize window (you can also use the mouse for that)
@@ -299,34 +408,4 @@ bindsym $mod+Ctrl+l  resize grow width 3 px or 3 ppt
 bindsym $mod+r mode "resize"
 
 
-# ----------------------------------------------------------------------------------------------------------------------
-# autostart applications
-# ----------------------------------------------------------------------------------------------------------------------
-
-
-# starting any third part applications
-# compositor
-exec --no-startup-id compton
-# system info
-# loading data for urxvt and others
-exec --no-startup-id "xrdb ~/.Xresources"
-# avoids tearing
-#exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
-exec --no-startup-id redshift
-#setting background
-exec --no-startup-id feh --bg-fill ~/.config/wall.png
-#setting color schemes
-exec --no-startup-id wal -R
-exec_always --no-startup-id ~/.config/polybar/launch
-exec --no-startup-id copyq
-exec --no-startup-id gnome-keyring-daemon
-exec --no-startup-id nm-applet
-exec --no-startup-id dunst
-exec --no-startup-id sleep 3 && conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'
-exec --no-startup-id ~/.scripts/remaps
-exec trello
-# my variant of the dmenu
-exec --no-startup-id QT_SCALE_FACTOR=1 albert
-exec --no-startup-id copyq
-exec --no-startup-id blueman-applet
 

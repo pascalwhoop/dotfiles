@@ -8,6 +8,7 @@ source ~/.vim/startup/settings.vim
 
 syntax enable
 set background=dark
+let g:solarized_contrast="high"
 colorscheme solarized
 hi Normal guibg=NONE ctermbg=NONE
 

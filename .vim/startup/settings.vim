@@ -14,3 +14,7 @@ set foldlevel=99
 "------------------------------------------------------------
 autocmd BufRead,BufNewFile *.json,*.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
 
+"------------------------------------------------------------
+" diary / notes
+"------------------------------------------------------------
+"autocmd BufEnter,BufRead,BufNewFile *.md Goyo

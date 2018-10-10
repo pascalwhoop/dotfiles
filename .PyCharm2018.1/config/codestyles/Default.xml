@@ -1,0 +1,10 @@
+<code_scheme name="Default" version="173">
+  <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
+  <Python>
+    <option name="OPTIMIZE_IMPORTS_SORT_NAMES_IN_FROM_IMPORTS" value="true" />
+    <option name="OPTIMIZE_IMPORTS_JOIN_FROM_IMPORTS_WITH_SAME_SOURCE" value="true" />
+  </Python>
+  <codeStyleSettings language="Python">
+    <option name="SPACE_AROUND_BITWISE_OPERATORS" value="false" />
+  </codeStyleSettings>
+</code_scheme>

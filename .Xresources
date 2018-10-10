@@ -2,7 +2,7 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.dpi:                    150
+Xft.dpi:                    100
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
@@ -16,6 +16,7 @@ Xft.hintstyle:              hintslight
 !-------------------------------------------------------------------------------
 URxvt.keysym.Control-Mod4-C: eval:selection_to_clipboard
 URxvt.keysym.Control-Mod4-V: eval:paste_clipboard
+URxvt*dynamicColors:         on
 URxvt.perl-ext-common:       default,resize-font
 URxvt.keysym.C-minus:        resize-font:smaller
 URxvt.keysym.C-plus:         resize-font:bigger
@@ -39,10 +40,9 @@ URxvt.allow_bold:            true
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
 !URxvt*font:              xft:monospace:size=14
 !URxvt*boldFont:          xft:monospace:size=14
-URxvt*font:                  xft:Fantasque Sans Mono NF:size=11
-URxvt*boldFont:              xft:Fantasque Sans Mono NF:size=11
+URxvt*font:                  xft:Fantasque Sans Mono NF:size=13
+URxvt*boldFont:              xft:Fantasque Sans Mono NF:size=13
 ! Fix font space
-!URxvt*letterSpace:       -1
 URxvt*letterSpace:           -1
 ! Scrollbar
 URxvt.scrollStyle:           rxvt
@@ -52,9 +52,69 @@ URxvt.perl-ext-common:       default,matcher
 URxvt.matcher.button:        1
 URxvt.urlLauncher:           firefox
 ! Cursor
-URxvt.cursorBlink:           false
+URxvt.cursorBlink:           true
 !URxvt.cursorColor:          #657b83
 URxvt.cursorColor:           #dc1315
 URxvt.cursorUnderline:       false
 ! Pointer
 URxvt.pointerBlank:          true
+! Set depth to make transparency work.
+URxvt*depth: 32
+
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            [93]#2F343F
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
