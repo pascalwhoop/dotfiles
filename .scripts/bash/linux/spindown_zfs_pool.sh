@@ -43,6 +43,6 @@ function keepsilence(){
 		d=`date`
 		echo "keeping silence at $d"
 		silence;
-		sleep 600;
+		sleep 120;
 	done
 }
