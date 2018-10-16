@@ -31,9 +31,12 @@ exec --no-startup-id dunst
 exec --no-startup-id libinput-gestures
 #exec --no-startup-id jetbrains-toolbox
 exec --no-startup-id ~/.scripts/remaps
+#bluetooth applet
 exec --no-startup-id blueman-applet
+#popup that listens to SU requests and shows a UI
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
+#file indexing throughout the system
+exec --no-startup-id tracker daemon -s
 
 # ----------------------------------------------------------------------------------------------------------------------
 # gaps and styling
@@ -270,13 +273,14 @@ mode "$monitor_config" {
 # quick edit many config settings
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $quick_config Quick Config: [b]menu [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
+set $quick_config Quick Config: [b]menu [f]ish [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
 bindsym $mod+c mode "$quick_config"
 
 mode "$quick_config" {
 
     bindsym b exec $term -e bmenu                                      ;mode "default"
     bindsym v exec $term -e vim ~/.vim/startup                         ;mode "default"
+    bindsym f exec $term -e vim ~/.config/fish/                        ;mode "default"
     bindsym i exec $term -e vim ~/.config/i3/config                    ;mode "default"
     bindsym x exec $term -e vim ~/.Xresources                          ;mode "default"
     bindsym c exec $term -e vim ~/.config/conky/pascalwhoop            ;mode "default"
@@ -298,7 +302,7 @@ bindsym $mod+o mode "$mode_launcher"
 mode         "$mode_launcher" {
 
     bindsym  f      exec firefox     ;mode "default"
-    bindsym  e      exec evolution   ;mode "default"
+    bindsym  e      exec thunderbird ;mode "default"
     bindsym  x      exec thunar      ;mode "default"
     bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
     #bindsym p
