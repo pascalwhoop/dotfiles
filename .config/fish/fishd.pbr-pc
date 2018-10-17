@@ -31,4 +31,4 @@ SET fish_pager_color_completion:\x1d
 SET fish_pager_color_description:B3A06D\x1eyellow
 SET fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SET fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SET fish_user_abbreviations:time\x20timetrap
+SET fish_user_abbreviations:time\x20timetrap\x1elocalup\x20docker\x2dcompose\x20\x2df\x20docker\x2dcompose\x2elocal\x2eyml\x20\x2df\x20docker\x2dcompose\x2elocal\x2edev\x2eyml\x20up\x1eenterweblocal\x20docker\x20exec\x20\x2dit\x20web\x2dlocal\x20/bin/bash\x1eminerva\x20rdesktop\x20\x2dg\x201920x1080\x20\x2dp\x20Minerva\x20\x2dT\x20Minerva\x20\x2da\x2016\x20\x20\x2du\x20SpaceApps\x5c\x5cMinervaApp\x2010\x2e1\x2e0\x2e38
