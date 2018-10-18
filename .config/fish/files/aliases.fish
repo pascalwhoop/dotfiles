@@ -60,7 +60,6 @@ alias light '~/.scripts/colors.sh light'
 
 # development tools
 ###############################
-alias activate "source venv/bin/activate"
 alias clearvim "rm -r /home/pascalwhoop/.vim/sessions\`pwd\`"
 alias rmswp 'find ./ -name "*.swp" -exec rm {} \;'
 alias goagent "cd ~/Documents/Code/University/powerTAC/python-agent ;and activate"

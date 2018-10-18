@@ -1,7 +1,9 @@
-function cd
-  command cd $argv
-  ls
-end
+#!/usr/bin/fish
+
+#function cd
+#  command cd $argv[1]
+#  ls
+#end
 
 function nativefier-make-app
 	APPPATH=$argv[1];
@@ -40,18 +42,17 @@ end
 
 #standard function for my blog to minimize the masters to a decent size
 function img2web
-	convert -size 2000x2000 -sampling-factor 4:2:0 -strip -interlace JPEG -colorspace RGB -quality "85%" $argv[1 $argv[2
+	convert -size 2000x2000 -sampling-factor 4:2:0 -strip -interlace JPEG -colorspace RGB -quality "85%" $argv[1] $argv[2]
 end
 
 # gets the weather for a certain city and outputs it to the console
 #TODO broken because the urxvt terminal shows all the css
 function weather 
-	if [[ $argv[1 != "in" ]]
-	then
+	if test $argv[1] != "in"
 		set CITY $argv[1]
 	else
 		set CITY $argv[2]
-	fi
+    end
 	curl http://wttr.in/$CITY;
 end
 
@@ -95,42 +96,14 @@ function alwayssilence
 end
 
 function keepsilence
-	while true; do
-		d=`date`
+	while true
+		set d (date)
 		echo "keeping silence at $d"
-		silence;
-		sleep 600;
-	done
+		silence
+		sleep 600
+    end
 end
 
-function toGif
-{
-	if [ -z $argv[1] ]; 
-		then 
-		echo "NO FILE SPECIFIED"; 
-		return;
-	fi
-
-
-	#default speed: 1 means we use every frame. 2 every 2nd frame 3 every 3rd frame a.s.o.
-	set SPEED   $argv[2] 10
-	set WIDTH   $argv[3] 900
-	set OUT_FN  $argv[1] gif
-	echo "Speed: $SPEED"
-	
-    	palette="palette.png"
-	filters="fps=$SPEED,scale=$WIDTH:-1:flags=lanczos"
-	mkdir frames
-#	ffmpeg -i $1 -vf "$filters" frames/ffout%03d.png
-#	convert -loop 0 -delay ${4:-1} frames/ffout*.png output.gif
-	rm -r frames
-	ffmpeg -v warning -i $1 -vf "$filters,palettegen" -y $palette
-    	ffmpeg -v warning -i $1 -r 10 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse"  -y $OUT_FN
-	#clean up
-	#rm palette.png
-	
-}
-#!/usr/bin/fish
 
 function fixbt
     pulseaudio -k 
