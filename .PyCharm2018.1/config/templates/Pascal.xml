@@ -1,8 +1,0 @@
-<templateSet group="Pascal">
-  <template name="chick" value="print(&quot;CHICKEN CHICKEN $dog$&quot;) $END$" description="prints chicken markers" toReformat="false" toShortenFQNames="true">
-    <variable name="dog" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="Python" value="true" />
-    </context>
-  </template>
-</templateSet>
