@@ -7,7 +7,6 @@ end
 
 #quickjump activation
 . /usr/share/autojump/autojump.fish
-set j autojump
 
 #disable Ctrl-S for freezing the shell
 #stty -ixon
