@@ -1,3 +1,6 @@
+if &shell =~# 'fish$'
+    set shell=sh
+endif
 
 source ~/.vim/startup/plugins.vim
 source ~/.vim/startup/functions.vim
