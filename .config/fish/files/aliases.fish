@@ -10,14 +10,8 @@ alias godadpi  'ssh pi@25.66.128.19'
 
 #note taking and todo list tricks
 ###############################
-alias notedate   "date +%Y-%m-%d-%A"
 alias isodate    "date +%Y-%m-%d"
-alias t          "todo.sh"
-alias vt         "cd ~/Documents/Syncthing/Notebooks ;and vim ./todo.txt"
-alias o          "cd ~/Documents/Syncthing/Notebooks ;and vim ./"
-alias n          "cd ~/Documents/Syncthing/Notebooks/daily ;and vim ./`notedate`.md"
-alias d          "cd ~/Documents/Syncthing/Notebooks/diary ;and vim ./`notedate`.md"
-alias remcomm    "echo \"!!\" >> ~/Documents/Syncthing/Notes/daily/`notedate`.md"
+#alias remcomm    "echo \"!!\" >> ~/Documents/Syncthing/Notes/daily/`notedate`.md"
 #aliases for VPN connections
 alias rubber     "openpyn -f --tcp"
 alias leech      "openpyn -f NL"
