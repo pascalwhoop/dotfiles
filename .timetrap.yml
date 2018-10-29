@@ -8,7 +8,7 @@ default_formatter: text
 auto_sheet: dotfiles
 auto_sheet_search_paths:
 - "/home/pascalwhoop/.timetrap/auto_sheets"
-default_command: 
+default_command: today
 auto_checkout: true
 require_note: true
 note_editor: false
