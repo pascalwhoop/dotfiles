@@ -30,7 +30,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id libinput-gestures
 #exec --no-startup-id jetbrains-toolbox
-exec --no-startup-id ~/.scripts/remaps
+exec --no-startup-id ~/.scripts/remaps.sh
 #bluetooth applet
 exec --no-startup-id blueman-applet
 #popup that listens to SU requests and shows a UI
