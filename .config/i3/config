@@ -68,8 +68,7 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-gaps inner 15
-gaps outer 15
+gaps inner 2
 smart_borders on
 
 #font
@@ -323,8 +322,8 @@ set $mode_system System [d]ark [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]ower
 mode "$mode_system" {
     bindsym d exec --no-startup-id xset dpms force off, mode "default"
     bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id mpc pause && i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym s exec --no-startup-id killall keepassx2 && mpc pause && i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id killall keepassx2 && i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym p exec --no-startup-id i3exit shutdown, mode "default"
 

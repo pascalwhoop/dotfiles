@@ -28,12 +28,6 @@ alias cdtac "cd ~/Documents/Code/University/powerTAC"
 alias cdcon "cd ~/Documents/Code/University/powerTAC/powertac-container-runtime"
 alias cdai 'cd "/home/pascalwhoop/Documents/Code/University/masterthesis"'
 
-alias cddot "cd ~/Documents/Code/dotfiles"
-alias cdblog 'cd ~/Documents/Code/blog/pascalwhoop.github.io'
-alias cdcode 'cd ~/Documents/Code'
-alias cdweb 'cd ~/Documents/Code/website/pascalbrokmeier.de'
-alias cdbash 'cd ~/dotfiles/bash'
-alias cdall 'cd ~/Documents/Syncthing/Sync/_ALL'
 alias shot 'import -silent "/tmp/(date +%Y-%m-%d-%T)-screenshot.png"'
 
 #short hands for long cli tools
