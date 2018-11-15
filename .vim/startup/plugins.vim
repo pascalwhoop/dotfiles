@@ -40,7 +40,7 @@ Plugin 'surround.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'xolox/vim-easytags'
+"Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'dbeniamine/todo.txt-vim'
 
