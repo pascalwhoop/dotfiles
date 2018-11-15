@@ -17,7 +17,6 @@ Xft.hintstyle:              hintslight
 URxvt.keysym.Control-Mod4-C: eval:selection_to_clipboard
 URxvt.keysym.Control-Mod4-V: eval:paste_clipboard
 URxvt*dynamicColors:         on
-URxvt.perl-ext-common:       default,resize-font
 URxvt.keysym.C-minus:        resize-font:smaller
 URxvt.keysym.C-plus:         resize-font:bigger
 URxvt.keysym.C-equal:        resize-font:reset
@@ -48,9 +47,10 @@ URxvt*letterSpace:           -1
 URxvt.scrollStyle:           rxvt
 URxvt.scrollBar:             false
 ! Perl extensions
-URxvt.perl-ext-common:       default,matcher
-URxvt.matcher.button:        1
+URxvt.perl-ext-common:       default,matcher,resize-font
 URxvt.urlLauncher:           firefox
+URxvt.matcher.pattern.1:     \\bwww\\.[\\w-]\\.[\\w./?&amp;@#-]*[\\w/-]
+URxvt.matcher.button:        1
 ! Cursor
 URxvt.cursorBlink:           true
 !URxvt.cursorColor:          #657b83
@@ -59,7 +59,7 @@ URxvt.cursorUnderline:       false
 ! Pointer
 URxvt.pointerBlank:          true
 ! Set depth to make transparency work.
-URxvt*depth: 32
+URxvt*depth:                 32
 
 
 #define S_base03        #002b36

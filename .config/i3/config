@@ -29,13 +29,16 @@ exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id libinput-gestures
-exec --no-startup-id ~/.scripts/remaps
+exec --no-startup-id ~/.scripts/remaps.sh
 #bluetooth applet
 exec --no-startup-id blueman-applet
 #popup that listens to SU requests and shows a UI
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #file indexing throughout the system
 exec --no-startup-id tracker daemon -s
+exec --no-startup-id clipmenud
+#auto starting work tools
+exec --no-startup-id mattermost-desktop
 
 # ----------------------------------------------------------------------------------------------------------------------
 # gaps and styling
@@ -64,8 +67,7 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-gaps inner 8                            
-gaps outer -3                        
+gaps inner 2
 smart_borders on
 
 #font
@@ -319,8 +321,8 @@ set $mode_system System [d]ark [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]ower
 mode "$mode_system" {
     bindsym d exec --no-startup-id xset dpms force off, mode "default"
     bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id mpc pause && i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym s exec --no-startup-id killall keepassx2 && mpc pause && i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id killall keepassx2 && i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym p exec --no-startup-id i3exit shutdown, mode "default"
 

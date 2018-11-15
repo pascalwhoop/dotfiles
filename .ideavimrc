@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set relativenumber
+set textwidth=100
 nnoremap <space> za

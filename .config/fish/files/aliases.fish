@@ -10,14 +10,8 @@ alias godadpi  'ssh pi@25.66.128.19'
 
 #note taking and todo list tricks
 ###############################
-alias notedate   "date +%Y-%m-%d-%A"
 alias isodate    "date +%Y-%m-%d"
-alias t          "todo.sh"
-alias vt         "cd ~/Documents/Syncthing/Notebooks ;and vim ./todo.txt"
-alias o          "cd ~/Documents/Syncthing/Notebooks ;and vim ./"
-alias n          "cd ~/Documents/Syncthing/Notebooks/daily ;and vim ./`notedate`.md"
-alias d          "cd ~/Documents/Syncthing/Notebooks/diary ;and vim ./`notedate`.md"
-alias remcomm    "echo \"!!\" >> ~/Documents/Syncthing/Notes/daily/`notedate`.md"
+#alias remcomm    "echo \"!!\" >> ~/Documents/Syncthing/Notes/daily/`notedate`.md"
 #aliases for VPN connections
 alias rubber     "openpyn -f --tcp"
 alias leech      "openpyn -f NL"
@@ -34,12 +28,6 @@ alias cdtac "cd ~/Documents/Code/University/powerTAC"
 alias cdcon "cd ~/Documents/Code/University/powerTAC/powertac-container-runtime"
 alias cdai 'cd "/home/pascalwhoop/Documents/Code/University/masterthesis"'
 
-alias cddot "cd ~/Documents/Code/dotfiles"
-alias cdblog 'cd ~/Documents/Code/blog/pascalwhoop.github.io'
-alias cdcode 'cd ~/Documents/Code'
-alias cdweb 'cd ~/Documents/Code/website/pascalbrokmeier.de'
-alias cdbash 'cd ~/dotfiles/bash'
-alias cdall 'cd ~/Documents/Syncthing/Sync/_ALL'
 alias shot 'import -silent "/tmp/(date +%Y-%m-%d-%T)-screenshot.png"'
 
 #short hands for long cli tools
