@@ -17,6 +17,7 @@ exec --no-startup-id compton
 # avoids tearing
 #exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
 exec --no-startup-id redshift
+exec --no-startup-id aw-qt #activity watch
 # loading data for urxvt and others
 exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id wal -R
