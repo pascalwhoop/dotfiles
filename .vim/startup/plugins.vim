@@ -39,7 +39,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'surround.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-speeddating'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
@@ -69,6 +68,11 @@ filetype plugin indent on    " required
 " YouCompleteMe PLUGIN SETUP
 "------------------------------------------------------------
 "let g:ycm_filetype_blacklist = {}
+let g:ycm_filetype_whitelist = {
+        \ 'text': 1,
+        \ 'markdown': 1,
+        \ 'notes': 1
+        \}
 let g:ycm_filetype_specific_completion_to_disable = {
         \ 'gitcommit': 1
         \}
