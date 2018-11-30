@@ -69,7 +69,7 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-gaps inner 2
+gaps inner 0
 smart_borders on
 
 #font

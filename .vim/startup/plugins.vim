@@ -11,7 +11,7 @@ call vundle#begin()
 " add vim plugins here
 "
 
-"Plugin 'python-mode/python-mode'
+Plugin 'python-mode/python-mode'
 
 "Plugin 'dbmrq/vim-ditto'
 "Plugin 'jceb/vim-orgmode'
@@ -184,9 +184,7 @@ let g:wordy#ring = [
 "------------------------------------------------------------
 " Width
 let g:goyo_width = 120
-"autocmd BufRead, BufNewFile *.md,*.markdown Goyo
-"autocmd BufLeave, BufNewFile *.md,*.markdown Goyo!
-
+autocmd BufRead, BufNewFile QuickNote.md Goyo
 "------------------------------------------------------------
 " todo.txt-vim PLUGIN SETUP
 "------------------------------------------------------------
