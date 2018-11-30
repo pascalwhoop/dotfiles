@@ -1,7 +1,7 @@
 #!/usr/bin/fish
 
 #sourcing functions / aliases / ...
-for file in (ls ~/.config/fish/files)
+for file in (command ls ~/.config/fish/files)
     source ~/.config/fish/files/$file
 end
 

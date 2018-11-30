@@ -50,8 +50,10 @@ end
 function weather 
 	if test $argv[1] != "in"
 		set CITY $argv[1]
-	else
+	elif test $argv[2]
 		set CITY $argv[2]
+    else
+        set CITY ""
     end
 	curl http://wttr.in/$CITY;
 end
