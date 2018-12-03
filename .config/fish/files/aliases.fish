@@ -20,19 +20,9 @@ alias leech      "openpyn -f NL"
 alias makesmartpl "~/.config/mpd/generate_playlists.sh"
 #alias getss "xfce4-screenshooter -r -s ~/Desktop"
 
-# cd to specific directories
-###############################
-alias cdnb "cd /home/pascalwhoop/Documents/Code/Jupyter/Notebooks"
-
-alias cdtac "cd ~/Documents/Code/University/powerTAC"
-alias cdcon "cd ~/Documents/Code/University/powerTAC/powertac-container-runtime"
-alias cdai 'cd "/home/pascalwhoop/Documents/Code/University/masterthesis"'
-
-alias shot 'import -silent "/tmp/(date +%Y-%m-%d-%T)-screenshot.png"'
 
 #short hands for long cli tools
 ###############################
-alias ls 'ls -al'
 alias r 'ranger'
 alias x 'exit'
 alias v 'vim ./'
