@@ -38,7 +38,7 @@ alert          = ${colors.color3}
 ;menu-1-0 = sub-item 2.1;command
 ;menu-1-1 = sub-item 2.2;command
 [bar/top]
-monitor                            = "eDP1"
+;monitor                            = "eDP1"
 bottom                             = false
 width                              = 100%
 height                             = 30
@@ -241,7 +241,7 @@ format = %{T3}%{T-} <label>
 ;format-padding = 3
 
 [module/alsa]
-type                    = internal/alsa
+type                    = internal/pulseaudio
 format-volume           = <ramp-volume> <label-volume>
 label-volume            = %percentage%
 label-volume-foreground = ${root.foreground}

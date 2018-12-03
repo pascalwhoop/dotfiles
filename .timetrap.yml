@@ -1,0 +1,15 @@
+---
+database_file: "/home/pascalwhoop/.config/timetrap/.timetrap.db"
+round_in_seconds: 300
+append_notes_delimiter: " "
+formatter_search_paths:
+- "/home/pascalwhoop/.config/timetrap/formatters"
+default_formatter: text
+auto_sheet: dotfiles
+auto_sheet_search_paths:
+- "/home/pascalwhoop/.timetrap/auto_sheets"
+default_command: today
+auto_checkout: true
+require_note: true
+note_editor: false
+week_start: Monday

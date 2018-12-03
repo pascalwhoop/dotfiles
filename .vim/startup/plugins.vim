@@ -11,27 +11,31 @@ call vundle#begin()
 " add vim plugins here
 "
 
-"Plugin 'python-mode/python-mode'
+Plugin 'python-mode/python-mode'
 
-Plugin 'ap/vim-css-color'
-Plugin 'majutsushi/tagbar'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'plasticboy/vim-markdown',
-Plugin 'junegunn/goyo.vim',
+"Plugin 'dbmrq/vim-ditto'
 "Plugin 'jceb/vim-orgmode'
+"Plugin 'powerman/vim-plugin-autosess'
+
+Plugin 'ActivityWatch/aw-watcher-vim' "activity Tracking
+Plugin 'Chiel92/vim-autoformat' "gaip *. tool
+Plugin 'Konfekt/FastFold' "a speed improvement for manual folds
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
+Plugin 'ap/vim-css-color'
 Plugin 'ctrlp.vim'
-"Plugin 'dbmrq/vim-ditto'
+Plugin 'dag/vim-fish'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'dbeniamine/todo.txt-vim'
 Plugin 'honza/vim-snippets'
+Plugin 'junegunn/goyo.vim',
 Plugin 'junegunn/vim-easy-align'
 Plugin 'lervag/vimtex'
-Plugin 'Konfekt/FastFold'
-"Plugin 'powerman/vim-plugin-autosess'
+Plugin 'majutsushi/tagbar'
+Plugin 'plasticboy/vim-markdown',
 Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/nerdtree'
@@ -39,9 +43,8 @@ Plugin 'surround.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'xolox/vim-easytags'
+"Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
-Plugin 'dbeniamine/todo.txt-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,6 +70,11 @@ filetype plugin indent on    " required
 " YouCompleteMe PLUGIN SETUP
 "------------------------------------------------------------
 "let g:ycm_filetype_blacklist = {}
+let g:ycm_filetype_whitelist = {
+        \ 'text': 1,
+        \ 'markdown': 1,
+        \ 'notes': 1
+        \}
 let g:ycm_filetype_specific_completion_to_disable = {
         \ 'gitcommit': 1
         \}
@@ -176,9 +184,7 @@ let g:wordy#ring = [
 "------------------------------------------------------------
 " Width
 let g:goyo_width = 120
-"autocmd BufRead, BufNewFile *.md,*.markdown Goyo
-"autocmd BufLeave, BufNewFile *.md,*.markdown Goyo!
-
+autocmd BufRead, BufNewFile QuickNote.md Goyo
 "------------------------------------------------------------
 " todo.txt-vim PLUGIN SETUP
 "------------------------------------------------------------

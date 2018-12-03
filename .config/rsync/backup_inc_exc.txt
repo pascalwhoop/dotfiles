@@ -1,0 +1,16 @@
+- /proc
+- /dev
+- /media
+- /run
+- /home/pascalwhoop/.cache/
+- /home/pascalwhoop/PC
+- /home/pascalwhoop/Downloads
+- /home/pascalwhoop/Documents/Syncthing/Music
+- /home/pascalwhoop/.local/share/Trash/
+- /var/log
+- /var/tmp
+- /home/pascalwhoop/VirtualBox\ VMs
+- /tmp
+- /home/pascalwhoop/Music
+- /var/lib/libvirt/images
+
