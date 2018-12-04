@@ -5,7 +5,6 @@
 #ssh connections
 ###############################
 alias gopi     'ssh pi@192.168.1.101'
-alias godad    'ssh pascalwhoop@25.33.211.37'
 alias godadpi  'ssh pi@25.66.128.19'
 
 #note taking and todo list tricks
@@ -23,12 +22,8 @@ alias makesmartpl "~/.config/mpd/generate_playlists.sh"
 
 #short hands for long cli tools
 ###############################
-alias r 'ranger'
-alias x 'exit'
-alias v 'vim ./'
 
 alias ll 'ls -laGh'
-alias hi "history"
 alias open "xdg-open"
 
 #Display bright / dark theme
@@ -40,8 +35,6 @@ alias light '~/.scripts/colors.sh light'
 ###############################
 alias clearvim "rm -r /home/pascalwhoop/.vim/sessions\`pwd\`"
 alias rmswp 'find ./ -name "*.swp" -exec rm {} \;'
-alias goagent "cd ~/Documents/Code/University/powerTAC/python-agent ;and activate"
-#alias pushagent "rsync --exclude "venv/" --exclude ".git/" --exclude ".idea/" --exclude "**/__pycache__"  --exclude tensorboard --exclude data -av /home/pascalwhoop/Documents/Code/University/powerTAC/python-agent/ pascalwhoop@25.33.211.37:/home/pascalwhoop/Documents/Code/University/powerTAC/python-agent"
 
 #yaourt shortcuts
 alias y yaourt
@@ -55,3 +48,5 @@ alias pacmanclean "sudo pacman -Rsn (pacman -Qqdt)"
 #alias plexdown "docker container stop plex"
 #alias jnbup "docker container start tensorflow-notebook"
 #alias kub "kubectl"
+#alias goagent "cd ~/Documents/Code/University/powerTAC/python-agent ;and activate"
+#alias pushagent "rsync --exclude "venv/" --exclude ".git/" --exclude ".idea/" --exclude "**/__pycache__"  --exclude tensorboard --exclude data -av /home/pascalwhoop/Documents/Code/University/powerTAC/python-agent/ pascalwhoop@25.33.211.37:/home/pascalwhoop/Documents/Code/University/powerTAC/python-agent"
