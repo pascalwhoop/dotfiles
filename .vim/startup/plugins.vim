@@ -10,15 +10,12 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 " add vim plugins here
 "
-
-Plugin 'python-mode/python-mode'
-
 "Plugin 'dbmrq/vim-ditto'
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'powerman/vim-plugin-autosess'
-
-Plugin 'ActivityWatch/aw-watcher-vim' "activity Tracking
-Plugin 'Chiel92/vim-autoformat' "gaip *. tool
+"Plugin 'xolox/vim-easytags'
+Plugin 'ActivityWatch/aw-watcher-vim'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'Konfekt/FastFold' "a speed improvement for manual folds
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'SirVer/ultisnips'
@@ -36,6 +33,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'lervag/vimtex'
 Plugin 'majutsushi/tagbar'
 Plugin 'plasticboy/vim-markdown',
+Plugin 'python-mode/python-mode'
 Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/nerdtree'
@@ -43,7 +41,6 @@ Plugin 'surround.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-syntastic/syntastic'
-"Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 
 " All of your Plugins must be added before the following line
