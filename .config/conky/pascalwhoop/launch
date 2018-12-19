@@ -2,5 +2,5 @@
 killall -q conky
 sleep 1
 conky -c /home/pascalwhoop/.config/conky/pascalwhoop/right.conf &
-conky -c /home/pascalwhoop/.config/conky/pascalwhoop/todo.conf &
+#conky -c /home/pascalwhoop/.config/conky/pascalwhoop/todo.conf &
 #conky -c /home/pascalwhoop/.config/conky/pascalwhoop/mpd.conf &

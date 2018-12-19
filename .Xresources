@@ -47,10 +47,10 @@ URxvt*letterSpace:           -1
 URxvt.scrollStyle:           rxvt
 URxvt.scrollBar:             false
 ! Perl extensions
-URxvt.perl-ext-common:       default,matcher,resize-font
-URxvt.urlLauncher:           firefox
-URxvt.matcher.pattern.1:     \\bwww\\.[\\w-]\\.[\\w./?&amp;@#-]*[\\w/-]
-URxvt.matcher.button:        1
+URxvt*perl-ext-common:       default,matcher,resize-font
+URxvt*urlLauncher:           /usr/bin/firefox
+!URxvt.matcher.pattern.1:     \\bwww\\.[\\w-]\\.[\\w./?&amp;@#-]*[\\w/-]
+URxvt*matcher.button:        1
 ! Cursor
 URxvt.cursorBlink:           true
 !URxvt.cursorColor:          #657b83
