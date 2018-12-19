@@ -109,6 +109,11 @@ for_window [class="phone-cam"] floating_minimum_size 670 x 378
 for_window [class="phone-cam"] floating_maximum_size 670 x 378
 no_focus   [class="phone-cam"] 
 
+for_window [title="QtWebFlix"] floating enable
+for_window [title="QtWebFlix"] sticky enable
+for_window [title="QtWebFlix"] floating_maximum_size 300 x 250
+for_window [title="QtWebFlix"] floating_minimum_size 300 x 250
+
 #assign [class="URxvt"]          2
 assign [class="TelegramDesktop"] 2
 assign [class="Trello"]          9
