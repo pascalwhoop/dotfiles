@@ -1,6 +1,6 @@
 #CUDA environment variables
 #setting display env variable for tmux
-set -x CM_DIR "/home/pascalwhoop/Documents/Syncthing/Notebooks/clipmenu"
+set -x CM_DIR "/home/pascalwhoop/.config/clipmenu"
 set -x DISPLAY ":0"
 set -x DYNAMIC_COLORS_ROOT "/home/pascalwhoop/.config/dynamic-colors/"
 set -x EDITOR /usr/bin/vim
@@ -14,3 +14,4 @@ set -x PATH $PATH "/home/pascalwhoop/.gem/ruby/2.5.0/bin"
 set -g theme_nerd_fonts yes
 set -g theme_newline_cursor yes
 set -g theme_color_scheme solarized
+set -g VIRTUAL_ENV_DISABLE_PROMPT 1

@@ -48,10 +48,8 @@ end
 # gets the weather for a certain city and outputs it to the console
 #TODO broken because the urxvt terminal shows all the css
 function weather 
-	if test $argv[1] != "in"
+	if test $argv[1]
 		set CITY $argv[1]
-	elif test $argv[2]
-		set CITY $argv[2]
     else
         set CITY ""
     end

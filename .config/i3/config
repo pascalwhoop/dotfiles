@@ -68,7 +68,7 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-gaps inner 0
+gaps inner 5
 smart_borders on
 
 #font
@@ -126,6 +126,25 @@ assign [class="Slack"]           2
 #assign [class="pycharm"]        3
 #assign [class="intellij"]       4
 assign [class="music"]           5
+assign [class="spotify"]         5
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Monitor configuration (workspace -> monitor)
+# ----------------------------------------------------------------------------------------------------------------------
+
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output HDMI1
+workspace 4 output HDMI2
+workspace 5 output eDP1
+workspace 6 output HDMI1
+workspace 7 output HDMI2
+workspace 8 output HDMI2
+workspace 9 output eDP1
+
+#workspace "10" output HDMI1
+#workspace 3 output VIRTUAL1
+#workspace 4 output VIRTUAL1
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -241,21 +260,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #    bindsym Escape mode "default"
 #    bindsym Return mode "default"
 #}
-# ----------------------------------------------------------------------------------------------------------------------
-# Monitor configuration 2 montiors
-# ----------------------------------------------------------------------------------------------------------------------
-
-workspace 1 output eDP1
-workspace 2 output eDP1
-workspace 3 output HDMI1
-workspace 4 output HDMI1
-workspace 5 output eDP1
-workspace 9 output eDP1
-
-#workspace "10" output HDMI1
-#workspace 3 output VIRTUAL1
-#workspace 4 output VIRTUAL1
-
 set $monitor_config Monitor Config: [g]ui [m]irror [l]eft [r]ight [a]bove [L]eft 4k [R]ight 4k [o]ff
 bindsym $mod+m mode "$monitor_config"
 
