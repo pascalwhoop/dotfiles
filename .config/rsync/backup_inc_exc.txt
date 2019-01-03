@@ -13,4 +13,5 @@
 - /tmp
 - /home/pascalwhoop/Music
 - /var/lib/libvirt/images
+- /var/cache
 

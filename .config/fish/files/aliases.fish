@@ -4,7 +4,7 @@
 
 #ssh connections
 ###############################
-alias gopi     'ssh pi@192.168.1.101'
+alias gopi     'ssh pi@192.168.1.202'
 alias godadpi  'ssh pi@25.66.128.19'
 
 #note taking and todo list tricks
