@@ -10,3 +10,5 @@ end
 
 #disable Ctrl-S for freezing the shell
 #stty -ixon
+
+eval (python -m virtualfish auto_activation)

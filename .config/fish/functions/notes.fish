@@ -1,5 +1,5 @@
 function notes
-    cd ~/Documents/Syncthing/Notebooks
-    vim QuickNote.md
+    cd ~/Documents/Syncthing/Notebooks/diary
+    vim daily.md
 end
 
