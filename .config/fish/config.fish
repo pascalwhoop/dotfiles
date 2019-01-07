@@ -11,4 +11,5 @@ end
 #disable Ctrl-S for freezing the shell
 #stty -ixon
 
+#virtualfish tooling
 eval (python -m virtualfish auto_activation)

@@ -14,7 +14,7 @@ call vundle#begin()
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'powerman/vim-plugin-autosess'
 "Plugin 'xolox/vim-easytags'
-Plugin 'ActivityWatch/aw-watcher-vim'
+"Plugin 'ActivityWatch/aw-watcher-vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'Konfekt/FastFold' "a speed improvement for manual folds
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -33,7 +33,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'lervag/vimtex'
 Plugin 'majutsushi/tagbar'
 Plugin 'plasticboy/vim-markdown',
-Plugin 'python-mode/python-mode'
+"Plugin 'python-mode/python-mode'
 Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/nerdtree'
@@ -66,7 +66,7 @@ filetype plugin indent on    " required
 "------------------------------------------------------------
 " YouCompleteMe PLUGIN SETUP
 "------------------------------------------------------------
-"let g:ycm_filetype_blacklist = {}
+let g:ycm_filetype_blacklist = {}
 let g:ycm_filetype_whitelist = {
         \ 'text': 1,
         \ 'markdown': 1,
