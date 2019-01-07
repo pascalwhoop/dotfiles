@@ -4,7 +4,7 @@
 [core]
 	editor = vim
 	autocrlf = input
-	excludesfile = ~/Documents/Code/.gitignore
+	excludesfile = ~/.config/.gitignore
 #[credential]
 #	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
 # Enforce SSH
