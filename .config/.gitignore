@@ -19,3 +19,8 @@ Thumbs.db
 .xsession-errors
 .lesshst
 .git-credentials
+
+#environments and IDE stuff
+.venv
+.idea/
+*.iml

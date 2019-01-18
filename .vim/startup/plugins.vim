@@ -188,3 +188,7 @@ autocmd BufRead, BufNewFile QuickNote.md Goyo
 "au filetype todo setlocal omnifunc=todo#complete
 let g:Todo_txt_prefix_creation_date=1
 
+"------------------------------------------------------------
+" vim-markdown PLUGIN SETUP
+"------------------------------------------------------------
+let g:vim_markdown_new_list_item_indent = 0

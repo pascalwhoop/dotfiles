@@ -48,9 +48,10 @@ URxvt.scrollStyle:           rxvt
 URxvt.scrollBar:             false
 ! Perl extensions
 URxvt*perl-ext-common:       default,matcher,resize-font
-URxvt*urlLauncher:           /usr/bin/firefox
+URxvt*urlLauncher:           /usr/bin/xdg-open
 !URxvt.matcher.pattern.1:     \\bwww\\.[\\w-]\\.[\\w./?&amp;@#-]*[\\w/-]
 URxvt*matcher.button:        1
+URxvt.matcher.rend.0: Uline Bold fg5
 ! Cursor
 URxvt.cursorBlink:           true
 !URxvt.cursorColor:          #657b83
@@ -59,7 +60,7 @@ URxvt.cursorUnderline:       false
 ! Pointer
 URxvt.pointerBlank:          true
 ! Set depth to make transparency work.
-URxvt*depth:                 32
+!URxvt*depth:                 32
 
 
 #define S_base03        #002b36
