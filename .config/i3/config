@@ -93,11 +93,17 @@ client.background       $ac
 # ----------------------------------------------------------------------------------------------------------------------
 # behavior and assignment
 # ----------------------------------------------------------------------------------------------------------------------
-
+# to figure out info about a window use `xprop`
 workspace_auto_back_and_forth yes
 focus_follows_mouse yes
 
 for_window [class="Tor Browser"] floating enable
+
+for_window [class="Blueman-manager"] resize   set 800 600
+for_window [class="Blueman-manager"] floating enable
+
+for_window [class="Pavucontrol"]     resize   set 800 600
+for_window [class="Pavucontrol"]     floating enable
 
 for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating enable
 for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating_maximum_size 801 x 601
