@@ -1,17 +1,19 @@
-- /proc
 - /dev
-- /media
-- /run
 - /home/pascalwhoop/.cache/
-- /home/pascalwhoop/PC
-- /home/pascalwhoop/Downloads
-- /home/pascalwhoop/Documents/Syncthing/Music
 - /home/pascalwhoop/.local/share/Trash/
+- /home/pascalwhoop/.local/share/gnome-boxes
+- /home/pascalwhoop/Documents/Syncthing
+- /home/pascalwhoop/Downloads
+- /home/pascalwhoop/Music
+- /home/pascalwhoop/PC
+- /home/pascalwhoop/VirtualBox\ VMs
+- /media
+- /proc
+- /root/.cache/
+- /run
+- /tmp
+- /var/cache
+- /var/lib/libvirt/images
 - /var/log
 - /var/tmp
-- /home/pascalwhoop/VirtualBox\ VMs
-- /tmp
-- /home/pascalwhoop/Music
-- /var/lib/libvirt/images
-- /var/cache
-
+- /var/lib/docker/image
