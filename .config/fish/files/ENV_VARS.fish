@@ -10,6 +10,9 @@ set -x XDG_CONFIG_HOME "/home/pascalwhoop/.config"
 set -x XDG_DATA_HOME "/home/pascalwhoop/.local/share"
 set -x PATH $PATH "/home/pascalwhoop/.gem/ruby/2.5.0/bin"
 
+#my own ENV vars
+set -x NOTES "/home/pascalwhoop/Documents/Syncthing/Default Folder/Notebooks"
+
 # omf bobthefish settings
 set -g theme_nerd_fonts yes
 set -g theme_newline_cursor yes

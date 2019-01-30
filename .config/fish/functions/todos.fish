@@ -1,7 +1,7 @@
 #!/usr/bin/fish
 
 function todos
-    cd ~/Documents/Syncthing/Notebooks/
+    cd $NOTES
     vim todo.txt
 end
 

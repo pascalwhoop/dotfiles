@@ -22,7 +22,7 @@ end
 
 #diary function
 function diary
-    set FILE "/home/pascalwhoop/Documents/Syncthing/Notebooks/diary/diary.gpg"
+    set FILE "$NOTES/diary/diary.gpg"
     cat $FILE  | gpg --decrypt > /tmp/diary.md
     vim /tmp/diary.md
     cat /tmp/diary.md | gpg --encrypt -r mail@pascalbrokmeier.de > $FILE
