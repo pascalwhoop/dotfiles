@@ -37,7 +37,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #file indexing throughout the system
 exec --no-startup-id tracker daemon -s
-exec --no-startup-id clipmenud
+#exec --no-startup-id clipmenud
 #auto starting work tools
 exec --no-startup-id mattermost-desktop
 
@@ -194,7 +194,7 @@ bindsym           Shift+$mod+p exec --no-startup-id passmenu
 bindsym $mod+Mod1+space exec dmenu_extended_run
 bindsym $mod+d exec rofi -show combi
 #clipboard history manager
-bindsym control+$mod+space exec ~/.config/clipmenu/run.sh
+bindsym control+$mod+space exec /home/pascalwhoop/.config/clipmenu/run.sh
 
 # change focus
 bindsym $mod+h focus left
