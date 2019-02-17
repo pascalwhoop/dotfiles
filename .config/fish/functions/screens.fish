@@ -10,8 +10,8 @@ function screens
         i3 restart
     end
     if test $argv[1] = 'dp4k'
-        xrandr --output DP1 --auto --pos 0x0
-        xrandr --output eDP1 --auto --pos 1008x2160
+        xrandr --output DP1 --auto --pos 0x0 --dpi 115  
+        xrandr --output eDP1 --off
         i3 restart
     end
     if test $argv[1] = 'off'
