@@ -6,6 +6,7 @@
 ###############################
 alias gopi     'ssh pi@192.168.1.202'
 alias godadpi  'ssh pi@25.66.128.19'
+alias ranger='ranger --choosedir=/tmp/rangerdir ;and cd (cat /tmp/rangerdir)'
 
 #note taking and todo list tricks
 ###############################
