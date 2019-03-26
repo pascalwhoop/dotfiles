@@ -22,6 +22,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'ap/vim-css-color'
 Plugin 'ctrlp.vim'
 Plugin 'dag/vim-fish'
@@ -192,3 +193,17 @@ let g:Todo_txt_prefix_creation_date=1
 " vim-markdown PLUGIN SETUP
 "------------------------------------------------------------
 let g:vim_markdown_new_list_item_indent = 0
+set conceallevel=0
+let g:vim_markdown_frontmatter = 1
+
+
+"------------------------------------------------------------
+" vim-markdown PLUGIN SETUP
+"------------------------------------------------------------
+:let g:notes_directories    = ['~/Documents/Syncthing/Default Folder/Notebooks']
+:let g:notes_suffix         = '.md'
+:let g:notes_conceal_code   = 0
+:let g:notes_conceal_italic = 0
+:let g:notes_conceal_bold   = 0
+:let g:notes_conceal_url    = 0
+
