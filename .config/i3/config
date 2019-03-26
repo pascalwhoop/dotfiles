@@ -183,6 +183,7 @@ bindsym $mod+Return           exec --no-startup-id urxvt
 
 # screenshotting ability
 bindsym --release $mod+Ctrl+4 exec --no-startup-id "maim -s > ~/Pictures/Screenshots/`date +%Y-%m-%d_%H-%M-%S`.jpg"
+bindsym --release $mod+Ctrl+5 exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
 bindsym           Shift+$mod+p exec --no-startup-id passmenu
 
 # start dmenu (a program launcher)
