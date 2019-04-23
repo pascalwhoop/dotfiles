@@ -195,7 +195,8 @@ let g:Todo_txt_prefix_creation_date=1
 let g:vim_markdown_new_list_item_indent = 0
 set conceallevel=0
 let g:vim_markdown_frontmatter = 1
-
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_new_list_item_indent = 2
 
 "------------------------------------------------------------
 " vim-markdown PLUGIN SETUP
