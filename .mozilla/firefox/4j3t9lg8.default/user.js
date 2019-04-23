@@ -1,5 +1,5 @@
 user_pref("layout.css.devPixelsPerPx",  "1.0");
-user_pref("widget.content.gtk-theme-override", "Adwaita:light")
+user_pref("widget.content.gtk-theme-override", "Adwaita")
 
 //# adopted from https://github.com/pyllyukko/user.js
 /******************************************************************************
