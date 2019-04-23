@@ -17,9 +17,10 @@ exec --no-startup-id compton
 # avoids tearing
 #exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
 exec --no-startup-id redshift
-exec --no-startup-id sleep 5 ; aw-qt #activity watch
+#exec --no-startup-id sleep 5 ; aw-qt #activity watch
 # loading data for urxvt and others
-exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
+exec_always --no-startup-id /usr/bin/xrdb -merge /home/pascalwhoop/.Xresources
+exec --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id wal -R
 exec_always --no-startup-id ~/.config/polybar/launch
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
@@ -69,7 +70,7 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
 gaps inner 10
-gaps outer 0
+gaps outer -10
 smart_borders on
 
 #font
@@ -98,6 +99,8 @@ client.background       $ac
 workspace_auto_back_and_forth yes
 focus_follows_mouse yes
 
+#floating_minimum_size 1500 x 800 
+#
 for_window [class="Tor Browser"] floating enable
 
 for_window [class="Blueman-manager"] resize   set 800 600
@@ -177,6 +180,7 @@ bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set 1
 bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set 100
 bindsym $mod+q                kill
 bindsym $mod+Return           exec --no-startup-id urxvt
+bindsym $mod+b                exec vimb
 
 # kill focused window
 #bindsym $mod+Shift+q kill
