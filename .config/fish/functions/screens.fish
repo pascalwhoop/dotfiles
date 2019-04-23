@@ -9,7 +9,7 @@ function screens
         xrandr --output HDMI1 --auto --above eDP1 
     end
     if test $argv[1] = 'h4k'
-        xrandr --output HDMI1 --auto --above eDP1 --dpi 115
+        xrandr --output HDMI1 --mode 3840x2160 --above eDP1 --dpi 115
         xrandr --output eDP1 --off
         hidpi
     end
