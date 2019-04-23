@@ -1,10 +1,11 @@
 configuration                   {
     fullscreen:                 true;
 	modi:                       "combi,window,run,ssh";
+    dpi:                        1;
 	width:                      50;
 	lines:                      15;
 	columns:                    1;
-  font:                         "Fantasque  Sans   Mono         NF 13";
+  font:                         "Fantasque Sans Mono NF 13";
 	bw:                         1;
 	location:                   0;
 	padding:                    5;
