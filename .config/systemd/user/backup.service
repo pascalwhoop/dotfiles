@@ -1,0 +1,6 @@
+[Unit]
+Description=Executes a backup of the hard drive to backblaze
+ 
+[Service]
+Type=oneshot
+ExecStart=~/.scripts/backup_backblaze.sh
