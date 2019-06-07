@@ -16,16 +16,17 @@ exec --no-startup-id compton
 # system info
 # avoids tearing
 #exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
-exec --no-startup-id redshift
+exec --no-startup-id redshift-gtk
 #exec --no-startup-id sleep 5 ; aw-qt #activity watch
 # loading data for urxvt and others
-exec_always --no-startup-id /usr/bin/xrdb -merge /home/pascalwhoop/.Xresources
+#exec_always --no-startup-id /usr/bin/xrdb -merge /home/pascalwhoop/.Xresources
 exec --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id wal -R
 exec_always --no-startup-id ~/.config/polybar/launch
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 #exec --no-startup-id copyq
+#exec --no-startup-id franz
 exec --no-startup-id mpDris2
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
@@ -127,6 +128,7 @@ for_window [title="QtWebFlix"] floating_minimum_size 300 x 250
 
 #assign [class="URxvt"]          2
 assign [class="TelegramDesktop"] 2
+assign [class="Franz"]           2
 assign [class="Trello"]          9
 assign [class="Signal"]          2
 assign [class="WhatsApp"]        2
@@ -273,17 +275,17 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #    bindsym Escape mode "default"
 #    bindsym Return mode "default"
 #}
-set $monitor_config Monitor Config: [g]ui [m]obile [U]hd-HDMI [u]hd-USBC [h]d-USB [H]d-HDMI [o]ff
+set $monitor_config Monitor Config: [g]ui [m]obile [1]uhd-USBC [2]uhd-HDMI [3]hd-USB [4]hd-HDMI [o]ff
 bindsym $mod+m mode "$monitor_config"
 
 mode "$monitor_config" {
 
     bindsym g      exec arandr           ;mode "default"
     bindsym m      exec screens   mobile ;mode "default"; restart
-    bindsym u      exec screens   4k     ;mode "default"; restart
-    bindsym U      exec screens   h4k    ;mode "default"; restart
-    bindsym h      exec screens   hd     ;mode "default"; restart
-    bindsym H      exec screens   hhd    ;mode "default"; restart
+    bindsym 1      exec screens   4k     ;mode "default"; restart
+    bindsym 2      exec screens   h4k    ;mode "default"; restart
+    bindsym 3      exec screens   hd     ;mode "default"; restart
+    bindsym 4      exec screens   hhd    ;mode "default"; restart
     bindsym Escape                       ;mode "default"
     bindsym Return                       ;mode "default"
 
@@ -317,13 +319,13 @@ mode "$quick_config" {
 # quick launch many applications
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mode_launcher Launch: [f]irefox [e]mail [m]usic [p]ycharm [i]ntellij [r]anger [x]plorer
+set $mode_launcher Launch: [f]irefox [e]mail [m]usic [x]plorer
 bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
 
     bindsym  f      exec firefox     ;mode "default"
-    bindsym  e      exec thunderbird ;mode "default"
+    bindsym  e      exec mailspring ;mode "default"
     bindsym  x      exec thunar      ;mode "default"
     bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
     #bindsym p

@@ -1,5 +1,6 @@
 #!/bin/bash
-notify-send "Backing up to backblaze"
-sudo duply backblaze backup
-notify-send "Backup complete"
+notify-send -a "Duply" "Backing up to backblaze"
+sleep 3
+sudo /usr/bin/duply backblaze backup
+notify-send -a "Duply" "Backup complete"
 

@@ -120,12 +120,12 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 "------------------------------------------------------------
-" FastFold LUGIN SETUP
+" FastFold PLUGIN SETUP
 "------------------------------------------------------------
 nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_savehook              = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
-let g:markdown_folding               = 1
+"let g:markdown_folding               = 1
 let g:tex_fold_enabled               = 1
 let g:vimsyn_folding                 = 'af'
 let g:xml_syntax_folding             = 1
@@ -192,11 +192,11 @@ let g:Todo_txt_prefix_creation_date=1
 "------------------------------------------------------------
 " vim-markdown PLUGIN SETUP
 "------------------------------------------------------------
-let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_new_list_item_indent = 1
 set conceallevel=0
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toc_autofit = 1
-let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_new_list_item_indent = 4
 
 "------------------------------------------------------------
 " vim-markdown PLUGIN SETUP
