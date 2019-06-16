@@ -10,7 +10,7 @@ export XDG_DATA_HOME="/home/pascalwhoop/.local/share"
 export PATH="/home/pascalwhoop/.gem/ruby/2.5.0/bin:$PATH"
 #export QT_SCALE_FACTOR=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export QT_QPA_PLATFORMTHEME=gtk2
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 #my own ENV vars
 export NOTES="/home/pascalwhoop/Documents/Syncthing/Default Folder/Notebooks"

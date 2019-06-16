@@ -103,16 +103,14 @@ focus_follows_mouse yes
 #floating_minimum_size 1500 x 800 
 #
 for_window [class="Tor Browser"] floating enable
+for_window [class="cairo-dock"] floating enable
+for_window [class="plank"] floating enable
 
 for_window [class="Blueman-manager"] resize   set 800 600
 for_window [class="Blueman-manager"] floating enable
 
 for_window [class="Pavucontrol"]     resize   set 800 600
 for_window [class="Pavucontrol"]     floating enable
-
-for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating enable
-for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating_maximum_size 801 x 601
-for_window [class="Evolution" title="(Appointment|\[Fwd|Re|Compose).*"] floating_minimum_size 800 x 600
 
 for_window [class="phone-cam"] border pixel 0
 for_window [class="phone-cam"] floating enable
@@ -183,7 +181,7 @@ bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set 100
 bindsym $mod+q                kill
 bindsym $mod+Return           exec --no-startup-id urxvt
 bindsym $mod+b                exec firefox
-bindsym $mod+x                exex thunar
+#bindsym $mod+x                exex --no-startup-id thunar
 
 # kill focused window
 #bindsym $mod+Shift+q kill
@@ -328,6 +326,7 @@ mode         "$mode_launcher" {
     bindsym  e      exec mailspring ;mode "default"
     bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
     #bindsym p
+    bindsym  x      exec thunar      ;mode "default"
     bindsym  r      exec $term       -e    ranger  "/"   ;mode "default"
     bindsym  Escape mode "default"
     bindsym  Return mode "default"
