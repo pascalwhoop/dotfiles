@@ -33,7 +33,7 @@ configuration                   {
 	auto-select:                false;
 	parse-hosts:                false;
 	parse-known-hosts:          true;
-  combi-modi:                   "window,drun,run,ssh";
+  combi-modi:                   "window,drun,ssh";
 	matching:                   "normal";
 	tokenize:                   true;
 	m:                          "-5";
