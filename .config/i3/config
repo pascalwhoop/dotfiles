@@ -70,8 +70,8 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-gaps inner 10
-gaps outer -10
+#gaps inner 10
+#gaps outer 0
 smart_borders on
 
 #font
@@ -81,7 +81,9 @@ font xft:FantasqueSansMono NF 11
 #taking over the colors from the .Xresources file
 #set_from_resource $in i3wm.background #2F343F
 #set_from_resource $ac i3wm.foreground #c7c8c8   
-set $in #2F343F
+#background
+set $in #181B28
+#foreground
 set $ac #c7c8c8   
 
 # class                 border  backgr. text indicator child_border
@@ -180,7 +182,8 @@ bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set 1
 bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set 100
 bindsym $mod+q                kill
 bindsym $mod+Return           exec --no-startup-id urxvt
-bindsym $mod+b                exec firefox
+bindsym $mod+b                exec brave
+#bindsym $mod+b                exec firefox
 #bindsym $mod+x                exex --no-startup-id thunar
 
 # kill focused window
@@ -318,7 +321,7 @@ mode "$quick_config" {
 # quick launch many applications
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mode_launcher Launch: [e]mail [m]usic
+set $mode_launcher Launch: [e]mail [m]usic [n]otes
 bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
@@ -328,6 +331,7 @@ mode         "$mode_launcher" {
     #bindsym p
     bindsym  x      exec thunar      ;mode "default"
     bindsym  r      exec $term       -e    ranger  "/"   ;mode "default"
+    bindsym n exec --no-startup-id code /home/pascalwhoop/Documents/Syncthing/Default\ Folder/Notebooks ;mode "default"
     bindsym  Escape mode "default"
     bindsym  Return mode "default"
 
@@ -356,7 +360,7 @@ bindsym $mod+P mode "$mode_system"
 # quick VM menu... TODO 
 # ----------------------------------------------------------------------------------------------------------------------
 #
-set $mode_vm vm [w]indows [m]anjaro
+set $mode_vm vm [w]indows [m]anjaro 
 mode "$mode_vm" {
     bindsym w exec --no-startup-id sudo virsh start win10, sudo virt-viewer -f win10, mode "default"
     bindsym m exec --no-startup-id sudo virsh start manjaro, sudo virt-viewer -f manjaro, mode "default"

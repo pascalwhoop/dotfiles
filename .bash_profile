@@ -7,11 +7,19 @@ export EDITOR=/usr/bin/vim
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export XDG_CONFIG_HOME="/home/pascalwhoop/.config"
 export XDG_DATA_HOME="/home/pascalwhoop/.local/share"
+#adding ruby gems
 export PATH="/home/pascalwhoop/.gem/ruby/2.5.0/bin:$PATH"
+#adding confluent bins
+export PATH="/home/pascalwhoop/Apps/confluent/confluent-5.2.2/bin:$PATH"
 #export QT_SCALE_FACTOR=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERM="xterm-256color"
+#export GDK_SCALE=2
 
 #my own ENV vars
 export NOTES="/home/pascalwhoop/Documents/Syncthing/Default Folder/Notebooks"
+
+#export NVM_VERSIONS_PATH=$HOME/.nvm/versions/node
+#export NPM_PATH=$NVM_VERSIONS_PATH/v$(cat /home/pascalwhoop/.nvm/alias/default)/bin
+#export PATH=$NPM_PATH:$PATH

@@ -9,7 +9,7 @@ Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
 !polybar extra setting
-polybar.height:30
+polybar.height:40
 
 !-------------------------------------------------------------------------------
 ! URxvt settings

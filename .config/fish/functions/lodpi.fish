@@ -4,7 +4,8 @@ function lodpi
 
     #xrdb
     sed -i "s/Xft\.dpi.*/Xft\.dpi:96/" ~/.Xresources
-    sed -i "s/polybar.height.*/polybar\.height:30/" ~/.Xresources
+    sed -i 's/.*window.zoomLevel.*/"window.zoomLevel": 0,/' ~/.config/Code\ -\ OSS/User/settings.json
+    #    sed -i "s/polybar.height.*/polybar\.height:30/" ~/.Xresources
     xrdb -merge ~/.Xresources
     #restart gui tools
     pkill -f dunst

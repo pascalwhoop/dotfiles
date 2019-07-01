@@ -39,27 +39,11 @@ alert          = ${colors.color3}
 ;menu-1-0 = sub-item 2.1;command
 ;menu-1-1 = sub-item 2.2;command
 [bar/top]
-;monitor                            = "eDP1"
+;------;
+; FONT ;
+;------;
 ;dpi=${xrdb:Xft.dpi}
 dpi=${xrdb:Xft.dpi}
-height=${xrdb:polybar.height}
-
-bottom                             = false
-width                              = 100%
-;offset-x = 3%
-;offset-y = 3%
-radius                             = 0.0
-fixed-center                       = true
-background                         = #d8181B28
-foreground                         = #eee8d5
-line-size                          = 1
-line-color                         = #f00
-border-size                        = 0
-border-color                       = #00000000
-padding-left                       = 0
-padding-right                      = 2
-module-margin-left                 = 1
-module-margin-right                = 2
 ; several fonts are used to make the icons be displayed by the NF font and the rest by a normal font
 ; This allows for large icons and normal font size
 ; the -3 font is used for the center i3 column to get extra big icons in the workspace switcher
@@ -67,7 +51,40 @@ font-0                             = FantasqueSansMono:weight=Regular:size=11
 font-1                             = FantasqueSansMono NF:weight=Regular:size=15
 font-2                             = FantasqueSansMono NF:weight=Regular:size=20;3
 font-3                             = FantasqueSansMono NF:weight=Regular:size=28;6
+;-----------;
+; DIMENSION ;
+;-----------;
+height=${xrdb:polybar.height}
+width                              = 100%
+padding-left                       = 0
+padding-right                      = 2
+module-margin-left                 = 1
+module-margin-right                = 2
+;----------;
+; LOCATION ;
+;----------;
+bottom                             = false
+fixed-center                       = true
+;monitor                            = "eDP1"
+monitor = ${env:MONITOR:}
+;--------;
+; COLORS ;
+;--------;
+;offset-x = 3%
+;offset-y = 3%
+radius                             = 0.0
+line-size                          = 1
+border-size                        = 0
+;border-bottom-size                 = 1
+;background                         = #d8181B28 
+;background                         = #181B28 
+foreground                         = #c7c8c8
+;line-color                         = #f00
+border-color                       = #C50ED2
 
+;--------;
+; CONFIG ;
+;--------;
 modules-center                     = i3
 ;modules-right = filesystem xbacklight alsa xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-left                       = powermenu mpd xkeyboard  battery temperature memory cpu xbacklight alsa 
@@ -136,8 +153,8 @@ label-mode-padding                 = 1
 label-mode-foreground              = ${colors.background}
 label-mode-background              = ${colors.foreground}
 ;label-focused = F %index%
-label-focused-background           = ${colors.background-alt}
-label-focused-foreground           = ${colors.background}
+label-focused-background           = ${colors.foreground}
+label-focused-foreground           = ${colors.background-alt}
 ;label-focused-underline            = ${colors.primary}
 label-focused-padding              = 2
 ;label-unfocused = U %index%
