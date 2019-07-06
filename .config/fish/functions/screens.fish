@@ -15,7 +15,7 @@ function screens
     end
     if test $argv[1] = '4k'
         xrandr --output DP1 --auto --pos 0x0 --dpi 115  
-        #xrandr --output eDP1 --off
+        xrandr --output eDP1 --off
         hidpi
     end
     if test $argv[1] = 'mobile'

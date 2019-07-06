@@ -170,19 +170,19 @@ set $term --no-startup-id urxvt
 floating_modifier $mod
 
 #media keys
-bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
-bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
-bindsym XF86AudioPlay         exec --no-startup-id playerctl play-pause
-bindsym XF86AudioPrev         exec --no-startup-id playerctl previous
-bindsym XF86AudioNext         exec --no-startup-id playerctl next
-bindsym XF86MonBrightnessDown exec xbacklight      -dec 5 
-bindsym XF86MonBrightnessUp   exec xbacklight      -inc 10
-bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set 1 
-bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set 100
-bindsym $mod+q                kill
-bindsym $mod+Return           exec --no-startup-id urxvt
-bindsym $mod+b                exec brave
+bindsym XF86AudioRaiseVolume       exec --no-startup-id pactl     set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume       exec --no-startup-id pactl     set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute              exec --no-startup-id pactl     set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym XF86AudioPlay              exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev              exec --no-startup-id playerctl previous
+bindsym XF86AudioNext              exec --no-startup-id playerctl next
+bindsym XF86MonBrightnessDown      exec xbacklight      -dec      5
+bindsym XF86MonBrightnessUp        exec xbacklight      -inc      10
+bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set      1
+bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set      100
+bindsym $mod+q                     kill
+bindsym $mod+Return                exec $term
+bindsym $mod+b                     exec --no-startup-id firefox
 #bindsym $mod+b                exec firefox
 #bindsym $mod+x                exex --no-startup-id thunar
 
