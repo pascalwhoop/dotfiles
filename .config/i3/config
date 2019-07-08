@@ -103,7 +103,9 @@ workspace_auto_back_and_forth yes
 focus_follows_mouse yes
 
 #floating_minimum_size 1500 x 800 
-#
+
+for_window [title="Toggl Desktop"] floating enable
+for_window [title="Toggl Desktop"] resize set 357 637
 for_window [class="Tor Browser"] floating enable
 for_window [class="cairo-dock"] floating enable
 for_window [class="plank"] floating enable
