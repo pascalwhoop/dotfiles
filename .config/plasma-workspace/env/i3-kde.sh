@@ -1,0 +1,1 @@
+/home/pascalwhoop/.config/i3/i3-kde.sh

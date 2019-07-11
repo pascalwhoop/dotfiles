@@ -27,7 +27,7 @@ exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 #exec --no-startup-id copyq
 #exec --no-startup-id franz
-exec --no-startup-id mpDris2
+#exec --no-startup-id mpDris2
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
@@ -70,8 +70,8 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-#gaps inner 10
-#gaps outer 0
+gaps inner 10
+gaps outer 0
 smart_borders on
 
 #font
@@ -98,6 +98,19 @@ client.background       $ac
 # ----------------------------------------------------------------------------------------------------------------------
 # behavior and assignment
 # ----------------------------------------------------------------------------------------------------------------------
+# Making KDE and i3 work nicely together
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, move position 12 48 , no_focus
+#for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
 # to figure out info about a window use `xprop`
 workspace_auto_back_and_forth yes
 focus_follows_mouse yes
@@ -185,6 +198,7 @@ bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set      100
 bindsym $mod+q                     kill
 bindsym $mod+Return                exec $term
 bindsym $mod+b                     exec --no-startup-id firefox
+#bindsym $mod+t                     exec --no-startup-id TogglDesktop
 #bindsym $mod+b                exec firefox
 #bindsym $mod+x                exex --no-startup-id thunar
 
@@ -269,31 +283,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # quick open many typical application scenarios
 # ----------------------------------------------------------------------------------------------------------------------
 
-#set $quick_start [t]hesis [p]owertac [w]ebsite
-#bindsym $mod+c mode "$quick_start"
+#set $monitor_config Monitor Config: [g]ui [m]obile [1]uhd-USBC [2]uhd-HDMI [3]hd-USB [4]hd-HDMI [o]ff
+#bindsym $mod+m mode "$monitor_config"
 #
-#mode "$quick_start" {
-#    bindsym t exec $term -e vim ~/Documents/Code/University/masterthesis
-#    bindsym p exec $term -e cd ~/Documents/Code/University/powerTAC/ ; ranger
-#    bindsym w exec $term -e vim ~/dotfiles/.Xresources
-#    bindsym Escape mode "default"
-#    bindsym Return mode "default"
+#mode "$monitor_config" {
+#
+#    bindsym g      exec arandr           ;mode "default"
+#    bindsym m      exec screens   mobile ;mode "default"; restart
+#    bindsym 1      exec screens   4k     ;mode "default"; restart
+#    bindsym 2      exec screens   h4k    ;mode "default"; restart
+#    bindsym 3      exec screens   hd     ;mode "default"; restart
+#    bindsym 4      exec screens   hhd    ;mode "default"; restart
+#    bindsym Escape                       ;mode "default"
+#    bindsym Return                       ;mode "default"
+#
 #}
-set $monitor_config Monitor Config: [g]ui [m]obile [1]uhd-USBC [2]uhd-HDMI [3]hd-USB [4]hd-HDMI [o]ff
-bindsym $mod+m mode "$monitor_config"
-
-mode "$monitor_config" {
-
-    bindsym g      exec arandr           ;mode "default"
-    bindsym m      exec screens   mobile ;mode "default"; restart
-    bindsym 1      exec screens   4k     ;mode "default"; restart
-    bindsym 2      exec screens   h4k    ;mode "default"; restart
-    bindsym 3      exec screens   hd     ;mode "default"; restart
-    bindsym 4      exec screens   hhd    ;mode "default"; restart
-    bindsym Escape                       ;mode "default"
-    bindsym Return                       ;mode "default"
-
-}
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -362,16 +366,16 @@ bindsym $mod+P mode "$mode_system"
 # quick VM menu... TODO 
 # ----------------------------------------------------------------------------------------------------------------------
 #
-set $mode_vm vm [w]indows [m]anjaro 
-mode "$mode_vm" {
-    bindsym w exec --no-startup-id sudo virsh start win10, sudo virt-viewer -f win10, mode "default"
-    bindsym m exec --no-startup-id sudo virsh start manjaro, sudo virt-viewer -f manjaro, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+i mode "$mode_vm"
+#set $mode_vm vm [w]indows [m]anjaro 
+#mode "$mode_vm" {
+#    bindsym w exec --no-startup-id sudo virsh start win10, sudo virt-viewer -f win10, mode "default"
+#    bindsym m exec --no-startup-id sudo virsh start manjaro, sudo virt-viewer -f manjaro, mode "default"
+#
+#    # back to normal: Enter or Escape
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+#bindsym $mod+i mode "$mode_vm"
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -411,3 +415,11 @@ bindsym $mod+Ctrl+h resize shrink width 3 px or 3 ppt
 bindsym $mod+Ctrl+j    resize grow height 3 px or 3 ppt
 bindsym $mod+Ctrl+k  resize shrink height 3 px or 3 ppt
 bindsym $mod+Ctrl+l  resize grow width 3 px or 3 ppt
+
+#bar {
+#    mode hide
+#    modifier $mod
+#    status_command i3status
+#    tray_output eDP1
+#    position top
+#}

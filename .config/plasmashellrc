@@ -1,0 +1,63 @@
+[Containments][2][General]
+AppletOrder=21;27;25;28;6;32;37
+
+[Containments][40][General]
+AppletOrder=41
+
+[Containments][7][General]
+extraItems=org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.discovernotifier,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.ktp-contactlist,org.kde.plasma.printmanager,org.kde.kdeconnect
+hiddenItems=org.kde.discovernotifier,org.kde.plasma.vault
+knownItems=org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.discovernotifier,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.ktp-contactlist,org.kde.plasma.printmanager,org.kde.kdeconnect
+shownItems=Toggl Desktop
+
+[DownloadDialog Settings]
+Height 1080=494
+Height 1440=494
+Width 1920=700
+Width 2560=700
+
+[General]
+Number of Actions=0
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Pictures/Resplash/D_5iQVxKkPY_Full.jpg,file:$HOME/Pictures/Resplash/RCAhiGJsUUE_Full.jpg,file:$HOME/Pictures/Resplash/D_5iQVxKkPY_Full.jpg
+Recent URLs[$e]=file:$HOME/Pictures/Resplash/
+
+[KPropertiesDialog]
+Height 1080=464
+Height 1440=456
+Width 1920=435
+Width 2560=435
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_org.kde.kdf.desktop,2 services_virtualbox.desktop,1 services_org.kde.kteatime.desktop,1 services_thunar-settings.desktop,2 services_standard_actions.desktop,1 services_kcm_kdeconnect.desktop,6 services_autostart.desktop,1 services_org.kde.kruler.desktop,1 services_kcm_kscreen.desktop,1 services_org.kde.juk.desktop,2 services_style.desktop,1 services_kcm_desktoptheme.desktop,1 services_firefox.desktop,2 services_org.kde.kontact.desktop,1 services_com.toggl.TogglDesktop.desktop,1 services_clock.desktop,2 services_code-oss.desktop,2 services_mailspring.desktop,1 services_telegramdesktop.desktop,1 services_htop.desktop,1 services_org.kde.sweeper.desktop,1 services_konqbrowser.desktop,2 services_org.kde.kfind.desktop,1 services_org.kde.korganizer.desktop,1 services_systemsettings.desktop,1 services_eid-viewer.desktop,3 services_keys.desktop,1 shell_krunner,1 baloosearch,1 services_signal-desktop.desktop,2 services_urxvt.desktop
+pluginWhiteList=services,desktopsessions,PowerDevil,calculator,unitconverter,shell,bookmarks,baloosearch,locations
+
+[PlasmaTransientsConfig]
+PreloadWeight=0
+
+[PlasmaViews][Panel 2]
+panelVisibility=0
+
+[PlasmaViews][Panel 2][Horizontal1920]
+thickness=36
+
+[PlasmaViews][Panel 2][Horizontal2560]
+thickness=30
+
+[PlasmaViews][Panel 2][Horizontal3840]
+thickness=30
+
+[PlasmaViews][Panel 2][Vertical1080]
+thickness=30
+
+[PlasmaViews][Panel 40][Horizontal1920]
+thickness=146
+
+[ScreenConnectors]
+0=eDP1
+1=DP1
+3=:0.0
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js
