@@ -22,6 +22,7 @@ exec --no-startup-id redshift-gtk
 exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id wal -R
+exec --no-startup-id gufw_icon.sh
 exec_always --no-startup-id ~/.config/polybar/launch
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
@@ -98,31 +99,18 @@ client.background       $ac
 # ----------------------------------------------------------------------------------------------------------------------
 # behavior and assignment
 # ----------------------------------------------------------------------------------------------------------------------
-# Making KDE and i3 work nicely together
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, move position 12 48 , no_focus
-#for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
 # to figure out info about a window use `xprop`
 workspace_auto_back_and_forth yes
 focus_follows_mouse yes
 
 #floating_minimum_size 1500 x 800 
 
-for_window [title="Toggl Desktop"] floating enable
-for_window [title="Toggl Desktop"] resize set 357 637
-for_window [class="Tor Browser"] floating enable
-for_window [class="cairo-dock"] floating enable
-for_window [class="plank"] floating enable
+for_window [title="Toggl Desktop"] floating enable, position center
+#for_window [title="Toggl Desktop"] resize set 357 637
+for_window [class="Tor Browser"] floating enable, position center
 
+for_window [window_type="dialog"] floating enable, position center
+for_window [title="Calculator"] floating enable, position center
 for_window [class="Blueman-manager"] resize   set 800 600
 for_window [class="Blueman-manager"] floating enable
 
@@ -421,5 +409,5 @@ bindsym $mod+Ctrl+l  resize grow width 3 px or 3 ppt
 #    modifier $mod
 #    status_command i3status
 #    tray_output eDP1
-#    position top
+#    position bottom
 #}
