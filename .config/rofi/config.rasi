@@ -1,14 +1,7 @@
 configuration                   {
-    fullscreen:                 true;
 	modi:                       "combi,window,run,ssh";
-    dpi:                        1;
-	width:                      50;
-	lines:                      15;
-	columns:                    1;
-  font:                         "Fantasque Sans Mono NF 13";
+    font:                       "Fantasque Sans Mono NF 13";
 	bw:                         1;
-	location:                   0;
-	padding:                    5;
 	yoffset:                    0;
 	xoffset:                    0;
 	fixed-num-lines:            true;
@@ -34,12 +27,11 @@ configuration                   {
 	parse-hosts:                false;
 	parse-known-hosts:          true;
   combi-modi:                   "window,drun,ssh";
-	matching:                   "normal";
+	matching:                   "fuzzy";
 	tokenize:                   true;
 	m:                          "-5";
 	line-margin:                2;
 	line-padding:               1;
-/*	filter:                     ;*/
 	separator-style:            "dash";
 	hide-scrollbar:             false;
 	fake-transparency:          false;
@@ -52,10 +44,6 @@ configuration                   {
 	click-to-exit:              true;
 	show-match:                 true;
   theme:                        "mytheme";
-/*	color-normal:               ;*/
-/*	color-urgent:               ;*/
-/*	color-active:               ;*/
-/*	color-window:               ;*/
 	max-history-size:           25;
 	combi-hide-mode-prefix:     false;
 	pid:                        "/run/user/1000/rofi.pid";
