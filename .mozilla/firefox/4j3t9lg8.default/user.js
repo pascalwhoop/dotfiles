@@ -18,11 +18,11 @@ user_pref("widget.content.gtk-theme-override", "Adwaita")
 // // NOTICE: Disabling ServiceWorkers breaks functionality on some sites (Google Street View...)
 // // Unknown security implications
 // // CVE-2016-5259, CVE-2016-2812, CVE-2016-1949, CVE-2016-5287 (fixed)
-user_pref("dom.serviceWorkers.enabled", false);
+//user_pref("dom.serviceWorkers.enabled", false);
 // 
 // // PREF: Disable web notifications
 // // https://support.mozilla.org/en-US/questions/1140439
-user_pref("dom.webnotifications.enabled",			true);
+//user_pref("dom.webnotifications.enabled",			false);
 // 
 // // PREF: Disable DOM timing API
 // // https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI
