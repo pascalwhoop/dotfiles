@@ -11,6 +11,7 @@ export XDG_DATA_HOME="/home/pascalwhoop/.local/share"
 export PATH="/home/pascalwhoop/.gem/ruby/2.5.0/bin:$PATH"
 #adding confluent bins
 export PATH="/home/pascalwhoop/Apps/confluent/confluent-5.2.2/bin:$PATH"
+export PATH="/home/pascalwhoop/.scripts/bin:$PATH"
 #export QT_SCALE_FACTOR=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
