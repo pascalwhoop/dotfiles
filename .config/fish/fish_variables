@@ -1,11 +1,14 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR LAST_WORKING_DIR:/home/pascalwhoop/Documents/Code/dataminded/html5\x2dpresentation\x2dtemplate
+SETUVAR LAST_WORKING_DIR:/home/pascalwhoop
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr_G:gcloud
+SETUVAR _fish_abbr_T:timetrap
 SETUVAR _fish_abbr_a:aws
+SETUVAR _fish_abbr_aws_2D_azure_2D_login:\x7e/\x2envm/versions/node/v6\x2e11\x2e1/bin/aws\x2dazure\x2dlogin
+SETUVAR _fish_abbr_bac_2D_login:\x7e/\x2envm/versions/node/v6\x2e11\x2e1/bin/aws\x2dazure\x2dlogin\x20\x2d\x2dno\x2dsandbox
 SETUVAR _fish_abbr_backup:sudo\x20\x2dE\x20duply\x20backblaze\x20backup
 SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_docs:gnome\x2ddocuments\x20\x26
@@ -27,13 +30,13 @@ SETUVAR _fish_abbr_hi:history
 SETUVAR _fish_abbr_k:kubectl
 SETUVAR _fish_abbr_n:notes
 SETUVAR _fish_abbr_pacmanstale:find\x20\x2e/\x20\x7c\x20xargs\x20pacman\x20\x2dQo\x20\x7b\x7d\x20\x7c\x20grep\x20\x22no\x20package\x22
+SETUVAR _fish_abbr_punch:timetrap
 SETUVAR _fish_abbr_r:ranger
 SETUVAR _fish_abbr_remove:sudo\x20pacman\x20\x2dRcnsu
 SETUVAR _fish_abbr_ssh_2D_telenet_2D_prod:ssh\x20\x2dJ\x20pascalwhoop\x40localhost\x3a2222\x20pbrokmei\x40tele1297\x2eprd\x2ebigd\x2etelenet\x2ebe\x20\x2di\x20\x7e/\x2essh/id_rsa_telenet
 SETUVAR _fish_abbr_ssh_2D_telenet_2D_sab:ssh\x20\x2dJ\x20pascalwhoop\x40localhost\x3a2222\x20pbrokmei\x40tele8060\x2edint\x2etelenet\x2ebe\x20\x2di\x20\x7e/\x2essh/id_rsa_telenet
 SETUVAR _fish_abbr_ssh_2D_telenet_2D_uat:ssh\x20\x2dJ\x20pascalwhoop\x40localhost\x3a2222\x20pbrokmei\x40tele1890\x2enprd\x2ebigd\x2etelenet\x2ebe\x20\x2di\x20\x7e/\x2essh/id_rsa_telenet
 SETUVAR _fish_abbr_t:terraform
-SETUVAR _fish_abbr_time:timetrap
 SETUVAR _fish_abbr_v:vim
 SETUVAR _fish_abbr_vt:todos
 SETUVAR _fish_abbr_x:exit

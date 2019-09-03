@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sudo umount /mnt/vault
+sudo umount /mnt/mergerdisk{1,2,3}
+sudo umount /mnt/parity1
+docker stop plex

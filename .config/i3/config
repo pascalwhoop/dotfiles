@@ -1,4 +1,5 @@
 # ======================================================================================================================
+#
 # i3 config file (v4)
 # follow me on twitter or youtube
 # twitter: https://twitter.com/PascalBrokmeier
@@ -205,7 +206,7 @@ bindsym           Shift+$mod+p exec --no-startup-id passmenu
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym Ctrl+space exec /home/pascalwhoop/.scripts/bin/rofi_finder
+bindsym $mod+ctrl+d exec /home/pascalwhoop/.scripts/bin/rofi_finder
 bindsym $mod+d exec rofi -show combi
 #clipboard history manager
 bindsym control+$mod+space exec /home/pascalwhoop/.config/clipmenu/run.sh

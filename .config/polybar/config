@@ -22,7 +22,8 @@ color13        = ${xrdb:color13}
 color14        = ${xrdb:color14}
 color15        = ${xrdb:color15}
 ;background has alpha value
-background     = ${xrdb:background} 
+;background     = #d8161925
+;background     = ${xrdb:background} 
 background-alt = #C50ED2
 foreground     = ${xrdb:foreground}
 foreground-alt = ${colors.color4}
@@ -142,6 +143,7 @@ label-unfocused = %{T4}%icon%
 label-visible   = %{T4}%icon%
 label-urgent    = %{T4}%icon%
 label-empty     = %{T4}%icon%
+label-mode-font = 1
 
 type                               = internal/i3
 format                             = <label-state> <label-mode>
@@ -150,13 +152,13 @@ wrapping-scroll                    = false
 strip-wsnumbers = true
 
 label-mode-padding                 = 1
-label-mode-foreground              = ${colors.background}
+label-mode-foreground              = #161925
 label-mode-background              = ${colors.foreground}
 ;label-focused = F %index%
 label-focused-background           = ${colors.foreground}
-label-focused-foreground           = ${colors.background-alt}
+label-focused-foreground           = #161925
 ;label-focused-underline            = ${colors.primary}
-label-focused-padding              = 2
+label-focused-padding              = 1
 ;label-unfocused = U %index%
 label-unfocused-padding            = 1
 ;label-visible = V %index%
