@@ -1,6 +1,6 @@
 #!/bin/sh
 # manipulating xrdb
-sed -i "s/Xft.dpi.*/Xft\.dpi:115/" ~/.Xresources
+sed -i "s/Xft.dpi.*/Xft\.dpi:125/" ~/.Xresources
 xrdb -merge ~/.Xresources
 # then firefox
 sed -i 's/  "1.0"/  "1.25"/' ~/.mozilla/firefox/4j3t9lg8.default/user.js

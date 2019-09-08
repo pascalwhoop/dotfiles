@@ -1,4 +1,6 @@
 #!/bin/sh
+set -xe
+
 
 sudo umount /mnt/vault
 sudo umount /mnt/mergerdisk{1,2,3}

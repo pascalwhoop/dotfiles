@@ -1,27 +1,27 @@
 * {
     active-background: @background-alt;
     active-foreground: @foreground;
-    normal-background: @background;
+    normal-background: transparent;
     normal-foreground: @foreground;
     urgent-background: #c7c4b8;
     urgent-foreground: @foreground;
 
-    alternate-active-background: @background;
+    alternate-active-background: transparent;
     alternate-active-foreground: @foreground;
-    alternate-normal-background: @background;
+    alternate-normal-background: transparent;
     alternate-normal-foreground: @foreground;
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
     selected-active-background: @background-alt;
     selected-active-foreground: @background;
-    selected-normal-background: @background-alt;
+    selected-normal-background: @foreground;
     selected-normal-foreground: @background;
     selected-urgent-background: @foreground;
     selected-urgent-foreground: @background-alt;
 
-    background-color: @background;
-    background: #181B28d8;
+    background-color: transparent;
+    background: #161925d8;
     foreground: #c7c8c8;
     background-alt: #C50ED2;
     border-color: @background;
@@ -31,7 +31,7 @@
 #window {
     background-color: transparent;
     border: 0;
-    margin: 40px 0px 0px 0px;
+    margin: 50px 0px 10px 10px;
     fullscreen: true;
     anchor:   west;
     orientation: horizontal;
@@ -39,9 +39,10 @@
 }
 
 #mainbox {
+    background-color: @background;
     expand: false;
     border: 0;
-    padding: 10px;
+    padding: 0px;
 }
 
 #message {
@@ -61,7 +62,7 @@ inputbar {
 textbox-prompt-colon {
     expand: false;
     str: ":";
-    margin: 0px 0.3em 0em 0em;
+    padding: 15px 0px 15px 0px;
     text-color: @normal-foreground;
 }
 
@@ -76,7 +77,7 @@ textbox-prompt-colon {
 
 #element {
     border: 0;
-    padding: 4px;
+    padding: 15px 10px 15px 10px;
 }
 
 #element.normal.normal {
@@ -125,6 +126,7 @@ textbox-prompt-colon {
 }
 
 #scrollbar {
+    
     width: 4px;
     border: 0;
     handle-width: 8px;
@@ -158,11 +160,14 @@ textbox-prompt-colon {
 
 #entry {
     spacing: 0;
+    padding: 15px 10px 15px 10px;
     width: 30em;
     text-color: @normal-foreground;
 }
 
 #prompt {
     spacing: 0;
+
+    padding: 15px 10px 15px 10px;
     text-color: @normal-foreground;
 }
