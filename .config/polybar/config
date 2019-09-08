@@ -23,11 +23,10 @@ color14        = ${xrdb:color14}
 color15        = ${xrdb:color15}
 ;background has alpha value
 ;background     = #d8161925
-;background     = ${xrdb:background} 
-background-alt = #C50ED2
+background     = ${xrdb:background_poly} 
 foreground     = ${xrdb:foreground}
+primary        = ${xrdb:primary}
 foreground-alt = ${colors.color4}
-primary        = ${colors.color14}
 secondary      = ${colors.color5}
 alert          = ${colors.color3}
 
@@ -77,11 +76,11 @@ radius                             = 0.0
 line-size                          = 1
 border-size                        = 0
 ;border-bottom-size                 = 1
-background                         = #d8161925
+background                         = ${colors.background}
 ;background                         = #181B28 
 foreground                         = #c7c8c8
 ;line-color                         = #f00
-border-color                       = #C50ED2
+;border-color                       = #C50ED2
 
 ;--------;
 ; CONFIG ;
@@ -268,7 +267,7 @@ type                    = internal/pulseaudio
 format-volume           = <ramp-volume> <label-volume>
 label-volume            = %percentage%
 label-volume-foreground = ${root.foreground}
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.primary}
 label-muted             = "ﱝ sound muted"
 ramp-volume-0           = 
 ramp-volume-1           = 墳
@@ -336,9 +335,9 @@ ramp-foreground                    = ${colors.foreground-alt}
 type                               = custom/menu
 format-spacing                     = 1
 label-open                         = "%{T3} "
-label-open-foreground              = ${colors.background-alt}
+label-open-foreground              = ${colors.primary}
 label-close                        = "%{T3} ⭘"
-label-close-foreground             = ${colors.background-alt}
+label-close-foreground             = ${colors.primary}
 label-separator                    = |
 label-separator-foreground         = ${colors.foreground-alt}
 menu-0-0                           = suspend

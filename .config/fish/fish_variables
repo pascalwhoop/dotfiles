@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR LAST_WORKING_DIR:/home/pascalwhoop
+SETUVAR LAST_WORKING_DIR:/home/pascalwhoop/\x2econfig/rofi
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d

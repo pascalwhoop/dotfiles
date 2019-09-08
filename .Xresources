@@ -1,12 +1,29 @@
 !-------------------------------------------------------------------------------
+! colors
+!-------------------------------------------------------------------------------
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+#define S_background_alpha     [93]#383C4A
+#define S_background    #383C4A
+#define S_primary       #5294E2
+!#define S_primary       #DC1315
+!-------------------------------------------------------------------------------
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.dpi:96
+Xft.dpi:125
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
+
 
 !polybar extra setting
 polybar.height:40
@@ -57,8 +74,8 @@ URxvt*matcher.button:        1
 URxvt.matcher.rend.0: Uline Bold fg5
 ! Cursor
 URxvt.cursorBlink:           true
-!URxvt.cursorColor:          #657b83
-URxvt.cursorColor:           #C50ED2
+URxvt.cursorColor:          S_primary
+!URxvt.cursorColor:           #C50ED2
 URxvt.cursorUnderline:       false
 ! Pointer
 URxvt.pointerBlank:          true
@@ -66,18 +83,13 @@ URxvt.pointerBlank:          true
 !URxvt*depth:                 32
 
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-
-!*background:            [93]#2F343F
+*primary:                S_primary
+!original background solarized
+!*background:            S_base03
+*background:            S_background_alpha
+*background_poly:       S_background
 !*background:            [93]#181B28
-*background:            [93]#161925
+!*background:            [93]#161925
 *foreground:            S_base0
 *fadeColor:             S_base03
 *cursorColor:           S_base1
