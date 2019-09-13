@@ -1,0 +1,59 @@
+{
+	"cSpell.userWords": ["discoverability", "gitlab", "integratability", "kubernetes"],
+	"workbench.colorTheme": "Darkula",
+	"presentationMode.zoomLevel": 2,
+	"markdown-toc.orderedList": true,
+	"editor.lineNumbers": "relative",
+	"explorer.confirmDelete": false,
+	"emmet.includeLanguages": { "javascript": "html" },
+	"workbench.tree.indent": 13,
+	"files.autoSave": "onFocusChange",
+	"explorer.confirmDragAndDrop": false,
+	"prettier.proseWrap": "always",
+	"prettier.printWidth": 100,
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.fontFamily": "'Fantasque Sans Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+"window.zoomLevel": 1.5,
+	"vs-kubernetes": {
+		"vs-kubernetes.minikube-path": "/home/pascalwhoop/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"aceJump.finder.onlyInitialLetter": false,
+	"keyboard.dispatch": "keyCode",
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/.classpath": true,
+		"**/.factorypath": true,
+		"**/.idea": true,
+		"**/.project": true,
+		"**/.pytest_cache": true,
+		"**/.settings": true,
+		"**/.terraform": true
+	},
+	"git.autofetch": true,
+	"workbench.colorCustomizations": {
+		 //"editor.background": "#383C4a",
+		 //"list.inactiveSelectionBackground": "#404552",
+		 //"sideBar.background": "#383C4A",
+		 //"sideBarSectionHeader.background": "#353945",
+		 //"activityBar.background": "#383C4A",
+		 //"tab.inactiveBackground": "#404552",
+		 //"statusBar.background": "#383C4A"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"cloudcode.enableTelemetry": false,
+	"gitlens.advanced.telemetry.enabled": false,
+	"terraform.telemetry.enabled": false,
+	"telemetry.enableTelemetry": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"git.enableSmartCommit": true,
+}
