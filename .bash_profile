@@ -18,6 +18,9 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERM="xterm-256color"
 #export GDK_SCALE=2
 
+export GOPATH=/home/pascalwhoop/.go/
+export PATH=$GOPATH/bin:$PATH
+
 #my own ENV vars
 export NOTES="/home/pascalwhoop/Documents/Syncthing/Default Folder/Notebooks"
 
