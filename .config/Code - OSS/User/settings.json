@@ -1,21 +1,30 @@
 {
 	"cSpell.userWords": ["discoverability", "gitlab", "integratability", "kubernetes"],
-	"workbench.colorTheme": "Darkula",
-	"presentationMode.zoomLevel": 2,
-	"markdown-toc.orderedList": true,
+	"cloudcode.enableTelemetry": false,
+	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.lineNumbers": "relative",
-	"explorer.confirmDelete": false,
 	"emmet.includeLanguages": { "javascript": "html" },
-	"workbench.tree.indent": 13,
-	"files.autoSave": "onFocusChange",
+	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
-	"prettier.proseWrap": "always",
+	"files.autoSave": "onFocusChange",
+	"git.enableSmartCommit": true,
+	"gitlens.advanced.telemetry.enabled": false,
+	"go.formatTool": "goimports",
+	"markdown-toc.orderedList": true,
+	"presentationMode.zoomLevel": 2,
 	"prettier.printWidth": 100,
+	"prettier.proseWrap": "always",
+	"telemetry.enableTelemetry": false,
+	"terraform.telemetry.enabled": false,
+	"vim.textwidth": 100,
+	"workbench.colorTheme": "Darkula",
+	"workbench.tree.indent": 13,
+
 	"[markdown]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"editor.fontFamily": "'Fantasque Sans Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-"window.zoomLevel": 1.5,
+"window.zoomLevel": 0,
 	"vs-kubernetes": {
 		"vs-kubernetes.minikube-path": "/home/pascalwhoop/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
 	},
@@ -50,10 +59,9 @@
 	"[yaml]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"cloudcode.enableTelemetry": false,
-	"gitlens.advanced.telemetry.enabled": false,
-	"terraform.telemetry.enabled": false,
-	"telemetry.enableTelemetry": false,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"git.enableSmartCommit": true,
+	"cloudcode.gke": {
+		"projectIds": [
+			"pascalwhoop"
+		]
+	},
 }
