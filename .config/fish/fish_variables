@@ -15,6 +15,7 @@ SETUVAR _fish_abbr_docs:gnome\x2ddocuments\x20\x26
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gc:git\x20commit
+SETUVAR _fish_abbr_gcp:git\x20cherry\x2dpick
 SETUVAR _fish_abbr_gd:git\x20diff
 SETUVAR _fish_abbr_gird:git\x20rebase\x20\x2di\x20origin/develop
 SETUVAR _fish_abbr_girm:git\x20rebase\x20\x2di\x20origin/master
@@ -23,13 +24,16 @@ SETUVAR _fish_abbr_gitcm:git\x20commit\x20\x2dm\x20\x27
 SETUVAR _fish_abbr_gitgo:git\x20add\x20\x2e/\x20\x3band\x20git\x20commit\x20\x3band\x20git\x20push
 SETUVAR _fish_abbr_gitpbb:git\x20stash\x20\x3band\x20git\x20pull\x20\x2d\x2drebase\x20\x3band\x20git\x20stash\x20pop
 SETUVAR _fish_abbr_gitpnb:git\x20push\x20\x2du\x20origin\x20HEAD
+SETUVAR _fish_abbr_gitsqueeze:git\x20add\x20\x2e/\x20\x3band\x20git\x20commit\x20\x2d\x2damend
 SETUVAR _fish_abbr_gl:git\x20log
+SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_gpfwl:git\x20push\x20\x2d\x2dforce\x2dwith\x2dlease
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_hi:history
 SETUVAR _fish_abbr_k:kubectl
 SETUVAR _fish_abbr_n:notes
 SETUVAR _fish_abbr_pacmanstale:find\x20\x2e/\x20\x7c\x20xargs\x20pacman\x20\x2dQo\x20\x7b\x7d\x20\x7c\x20grep\x20\x22no\x20package\x22
+SETUVAR _fish_abbr_pud:pushd\x20\x2e/
 SETUVAR _fish_abbr_punch:timetrap
 SETUVAR _fish_abbr_r:ranger
 SETUVAR _fish_abbr_remove:sudo\x20pacman\x20\x2dRcnsu

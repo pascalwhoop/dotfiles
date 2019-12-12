@@ -1,6 +1,6 @@
 * {
     active-background: @background-alt;
-    active-foreground: @foreground;
+    active-foreground: @background;
     normal-background: transparent;
     normal-foreground: @foreground;
     urgent-background: #c7c4b8;
@@ -21,9 +21,9 @@
     selected-urgent-foreground: @background-alt;
 
     background-color: transparent;
-    background: #161925d8;
-    foreground: #c7c8c8;
-    background-alt: #C50ED2;
+    background: #383C4Ad8;
+    foreground: #FDF6E3;
+    background-alt: #5294E2;
     border-color: @background;
     spacing: 2;
 }

@@ -24,3 +24,9 @@ Thumbs.db
 .venv
 .idea/
 *.iml
+
+**/.settings/
+**/.project
+**/.classpath
+**/.factorypath
+

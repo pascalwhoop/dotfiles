@@ -1,9 +1,16 @@
 {
-	"cSpell.userWords": ["discoverability", "gitlab", "integratability", "kubernetes"],
+	"cSpell.userWords": [
+		"discoverability",
+		"gitlab",
+		"integratability",
+		"kubernetes"
+	],
 	"cloudcode.enableTelemetry": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.lineNumbers": "relative",
-	"emmet.includeLanguages": { "javascript": "html" },
+	"emmet.includeLanguages": {
+		"javascript": "html"
+	},
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
 	"files.autoSave": "onFocusChange",
@@ -19,11 +26,14 @@
 	"vim.textwidth": 100,
 	"workbench.colorTheme": "Darkula",
 	"workbench.tree.indent": 13,
-
 	"[markdown]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.wordWrap": "wordWrapColumn",
+		"editor.wrappingIndent": "same",
+		"editor.wordWrapColumn": 100
 	},
-	"editor.fontFamily": "'Fantasque Sans Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontFamily": "'SauceCodePro Nerd Font Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontSize": 12,
 "window.zoomLevel": 0,
 	"vs-kubernetes": {
 		"vs-kubernetes.minikube-path": "/home/pascalwhoop/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
@@ -45,14 +55,15 @@
 	},
 	"git.autofetch": true,
 	"workbench.colorCustomizations": {
-		 //"editor.background": "#383C4a",
-		 //"list.inactiveSelectionBackground": "#404552",
-		 //"sideBar.background": "#383C4A",
-		 //"sideBarSectionHeader.background": "#353945",
-		 //"activityBar.background": "#383C4A",
-		 //"tab.inactiveBackground": "#404552",
-		 //"statusBar.background": "#383C4A"
+		//"editor.background": "#383C4a",
+		//"list.inactiveSelectionBackground": "#404552",
+		//"sideBar.background": "#383C4A",
+		//"sideBarSectionHeader.background": "#353945",
+		//"activityBar.background": "#383C4A",
+		//"tab.inactiveBackground": "#404552",
+		//"statusBar.background": "#383C4A"
 	},
+	"eslint.autoFixOnSave": true,
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
@@ -63,5 +74,28 @@
 		"projectIds": [
 			"pascalwhoop"
 		]
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"workbench.iconTheme": "vscode-icons",
+	"terraform.indexing": {
+		"enabled": false,
+		"liveIndexing": false,
+		"delay": 500,
+		"exclude": [
+			".terraform/**/*",
+			"**/.terraform/**/*"
+		]
+	},
+	"terraform.languageServer": {
+		"enabled": true,
+		"args": []
 	},
 }

@@ -25,8 +25,6 @@ Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
 
-!polybar extra setting
-polybar.height:40
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -59,8 +57,10 @@ URxvt.allow_bold:            true
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
 !URxvt*font:              xft:monospace:size=14
 !URxvt*boldFont:          xft:monospace:size=14
-URxvt*font:                  xft:Fantasque Sans Mono NF:size=13
-URxvt*boldFont:              xft:Fantasque Sans Mono NF:size=13
+URxvt*font:                  xft:SauceCodePro Nerd Font Mono:size=11
+URxvt*boldFont:              xft:SauceCodePro Nerd Font Mono:size=11,style=Bold
+!URxvt*font:                  xft:Fantasque Sans Mono NF:size=13
+!URxvt*boldFont:              xft:Fantasque Sans Mono NF:size=13,style=Bold
 ! Fix font space
 URxvt*letterSpace:           -1
 ! Scrollbar

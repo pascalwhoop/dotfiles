@@ -1,0 +1,11 @@
+#!/bin/bash
+cd ~/.password-store
+#notify-send "sync pass"
+MSG=$(date +"%y-%m-%d")
+
+git stash
+git pull --rebase
+git stash pop
+git add ./
+git commit -m "$MSG"
+git push

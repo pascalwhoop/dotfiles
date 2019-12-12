@@ -11,6 +11,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 
 
+exec --no-startup-id urxvtd
 # starting any third part applications
 # compositor
 exec --no-startup-id compton
@@ -77,14 +78,14 @@ gaps outer 0
 smart_borders on
 
 #font
-font xft:FantasqueSansMono NF 11         
+font xft:SauceCodePro Nerd Font Mono 9 
 #for_window [floating] border none       
 
 #taking over the colors from the .Xresources file
 #set_from_resource $in i3wm.background #2F343F
 #set_from_resource $ac i3wm.foreground #c7c8c8   
 #background
-set $in #181B28
+set $in #383C4A
 #foreground
 set $ac #c7c8c8   
 
@@ -207,7 +208,7 @@ bindsym           Shift+$mod+p exec --no-startup-id passmenu
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+ctrl+d exec /home/pascalwhoop/.scripts/bin/rofi_finder
-bindsym $mod+d exec rofi -show combi
+bindsym $mod+d exec /home/pascalwhoop/.scripts/bin/i3-rofi
 #clipboard history manager
 bindsym control+$mod+space exec /home/pascalwhoop/.config/clipmenu/run.sh
 
@@ -234,6 +235,10 @@ bindsym $mod+Shift+Left  move workspace to output left
 bindsym $mod+Shift+Down  move workspace to output down
 bindsym $mod+Shift+Up    move workspace to output up
 bindsym $mod+Shift+Right move workspace to output right
+
+#bindsym $mod+u exec --no-startup-id urxvtc
+
+
 
 
 # split in horizontal orientation
@@ -272,21 +277,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # quick open many typical application scenarios
 # ----------------------------------------------------------------------------------------------------------------------
 
-#set $monitor_config Monitor Config: [g]ui [m]obile [1]uhd-USBC [2]uhd-HDMI [3]hd-USB [4]hd-HDMI [o]ff
-#bindsym $mod+m mode "$monitor_config"
-#
-#mode "$monitor_config" {
-#
-#    bindsym g      exec arandr           ;mode "default"
-#    bindsym m      exec screens   mobile ;mode "default"; restart
-#    bindsym 1      exec screens   4k     ;mode "default"; restart
-#    bindsym 2      exec screens   h4k    ;mode "default"; restart
-#    bindsym 3      exec screens   hd     ;mode "default"; restart
-#    bindsym 4      exec screens   hhd    ;mode "default"; restart
-#    bindsym Escape                       ;mode "default"
-#    bindsym Return                       ;mode "default"
-#
-#}
+set $monitor_config Monitor Config: [g]ui [m]obile [1]uhd-USBC [2]uhd-HDMI [3]hd-USB [4]hd-HDMI [o]ff
+bindsym $mod+m mode "$monitor_config"
+
+mode "$monitor_config" {
+
+    bindsym g      exec arandr           ;mode "default"
+    bindsym m      exec /home/pascalwhoop/.scripts/bin/screens   mobile ;mode "default"
+    bindsym 1      exec /home/pascalwhoop/.scripts/bin/screens   4k     ;mode "default"
+    bindsym 2      exec /home/pascalwhoop/.scripts/bin/screens   h4k    ;mode "default"
+    bindsym 3      exec /home/pascalwhoop/.scripts/bin/screens   hd     ;mode "default"
+    bindsym 4      exec /home/pascalwhoop/.scripts/bin/screens   hhd    ;mode "default"
+    bindsym Escape                       ;mode "default"
+    bindsym Return                       ;mode "default"
+
+}
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -321,7 +326,7 @@ bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
 
-    bindsym  e      exec mailspring ;mode "default"
+    bindsym  e      exec thunderbird ;mode "default"
     bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
     #bindsym p
     bindsym  x      exec thunar      ;mode "default"
