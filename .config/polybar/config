@@ -5,6 +5,13 @@
 ;   The README contains alot of information
 ;
 ;=====================================================
+[settings]
+screenchange-reload           = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
 [colors]
 color1              = ${xrdb:color1}
 color2              = ${xrdb:color2}
@@ -88,7 +95,7 @@ foreground          = #c7c8c8
 modules-center                     = i3
 ;modules-right = filesystem xbacklight alsa xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-left                       = powermenu mpd  xkeyboard  battery temperature memory cpu xbacklight alsa 
-modules-right                      = wlan date
+modules-right                      = wlan date vpn
 
 tray-position                      = right
 tray-padding                       = 2
@@ -135,6 +142,7 @@ ws-icon-4 = 5;5
 ws-icon-5 = 6;6
 ws-icon-6 = 7;7
 ws-icon-7 = 8;8
+ws-icon-8 = 9;9
 ;ws-icon-0 = 1;
 ;ws-icon-1 = 2;
 ;ws-icon-2 = 3;
@@ -225,6 +233,12 @@ format-prefix                      = " "
 format-prefix-foreground           = ${colors.foreground}
 ;format-underline                   = ${colors.foreground}
 label                              = %percentage_used%%
+
+[module/vpn]
+type = custom/script
+exec = ~/.config/polybar/polybar-scripts/polybar-scripts/vpn-nordvpn-status/vpn-nordvpn-status.sh
+interval = 5 
+
 [module/wlan]
 label-connected                    = "%{T3} %{T-}%essid% "
 label-disconnected                 = "睊 not connected"
@@ -364,12 +378,6 @@ menu-2-0                      = power off
 menu-2-0-exec                 = sudo poweroff
 menu-2-1                      = cancel
 menu-2-1-exec                 = menu-open-0
-[settings]
-screenchange-reload           = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
 [global/wm]
 margin-top                    = 5
 margin-bottom                 = 5
