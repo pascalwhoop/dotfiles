@@ -41,10 +41,9 @@ exec --no-startup-id blueman-applet
 #popup that listens to SU requests and shows a UI
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #file indexing throughout the system
-exec --no-startup-id tracker daemon -s
+#exec --no-startup-id tracker daemon -s
 #exec --no-startup-id clipmenud
 #auto starting work tools
-exec --no-startup-id mattermost-desktop
 
 # ----------------------------------------------------------------------------------------------------------------------
 # gaps and styling

@@ -14,3 +14,7 @@
   insteadOf = https://gitlab.com/
 [url "ssh://git@bitbucket.org/"]
   insteadOf = https://bitbucket.org/
+[url "https://bitbucket.brusselsairport.be/scm/"]
+  insteadOf = ssh://git@bitbucket.brusselsairport.be:22/
+[credential]
+	helper = cache --timeout=43200
