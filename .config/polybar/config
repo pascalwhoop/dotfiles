@@ -237,6 +237,7 @@ label                              = %percentage_used%%
 [module/vpn]
 type = custom/script
 exec = ~/.config/polybar/polybar-scripts/polybar-scripts/vpn-nordvpn-status/vpn-nordvpn-status.sh
+click-left = ~/.config/polybar/polybar-scripts/polybar-scripts/vpn-nordvpn-status/click.sh
 interval = 5 
 
 [module/wlan]
