@@ -34,6 +34,7 @@ exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id pa-applet
 exec --no-startup-id libinput-gestures
 exec_always --no-startup-id ~/.scripts/bin/keyboard
 #bluetooth applet
@@ -114,6 +115,7 @@ for_window [window_type="dialog"] floating enable, position center
 for_window [title="Calculator"] floating enable, position center
 for_window [class="Blueman-manager"] resize   set 800 600
 for_window [class="Blueman-manager"] floating enable
+for_window [title="Microsoft Teams Notification"] floating enable
 
 for_window [class="Pavucontrol"]     resize   set 800 600
 for_window [class="Pavucontrol"]     floating enable

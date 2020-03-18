@@ -5,21 +5,6 @@
 #  ls
 #end
 
-function nativefier-make-app
-	APPPATH=$argv[1];
-	NAME=$argv[2];
-	CATEGORIES=$argv[3]
-	COMMENT=$argv[4];
-	echo "[Desktop Entry]
-	Name=$NAME
-	Comment=$COMMENT
-	Exec=$APPPATH/$NAME %U
-	Terminal=false
-	Type=Application
-	Icon=$APPPATH/resources/app/icon.png
-	Categories=$CATEGORIES;" > "/home/pascalwhoop/.local/share/applications/menulibre-$NAME.desktop"
-end	
-
 
 # quick commit everything and push upstream
 function gitgo
