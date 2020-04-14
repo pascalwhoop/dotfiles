@@ -24,7 +24,7 @@
 	"telemetry.enableTelemetry": false,
 	"terraform.telemetry.enabled": false,
 	"vim.textwidth": 100,
-	"workbench.colorTheme": "Darkula",
+	"workbench.colorTheme": "Default Light+",
 	"workbench.tree.indent": 13,
 	"[markdown]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -97,5 +97,10 @@
 	"terraform.languageServer": {
 		"enabled": true,
 		"args": []
+	},
+	"kite.showWelcomeNotificationOnStartup": false,
+	"python.dataScience.askForKernelRestart": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
 	},
 }

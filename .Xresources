@@ -10,15 +10,30 @@
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
-#define S_background_alpha     [93]#383C4A
-#define S_background    #383C4A
-#define S_primary       #5294E2
-!#define S_primary       #DC1315
+#define arc_bg          #F5F6F7
+
+*background:            arc_bg
+*foreground:            S_base00
+*fadeColor:             S_base3
+*cursorColor:           S_base01
+*pointerColorBackground:S_base1
+*pointerColorForeground:S_base01
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
 !-------------------------------------------------------------------------------
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.dpi:96
+Xft.dpi:125
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
@@ -62,7 +77,7 @@ URxvt*boldFont:              xft:SauceCodePro Nerd Font Mono:size=11,style=Bold
 !URxvt*font:                  xft:Fantasque Sans Mono NF:size=13
 !URxvt*boldFont:              xft:Fantasque Sans Mono NF:size=13,style=Bold
 ! Fix font space
-URxvt*letterSpace:           -1
+!URxvt*letterSpace:           -1
 ! Scrollbar
 URxvt.scrollStyle:           rxvt
 URxvt.scrollBar:             false
@@ -74,7 +89,7 @@ URxvt*matcher.button:        1
 URxvt.matcher.rend.0: Uline Bold fg5
 ! Cursor
 URxvt.cursorBlink:           true
-URxvt.cursorColor:          S_primary
+URxvt.cursorColor:          S_orange
 !URxvt.cursorColor:           #C50ED2
 URxvt.cursorUnderline:       false
 ! Pointer
@@ -83,27 +98,6 @@ URxvt.pointerBlank:          true
 !URxvt*depth:                 32
 
 
-*primary:                S_primary
-!original background solarized
-!*background:            S_base03
-*background:            S_background_alpha
-*background_poly:       S_background
-!*background:            [93]#181B28
-!*background:            [93]#161925
-*foreground:            S_base0
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
-
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
 
 !! black dark/light
 *color0:                S_base02

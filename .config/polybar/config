@@ -28,11 +28,9 @@ color12             = ${xrdb:color12}
 color13             = ${xrdb:color13}
 color14             = ${xrdb:color14}
 color15             = ${xrdb:color15}
-;background has alpha value
-;background     = #d8161925
-background          = ${xrdb:background_poly}
+background          = ${xrdb:background}
 foreground          = ${xrdb:foreground}
-primary             = ${xrdb:primary}
+primary             = ${xrdb:color9}
 foreground-alt      = ${colors.color4}
 secondary           = ${colors.color5}
 alert               = ${colors.color3}
@@ -53,10 +51,10 @@ dpi                 = ${xrdb:Xft.dpi}
 ; several fonts are used to make the icons be displayed by the NF font and the rest by a normal font
 ; This allows for large icons and normal font size
 ; the -3 font is used for the center i3 column to get extra big icons in the workspace switcher
-font-0              = SauceCodePro Nerd Font Mono:size=12
-font-1              = SauceCodePro Nerd Font Mono:size=12
-font-2              = SauceCodePro Nerd Font Mono:size=12
-font-3              = SauceCodePro Nerd Font Mono:size=12
+font-0              = SauceCodePro Nerd Font Mono:size = 12
+font-1              = SauceCodePro Nerd Font Mono:size = 12
+font-2              = SauceCodePro Nerd Font Mono:size = 12
+font-3              = SauceCodePro Nerd Font Mono:size = 12
 ;-----------;
 ; DIMENSION ;
 ;-----------;
@@ -82,10 +80,9 @@ monitor             = ${env:MONITOR:}
 radius              = 0.0
 line-size           = 1
 border-size         = 0
-;border-bottom-size                 = 1
+border-bottom-size  = 1
 background          = ${colors.background}
-;background                         = #181B28 
-foreground          = #c7c8c8
+foreground          = ${colors.foreground}
 ;line-color                         = #f00
 ;border-color                       = #C50ED2
 
@@ -355,6 +352,7 @@ label                         = %temperature-c%
 label-warn                    = %temperature-c%
 label-warn-foreground         = ${colors.secondary}
 ramp-foreground               = ${colors.foreground-alt}
+
 [module/powermenu]
 type                          = custom/menu
 format-spacing                = 1

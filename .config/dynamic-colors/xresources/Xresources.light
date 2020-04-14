@@ -7,7 +7,7 @@
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
-*background:            [93]#ffffff
+*background:            S_base3
 *foreground:            S_base00
 *fadeColor:             S_base3
 *cursorColor:           S_base01

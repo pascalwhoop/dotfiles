@@ -14,7 +14,7 @@
 exec --no-startup-id urxvtd
 # starting any third part applications
 # compositor
-exec --no-startup-id compton
+exec --no-startup-id picom
 # system info
 # avoids tearing
 #exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
@@ -66,6 +66,10 @@ set_from_resource $color13    i3wm.color13    #979695
 set_from_resource $color14    i3wm.color14    #D5BE97
 set_from_resource $color15    i3wm.color15    #95B6DD
 
+set_from_resource $in i3wm.background #000000
+set_from_resource $ac i3wm.foreground #ffffff
+set_from_resource $no i3wm.color9
+
 #set $gaps_norm_inner 20
 #set $gaps_norm_outer -10
 #set $gaps_wide_inner 50
@@ -73,7 +77,7 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 for_window [class="^.*"] border pixel 2
 # minimal space waste but clear separation
-gaps inner 10
+gaps inner 0
 gaps outer 0
 smart_borders on
 
@@ -82,19 +86,13 @@ font xft:SauceCodePro Nerd Font Mono 9
 #for_window [floating] border none       
 
 #taking over the colors from the .Xresources file
-#set_from_resource $in i3wm.background #2F343F
-#set_from_resource $ac i3wm.foreground #c7c8c8   
-#background
-set $in #383C4A
-#foreground
-set $ac #c7c8c8   
 
 # class                 border  backgr. text indicator child_border
-client.focused          $ac     $ac $in $ac $ac
-client.focused_inactive $in     $in $ac $in $in
-client.unfocused        $in     $in $ac $in $in
-client.urgent           $color3 $ac $in $ac $ac
-client.placeholder      $color7 $ac $in $ac $ac
+client.focused          $color9 $ac     $in $ac $color9
+client.focused_inactive $color0 $in     $ac $in $color0
+client.unfocused        $ac     $in     $ac $in $color0
+client.urgent           $in     $no     $in $ac $ac
+client.placeholder      $color7 #0000ff $in $ac $ac
 
 client.background       $ac
 
@@ -119,6 +117,8 @@ for_window [title="Microsoft Teams Notification"] floating enable
 
 for_window [class="Pavucontrol"]     resize   set 800 600
 for_window [class="Pavucontrol"]     floating enable
+
+for_window [class="cairo-dock"] floating enable
 
 for_window [class="phone-cam"] border pixel 0
 for_window [class="phone-cam"] floating enable
@@ -188,7 +188,7 @@ bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set      1
 bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set      100
 bindsym $mod+q                     kill
 bindsym $mod+Return                exec $term
-bindsym $mod+b                     exec --no-startup-id firefox
+bindsym $mod+b                     exec --no-startup-id google-chrome-stable
 #bindsym $mod+t                     exec --no-startup-id TogglDesktop
 #bindsym $mod+b                exec firefox
 #bindsym $mod+x                exex --no-startup-id thunar
