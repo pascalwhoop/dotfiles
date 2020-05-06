@@ -34,6 +34,7 @@ exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id aw-qt
 exec --no-startup-id pa-applet
 exec --no-startup-id libinput-gestures
 exec_always --no-startup-id ~/.scripts/bin/keyboard
