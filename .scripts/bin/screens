@@ -3,15 +3,20 @@ set -ox
 if [[ $1 == 'hhd' ]]; then
     xrandr --output HDMI1 --auto --above eDP1 
 fi
+if [[ $1 == 'hd' ]]; then
+    xrandr --output DP1 --auto --above eDP1 
+fi
 if [[ $1 == 'h4k' ]]; then
     xrandr --output HDMI1 --mode 3840x2160 --above eDP1 --dpi 115
     xrandr --output eDP1 --off
     hidpi
+    i3 restart
 fi
 if [[ $1 == '4k' ]]; then
     xrandr --output DP1 --auto --pos 0x0 --dpi 115  
     xrandr --output eDP1 --off
     hidpi
+    i3 restart
 fi
 if [[ $1 == 'mobile' ]]; then
     xrandr --output eDP1 --auto

@@ -241,8 +241,6 @@ bindsym $mod+Shift+Right move workspace to output right
 #bindsym $mod+u exec --no-startup-id urxvtc
 
 
-
-
 # split in horizontal orientation
 bindsym $mod+n split h
 

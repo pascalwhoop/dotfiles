@@ -91,7 +91,7 @@ foreground          = ${colors.foreground}
 ;--------;
 modules-center                     = i3
 ;modules-right = filesystem xbacklight alsa xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-left                       = powermenu mpd  xkeyboard  battery temperature memory cpu xbacklight alsa 
+modules-left                       = powermenu xkeyboard  battery temperature memory cpu xbacklight alsa 
 modules-right                      = wlan date vpn
 
 tray-position                      = right

@@ -43,6 +43,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-misc'
+Plugin 'fatih/vim-go'
+Plugin 'chriskempson/base16-vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
