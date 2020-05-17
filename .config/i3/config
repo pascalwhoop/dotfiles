@@ -31,6 +31,7 @@ exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 #exec --no-startup-id copyq
 #exec --no-startup-id franz
 #exec --no-startup-id mpDris2
+exec --no-startup-id cryptomator
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst

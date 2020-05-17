@@ -1,13 +1,16 @@
 [user]
-	email = accounts@pascalbrokmeier.de
-	name = Pascal Brokmeier
+	email = git@pascalbrokmeier.de
+	name  = Pascal Brokmeier
+
 [core]
 	editor = vim
 	autocrlf = input
 	excludesfile = ~/.config/.gitignore
 #[credential]
 #	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+
 # Enforce SSH
+#
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 [url "ssh://git@gitlab.com/"]
