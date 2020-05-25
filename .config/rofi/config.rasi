@@ -5,7 +5,7 @@ configuration                   {
 	yoffset:                    0;
 	xoffset:                    0;
 	fixed-num-lines:            true;
-  show-icons:                   true;
+    show-icons:                 false;
 	terminal:                   "rofi-sensible-terminal";
 	ssh-client:                 "ssh";
 	ssh-command:                "{terminal} -e     {ssh-client} {host}";
@@ -40,7 +40,7 @@ configuration                   {
 	window-format:              "{w} - {n} - {t}";
 	click-to-exit:              true;
 	show-match:                 true;
-  theme:                        "mytheme";
+    theme:                      "spotlight";
 	max-history-size:           25;
 	combi-hide-mode-prefix:     false;
 	pid:                        "/run/user/1000/rofi.pid";

@@ -1,3 +1,4 @@
 #!/usr/bin/sh
 source ~/.bash_profile
-rofi -show combi
+rofi -show drun -show-icons
+

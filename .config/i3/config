@@ -11,42 +11,37 @@
 # ----------------------------------------------------------------------------------------------------------------------
 
 
-exec --no-startup-id urxvtd
-# starting any third part applications
 # compositor
-exec --no-startup-id picom
-# system info
-# avoids tearing
-#exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
-exec --no-startup-id redshift-gtk
-#exec --no-startup-id sleep 5 ; aw-qt #activity watch
-# loading data for urxvt and others
-exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
-exec --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
-exec --no-startup-id wal -R
-exec --no-startup-id gufw_icon.sh
-exec_always --no-startup-id ~/.config/polybar/launch
-exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
-exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
+# starting any third part applications
+#auto starting work tools
+#exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\"" # avoids tearing
+#exec --no-startup-id clipmenud
 #exec --no-startup-id copyq
+#exec --no-startup-id cryptomator
 #exec --no-startup-id franz
 #exec --no-startup-id mpDris2
-exec --no-startup-id cryptomator
-exec --no-startup-id gnome-keyring-daemon
-exec --no-startup-id nm-applet
-exec --no-startup-id dunst
-exec --no-startup-id aw-qt
-exec --no-startup-id pa-applet
-exec --no-startup-id libinput-gestures
+#exec --no-startup-id tracker daemon -s #file indexing throughout the system
+
+exec --no-startup-id        /usr/bin/xrdb /home/pascalwhoop/.Xresources
+exec --no-startup-id        /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 #popup that listens to SU requests and shows a UI
+exec --no-startup-id        blueman-applet
+exec --no-startup-id        dunst
+exec --no-startup-id        gnome-keyring-daemon
+exec --no-startup-id        gufw_icon.sh
+exec --no-startup-id        libinput-gestures
+exec --no-startup-id        nextcloud
+exec --no-startup-id        nm-applet
+exec --no-startup-id        pa-applet
+exec --no-startup-id        picom
+exec --no-startup-id        redshift-gtk
+exec --no-startup-id        sleep 5 ; aw-qt #activity watch
+exec --no-startup-id        urxvtd
+exec --no-startup-id        wal -R
+exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources # loading data for urxvt and others
+exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
+#exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
+exec_always --no-startup-id ~/.config/polybar/launch
 exec_always --no-startup-id ~/.scripts/bin/keyboard
-#bluetooth applet
-exec --no-startup-id blueman-applet
-#popup that listens to SU requests and shows a UI
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#file indexing throughout the system
-#exec --no-startup-id tracker daemon -s
-#exec --no-startup-id clipmenud
-#auto starting work tools
 
 # ----------------------------------------------------------------------------------------------------------------------
 # gaps and styling
@@ -213,7 +208,7 @@ bindsym           Shift+$mod+p exec --no-startup-id passmenu
 bindsym $mod+ctrl+d exec /home/pascalwhoop/.scripts/bin/rofi_finder
 bindsym $mod+d exec /home/pascalwhoop/.scripts/bin/i3-rofi
 #clipboard history manager
-bindsym control+$mod+space exec /home/pascalwhoop/.config/clipmenu/run.sh
+bindsym control+$mod+space exec /home/pascalwhoop/.scripts/bin/i3-clipmenu
 
 # change focus
 bindsym $mod+h focus left
