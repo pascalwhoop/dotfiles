@@ -20,12 +20,12 @@ configuration                   {
 	sort:                       true;
 	case-sensitive:             false;
 	cycle:                      true;
-	sidebar-mode:               true;
+	sidebar-mode:               false;
 	eh:                         1;
 	auto-select:                false;
 	parse-hosts:                false;
 	parse-known-hosts:          true;
-  combi-modi:                   "window,drun,ssh";
+    combi-modi:                 "window,drun,ssh";
 	matching:                   "fuzzy";
 	tokenize:                   true;
 	m:                          "-5";
