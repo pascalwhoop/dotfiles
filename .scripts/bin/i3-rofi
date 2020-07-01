@@ -1,4 +1,4 @@
 #!/usr/bin/sh
 source ~/.bash_profile
-rofi -show drun -show-icons
+rofi  -show drun -show-icons -matching normal
 
