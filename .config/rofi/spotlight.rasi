@@ -12,7 +12,7 @@
     //dark
     //-----
     background-color: transparent;
-    background: #06030Ab0;
+    background: #002b36b0;
     //background: #657B83dd;
     foreground: #FFFFFF;
     background-alt: #2D6AD6;
@@ -24,10 +24,10 @@
 
 * {
   border-color: @border-color;
-  text-color: @foreground;
-  spacing: 0;
-  width: 1000px;
-  font: "Fantasque Sans Mono NF 15";
+  text-color:   @foreground;
+  spacing:      0;
+  width:        1000px;
+  font:         "SauceCodePro Nerd Font Mono 15";
 }
 
 #window{
@@ -43,10 +43,10 @@
     }
     
     * {
-        font: "Fantasque Sans Mono NF 12";
+        font: "SauceCodePro Nerd Font Mono 12";
     }
     #entry {
-      font: "Fantasque Sans Mono NF 18";
+      font: "SauceCodePro Nerd Font Mono 18";
     }
 }
 
@@ -62,11 +62,12 @@ inputbar {
   background-color: @background;
 }
 
+
 //search field
 #entry {
   padding: 32px;
   border: 0 1px 0 0;
-  font: "Fantasque Sans Mono NF 25";
+  font: "SauceCodePro Nerd Font Mono 25"; 
 }
 
 listview {

@@ -1,6 +1,6 @@
 configuration                   {
 	modi:                       "combi,window,run,ssh";
-    font:                       "Fantasque Sans Mono NF 13";
+    font:                       "SauceCodePro Nerd Font Mono 15";
 	bw:                         1;
 	yoffset:                    0;
 	xoffset:                    0;
@@ -32,7 +32,7 @@ configuration                   {
 	separator-style:            "dash";
 	hide-scrollbar:             false;
 	fake-transparency:          false;
-	dpi:                        0;
+	dpi:125;
 	threads:                    0;
 	scrollbar-width:            8;
 	scroll-method:              0;
