@@ -1,1 +1,19 @@
-/usr/lib/systemd/user/clipmenud.service
+[Unit]
+Description=Clipmenu daemon
+
+[Service]
+ExecStart=/usr/bin/clipmenud
+Restart=always
+RestartSec=500ms
+Environment=DISPLAY=:0
+Environment=CM_DIR=/home/pascalwhoop/.config/clipmenu/
+
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+RestrictAddressFamilies=
+RestrictRealtime=yes
+
+[Install]
+WantedBy=default.target
