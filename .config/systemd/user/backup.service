@@ -1,6 +1,0 @@
-[Unit]
-Description=Executes a backup of the hard drive to backblaze
- 
-[Service]
-Type=oneshot
-ExecStart=/home/pascalwhoop/.scripts/backup_backblaze.sh
