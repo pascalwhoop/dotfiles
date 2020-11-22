@@ -1,25 +1,26 @@
 * {
     //light
     //-----
-    //background-color: transparent;
-    //foreground: #657b83;
-    //background-alt: #2D6AD6;
-    //foreground-alt: #FFFFFF;
-    //border-color: @background;
-    //border-color: @background;
-    //spacing: 2;657b83
-
-    //dark
-    //-----
     background-color: transparent;
-    background: #002b36b0;
-    //background: #657B83dd;
-    foreground: #FFFFFF;
+    background: #fdf6e3;
+    foreground: #657b83;
     background-alt: #2D6AD6;
     foreground-alt: #FFFFFF;
     border-color: @background;
     border-color: @background;
     spacing: 2;
+
+    //dark
+    //-----
+    //background-color: transparent;
+    //background: #002b36b0;
+    ////background: #657B83dd;
+    //foreground: #FFFFFF;
+    //background-alt: #2D6AD6;
+    //foreground-alt: #FFFFFF;
+    //border-color: @background;
+    //border-color: @background;
+    //spacing: 2;
 }
 
 * {

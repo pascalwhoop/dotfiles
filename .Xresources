@@ -10,14 +10,16 @@
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
-#define arc_bg          #F5F6F7
+!#define arc_bg          #F5F6F7
+#define arc_bg          #383C4A
+#define sol_bg         #181B28
 
 *background:            arc_bg
-*foreground:            S_base00
-*fadeColor:             S_base3
-*cursorColor:           S_base01
-*pointerColorBackground:S_base1
-*pointerColorForeground:S_base01
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
 
 #define S_yellow        #b58900
 #define S_orange        #cb4b16
