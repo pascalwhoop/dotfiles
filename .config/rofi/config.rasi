@@ -32,7 +32,7 @@ configuration                   {
 	separator-style:            "dash";
 	hide-scrollbar:             false;
 	fake-transparency:          false;
-	dpi:125;
+	dpi:96;
 	threads:                    0;
 	scrollbar-width:            8;
 	scroll-method:              0;

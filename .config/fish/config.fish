@@ -13,9 +13,6 @@ end
 #disable Ctrl-S for freezing the shell
 #stty -ixon
 
-#virtualfish tooling
-eval (python -m virtualfish auto_activation)
-
 #enable fzf
 #https://wiki.archlinux.org/index.php/Fzf#fish
 fzf_key_bindings

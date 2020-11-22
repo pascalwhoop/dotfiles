@@ -21,3 +21,5 @@
   insteadOf = ssh://git@bitbucket.brusselsairport.be:22/
 [credential]
 	helper = cache --timeout=43200
+[pull]
+	rebase = true

@@ -24,7 +24,7 @@
 	"telemetry.enableTelemetry": false,
 	"terraform.telemetry.enabled": false,
 	"vim.textwidth": 100,
-	"workbench.colorTheme": "Default Light+",
+	"workbench.colorTheme": "Better Solarized Dark",
 	"workbench.tree.indent": 13,
 	"[markdown]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -34,7 +34,7 @@
 	},
 	"editor.fontFamily": "'SauceCodePro Nerd Font Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 	"editor.fontSize": 12,
-"window.zoomLevel": 1.5,
+"window.zoomLevel": 1,
 	"vs-kubernetes": {
 		"vs-kubernetes.minikube-path": "/home/pascalwhoop/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
 		"vs-kubernetes.minikube-path.linux": "/home/pascalwhoop/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
@@ -96,8 +96,10 @@
 		]
 	},
 	"terraform.languageServer": {
-		"enabled": true,
-		"args": []
+		"external": true,
+		"args": [
+			"serve"
+		]
 	},
 	"kite.showWelcomeNotificationOnStartup": false,
 	"python.dataScience.askForKernelRestart": false,

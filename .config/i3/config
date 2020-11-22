@@ -1,4 +1,4 @@
-# ======================================================================================================================
+
 #
 # i3 config file (v4)
 # follow me on twitter or youtube
@@ -85,7 +85,7 @@ font xft:SauceCodePro Nerd Font Mono 9
 #taking over the colors from the .Xresources file
 
 # class                 border  backgr. text indicator child_border
-client.focused          $color9 $ac     $in $ac $color9
+client.focused          $color4 $ac     $in $ac $color4
 client.focused_inactive $color0 $in     $ac $in $color0
 client.unfocused        $ac     $in     $ac $in $color0
 client.urgent           $in     $no     $in $ac $ac
@@ -112,8 +112,8 @@ for_window [class="Blueman-manager"] resize   set 800 600
 for_window [class="Blueman-manager"] floating enable
 for_window [title="Microsoft Teams Notification"] floating enable
 
-for_window [class="Pavucontrol"]     resize   set 800 600
-for_window [class="Pavucontrol"]     floating enable
+for_window [class="Pavucontrol"] resize   set 800 600
+for_window [class="Pavucontrol"] floating enable
 
 for_window [class="cairo-dock"] floating enable
 
@@ -123,6 +123,20 @@ for_window [class="phone-cam"] sticky enable
 for_window [class="phone-cam"] floating_minimum_size 670 x 378
 for_window [class="phone-cam"] floating_maximum_size 670 x 378
 no_focus   [class="phone-cam"] 
+
+#for_window [class="crx_eppojlglocelodeimnohnlnionkobfln"] border pixel 0
+#for_window [class="crx_eppojlglocelodeimnohnlnionkobfln"] floating enable
+#for_window [class="crx_eppojlglocelodeimnohnlnionkobfln"] sticky enable
+#for_window [class="crx_eppojlglocelodeimnohnlnionkobfln"] floating_minimum_size 670 x 378
+#for_window [class="crx_eppojlglocelodeimnohnlnionkobfln"] floating_maximum_size 670 x 378
+#no_focus   [class="crx_eppojlglocelodeimnohnlnionkobfln"] 
+
+for_window [title="Netflix"] border pixel 0
+for_window [title="Netflix"] floating enable
+for_window [title="Netflix"] sticky enable
+for_window [title="Netflix"] floating_minimum_size 670 x 378
+for_window [title="Netflix"] floating_maximum_size 670 x 378
+no_focus   [title="Netflix"] 
 
 for_window [title="QtWebFlix"] floating enable
 for_window [title="QtWebFlix"] sticky enable
@@ -144,9 +158,15 @@ assign [class="Slack"]           2
 assign [class="music"]           5
 assign [class="spotify"]         5
 
-# ----------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+# Quick jump to favorite applications
+# ------------------------------------------------------------------------------
+# TODO
+
+
+# ------------------------------------------------------------------------------
 # Monitor configuration (workspace -> monitor)
-# ----------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 workspace 1 output eDP1
 workspace 2 output eDP1
@@ -322,8 +342,8 @@ bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
 
-    bindsym  e      exec thunderbird ;mode "default"
-    bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
+    bindsym  e      exec thunderbird   ;mode "default"
+    bindsym  m      exec spotify        ;mode "default"
     #bindsym p
     bindsym  x      exec thunar      ;mode "default"
     bindsym  r      exec $term       -e    ranger  "/"   ;mode "default"
