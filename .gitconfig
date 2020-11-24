@@ -1,6 +1,13 @@
 [user]
 	email = git@pascalbrokmeier.de
 	name  = Pascal Brokmeier
+	signingkey = BB6E506D63C258297A2ADA481C49A27D63A8B5A0
+[includeIf "gitdir:~/Documents/Code/work/"]
+    path = ~/.config/git/gitconfig-work
+[includeIf "gitdir:~/Documents/Code/play/"]
+    path = ~/.config/git/gitconfig-play
+[commit]
+    gpgSign = true
 
 [core]
 	editor = vim
@@ -11,8 +18,8 @@
 
 # Enforce SSH
 #
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
+#[url "ssh://git@github.com/"]
+#  insteadOf = https://github.com/
 [url "ssh://git@gitlab.com/"]
   insteadOf = https://gitlab.com/
 [url "ssh://git@bitbucket.org/"]
@@ -21,3 +28,5 @@
   insteadOf = ssh://git@bitbucket.brusselsairport.be:22/
 [credential]
 	helper = cache --timeout=43200
+[gpg]
+	program = gpg2

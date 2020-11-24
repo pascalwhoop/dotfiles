@@ -25,7 +25,6 @@ alias makesmartpl "~/.config/mpd/generate_playlists.sh"
 ###############################
 
 alias ll 'ls -laGh'
-alias open "xdg-open"
 
 #Display bright / dark theme
 ###############################
@@ -34,20 +33,8 @@ alias light '~/.scripts/colors.sh light'
 
 # development tools
 ###############################
-alias clearvim "rm -r /home/pascalwhoop/.vim/sessions\`pwd\`"
 alias rmswp 'find ./ -name "*.swp" -exec rm {} \;'
 
 #yaourt shortcuts
 alias y yaourt
 alias pacmanclean "sudo pacman -Rsn (pacman -Qqdt)"
-
-# old / unused aliases
-###############################
-#alias jupystart "nvidia-docker start jupyter ;and docker exec -it jupyter bash -c \"jupyter notebook list\""
-#alias editconky "vim ~/.config/conky/pascalwhoop/conky.conf"
-#alias plexup "docker container start plex"
-#alias plexdown "docker container stop plex"
-#alias jnbup "docker container start tensorflow-notebook"
-#alias kub "kubectl"
-#alias goagent "cd ~/Documents/Code/University/powerTAC/python-agent ;and activate"
-#alias pushagent "rsync --exclude "venv/" --exclude ".git/" --exclude ".idea/" --exclude "**/__pycache__"  --exclude tensorboard --exclude data -av /home/pascalwhoop/Documents/Code/University/powerTAC/python-agent/ pascalwhoop@25.33.211.37:/home/pascalwhoop/Documents/Code/University/powerTAC/python-agent"

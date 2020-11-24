@@ -11,14 +11,14 @@ call vundle#begin()
 " add vim plugins here
 "
 "Plugin 'dbmrq/vim-ditto'
-"Plugin 'jceb/vim-orgmode'
 "Plugin 'powerman/vim-plugin-autosess'
 "Plugin 'xolox/vim-easytags'
-"Plugin 'ActivityWatch/aw-watcher-vim'
-Plugin 'Chiel92/vim-autoformat'
+"Plugin 'Chiel92/vim-autoformat'
 Plugin 'Konfekt/FastFold' "a speed improvement for manual folds
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'SirVer/ultisnips'
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
+"Plugin 'SirVer/ultisnips'
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
@@ -26,15 +26,15 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'ap/vim-css-color'
 Plugin 'ctrlp.vim'
 Plugin 'dag/vim-fish'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'dbeniamine/todo.txt-vim'
+"Plugin 'davidhalter/jedi-vim'
+"Plugin 'dbeniamine/todo.txt-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/goyo.vim',
 Plugin 'junegunn/vim-easy-align'
-Plugin 'lervag/vimtex'
+"Plugin 'lervag/vimtex'
 Plugin 'majutsushi/tagbar'
 Plugin 'plasticboy/vim-markdown',
-"Plugin 'python-mode/python-mode'
+Plugin 'python-mode/python-mode'
 Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/nerdtree'
@@ -42,9 +42,9 @@ Plugin 'surround.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-speeddating'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'xolox/vim-misc'
-Plugin 'fatih/vim-go'
-Plugin 'chriskempson/base16-vim'
+"Plugin 'xolox/vim-misc'
+"Plugin 'fatih/vim-go'
+"Plugin 'chriskempson/base16-vim'
 
 
 " All of your Plugins must be added before the following line

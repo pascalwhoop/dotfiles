@@ -7,6 +7,7 @@ let g:pymode_rope_rename_bind = '<C-c>rr'
 let g:pymode_rope_organize_imports_bind = '<C-c>ro'
 let g:pymode_rope_extract_method_bind = '<C-c>rm'
 let g:pymode_rope_extract_variable_bind = '<C-c>rl'
+let g:pymode_options_max_line_length = 0
 "au BufNewFile,BufRead *.py
 "set tabstop=4
 "set softtabstop=4
