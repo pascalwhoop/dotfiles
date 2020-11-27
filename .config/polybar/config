@@ -59,7 +59,7 @@ font-3              = SauceCodePro Nerd Font Mono:size = 12
 ; DIMENSION ;
 ;-----------;
 ;height=${xrdb:polybar.height}
-height              = 30
+height              = 45
 width               = 100%
 padding-left        = 0
 padding-right       = 2

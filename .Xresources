@@ -11,7 +11,7 @@
 #define S_base3         #fdf6e3
 
 !#define arc_bg          #F5F6F7
-#define arc_bg          #383C4A
+#define arc_bg          #282C36
 #define sol_bg         #181B28
 
 *background:            arc_bg
@@ -35,7 +35,7 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.dpi:96
+Xft.dpi:180
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true

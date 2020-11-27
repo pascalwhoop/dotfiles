@@ -24,19 +24,16 @@
 
 exec --no-startup-id        /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id        /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 #popup that listens to SU requests and shows a UI
-exec --no-startup-id        blueman-applet
 exec --no-startup-id        dunst
 exec --no-startup-id        gnome-keyring-daemon
 exec --no-startup-id        gufw_icon.sh
-exec --no-startup-id        libinput-gestures
 exec --no-startup-id        nextcloud
 exec --no-startup-id        nm-applet
 exec --no-startup-id        pa-applet
 exec --no-startup-id        picom
-exec --no-startup-id        redshift-gtk
-exec --no-startup-id        sleep 5 ; aw-qt #activity watch
 exec --no-startup-id        urxvtd
 exec --no-startup-id        wal -R
+exec --no-startup-id        ~/.scripts/mbp16_res.sh
 exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources # loading data for urxvt and others
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 #exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
