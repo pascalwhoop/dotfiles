@@ -34,7 +34,6 @@ exec --no-startup-id        picom
 exec --no-startup-id        urxvtd
 exec --no-startup-id        wal -R
 exec --no-startup-id        ~/.scripts/mbp16_res.sh
-exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources # loading data for urxvt and others
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 #exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 exec_always --no-startup-id ~/.config/polybar/launch
@@ -202,7 +201,7 @@ bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set      1
 bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set      100
 bindsym $mod+q                     kill
 bindsym $mod+Return                exec $term
-bindsym $mod+b                     exec --no-startup-id google-chrome-stable
+bindsym $mod+b                     exec --no-startup-id firefox
 #bindsym $mod+t                     exec --no-startup-id TogglDesktop
 #bindsym $mod+b                exec firefox
 #bindsym $mod+x                exex --no-startup-id thunar

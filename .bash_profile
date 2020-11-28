@@ -1,12 +1,13 @@
 #CUDA environment variables
 #setting display env variable for tmux
 export CM_DIR="/home/pascalwhoop/.config/clipmenu"
-export DISPLAY=":0"
+#export DISPLAY=":0"
 export DYNAMIC_COLORS_ROOT="/home/pascalwhoop/.config/dynamic-colors/"
 export EDITOR=/usr/bin/vim
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export XDG_CONFIG_HOME="/home/pascalwhoop/.config"
 export XDG_DATA_HOME="/home/pascalwhoop/.local/share"
+export WLR_NO_HARDWARE_CURSORS=1
 
 #adding ruby gems
 export PATH="/home/pascalwhoop/.gem/ruby/2.5.0/bin:$PATH"
