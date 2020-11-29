@@ -1,6 +1,0 @@
-[Unit]
-Description=sway
-[Service]
-ExecStart=sway 2>/tmp/sway.log
-[Install]
-WantedBy=default.target

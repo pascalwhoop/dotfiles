@@ -12,7 +12,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term urxvt
+set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | dmenu | xargs swaymsg exec
@@ -28,12 +28,11 @@ output * bg ~/.config/wall.png fill
 
 exec --no-startup-id        /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id        /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 #popup that listens to SU requests and shows a UI
-exec --no-startup-id        dunst
+#exec --no-startup-id        dunst
 exec --no-startup-id        gnome-keyring-daemon
 exec --no-startup-id        nextcloud
-exec --no-startup-id        nm-applet
-exec --no-startup-id        pa-applet
-exec --no-startup-id        urxvtd
+#exec --no-startup-id        nm-applet
+#exec --no-startup-id        pa-applet
 
 #exec_always --no-startup-id ~/.config/polybar/launch
 # output Virtual-1 pos 0 0 res 3072x1920
@@ -77,10 +76,11 @@ focus_follows_mouse yes
 # Custom:
 #
 bindsym Shift+$mod+p exec --no-startup-id passmenu
-bindsym $mod+b       exec --no-startup-id firefox
+bindsym $mod+b       exec --no-startup-id GDK_BACKEND=wayland MOZ_ENABLE_WAYLAND=1 firefox
 bindsym $mod+ctrl+d exec /home/pascalwhoop/.scripts/bin/rofi_finder
 bindsym $mod+d exec /home/pascalwhoop/.scripts/bin/i3-rofi
 bindsym control+$mod+space exec /home/pascalwhoop/.scripts/bin/i3-clipmenu
+bindsym $mod+Shift+r exec --no-startup-id swaymsg reload
 
 #
 # Basics:
@@ -130,6 +130,12 @@ bindsym control+$mod+space exec /home/pascalwhoop/.scripts/bin/i3-clipmenu
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+    bindsym $mod+Ctrl+h resize shrink width  3 px or 3 ppt
+    bindsym $mod+Ctrl+j resize grow   height 3 px or 3 ppt
+    bindsym $mod+Ctrl+k resize shrink height 3 px or 3 ppt
+    bindsym $mod+Ctrl+l resize grow   width  3 px or 3 ppt
+
 #
 # Workspaces:
 #
@@ -199,22 +205,23 @@ bindsym control+$mod+space exec /home/pascalwhoop/.scripts/bin/i3-clipmenu
 # quick edit many config settings
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $quick_config Quick Config: [b]menu [f]ish [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
+set $quick_config Quick Config: [b]menu [f]ish [v]imrc [s]way [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
 bindsym $mod+c mode "$quick_config"
 
 mode "$quick_config" {
 
-    bindsym b exec $term -e bmenu                                      ;mode "default"
-    bindsym v exec $term -e vim ~/.vim/startup                         ;mode "default"
-    bindsym f exec $term -e vim ~/.config/fish/                        ;mode "default"
-    bindsym i exec $term -e vim ~/.config/i3/config                    ;mode "default"
-    bindsym x exec $term -e vim ~/.Xresources                          ;mode "default"
-    bindsym c exec $term -e vim ~/.config/conky/pascalwhoop            ;mode "default"
-    bindsym p exec $term -e vim ~/.config/polybar/config               ;mode "default"
-    bindsym r exec $term -e vim ~/.config/ranger/rc.conf               ;mode "default"
-    bindsym a exec ~/.config/i3/apply.sh ;mode "default"
-    bindsym Escape mode "default"        ;mode "default"
-    bindsym Return mode "default"        ;mode "default"
+    bindsym b      exec $term                 -e    bmenu ;mode                       "default"
+    bindsym v      exec $term                 -e    vim   ~/.vim/startup              ;mode "default"
+    bindsym f      exec $term                 -e    vim   ~/.config/fish/             ;mode "default"
+    bindsym i      exec $term                 -e    vim   ~/.config/i3/config         ;mode "default"
+    bindsym s      exec $term                 -e    vim   ~/.config/sway/config       ;mode "default"
+    bindsym x      exec $term                 -e    vim   ~/.Xresources               ;mode "default"
+    bindsym c      exec $term                 -e    vim   ~/.config/conky/pascalwhoop ;mode "default"
+    bindsym p      exec $term                 -e    vim   ~/.config/polybar/config    ;mode "default"
+    bindsym r      exec $term                 -e    vim   ~/.config/ranger/rc.conf    ;mode "default"
+    bindsym a      exec ~/.config/i3/apply.sh ;mode "default"
+    bindsym Escape mode "default"             ;mode "default"
+    bindsym Return mode "default"             ;mode "default"
 
 }
 
@@ -292,12 +299,13 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    status_command i3status
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        #statusline #ffffff
+        #background #323232
+        #inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
 
