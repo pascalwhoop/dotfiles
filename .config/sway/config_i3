@@ -1,0 +1,405 @@
+# ======================================================================================================================
+# i3 config file (v4)
+# follow me on twitter or youtube
+# twitter: https://twitter.com/PascalBrokmeier
+# youtube: https://www.youtube.com/channel/UCEn3QF8VlZzw0Se19GRAo6g
+# ======================================================================================================================
+
+# ----------------------------------------------------------------------------------------------------------------------
+# autostart applications
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# starting any third part applications
+#exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
+exec --no-startup-id redshift-gtk
+#exec --no-startup-id sleep 5 ; aw-qt #activity watch
+# loading data for urxvt and others
+exec_always --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
+exec --no-startup-id /usr/bin/xrdb /home/pascalwhoop/.Xresources
+#---exec --no-startup-id wal -R
+#---exec_always --no-startup-id ~/.config/polybar/launch
+#---exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
+#---exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
+#exec --no-startup-id copyq
+#exec --no-startup-id franz
+#---exec --no-startup-id mpDris2
+exec --no-startup-id gnome-keyring-daemon
+#---exec --no-startup-id nm-applet
+#---exec --no-startup-id dunst
+exec --no-startup-id libinput-gestures
+exec_always --no-startup-id ~/.scripts/remaps.sh
+#bluetooth applet
+exec --no-startup-id blueman-applet
+#popup that listens to SU requests and shows a UI
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#file indexing throughout the system
+exec --no-startup-id tracker daemon -s
+#exec --no-startup-id clipmenud
+
+# ----------------------------------------------------------------------------------------------------------------------
+# gaps and styling
+# ----------------------------------------------------------------------------------------------------------------------
+
+#---set_from_resource $color1     i3wm.color1     #2e2d2d
+#---set_from_resource $color2     i3wm.color2     #08A2FB
+#---set_from_resource $color3     i3wm.color3     #63B1F1
+#---set_from_resource $color4     i3wm.color4     #6BC6F8
+#---set_from_resource $color5     i3wm.color5     #979695
+#---set_from_resource $color6     i3wm.color6     #D5BE97
+#---set_from_resource $color7     i3wm.color7     #95B6DD
+#---set_from_resource $color8     i3wm.color8     #cbddeb
+#---set_from_resource $color9     i3wm.color9     #8e9aa4
+#---set_from_resource $color10    i3wm.color10    #08A2FB
+#---set_from_resource $color11    i3wm.color11    #63B1F1
+#---set_from_resource $color12    i3wm.color12    #6BC6F8
+#---set_from_resource $color13    i3wm.color13    #979695
+#---set_from_resource $color14    i3wm.color14    #D5BE97
+#---set_from_resource $color15    i3wm.color15    #95B6DD
+
+#set $gaps_norm_inner 20
+#set $gaps_norm_outer -10
+#set $gaps_wide_inner 50
+#set $gaps_wide_outer 50
+
+for_window [class="^.*"] border pixel 2
+# minimal space waste but clear separation
+#gaps inner 10
+#gaps outer 0
+smart_borders on
+
+#font
+font xft:FantasqueSansMono NF 11         
+#for_window [floating] border none       
+
+#taking over the colors from the .Xresources file
+#set_from_resource $in i3wm.background #2F343F
+#set_from_resource $ac i3wm.foreground #c7c8c8   
+#background
+set $in #181B28
+#foreground
+set $ac #c7c8c8   
+
+# class                 border  backgr. text indicator child_border
+client.focused          $ac $ac $in $ac $ac
+client.focused_inactive $in $in $ac $in $in
+client.unfocused        $in $in $ac $in $in
+client.urgent           $in $ac $in $ac $ac
+client.placeholder      $in $ac $in $ac $ac
+
+client.background       $ac
+
+# ----------------------------------------------------------------------------------------------------------------------
+# behavior and assignment
+# ----------------------------------------------------------------------------------------------------------------------
+# to figure out info about a window use `xprop`
+workspace_auto_back_and_forth yes
+focus_follows_mouse yes
+
+#floating_minimum_size 1500 x 800 
+#
+for_window [class="Tor Browser"] floating enable
+for_window [class="cairo-dock"] floating enable
+for_window [class="plank"] floating enable
+
+for_window [class="Blueman-manager"] resize   set 800 600
+for_window [class="Blueman-manager"] floating enable
+
+for_window [class="Pavucontrol"]     resize   set 800 600
+for_window [class="Pavucontrol"]     floating enable
+
+for_window [class="phone-cam"] border pixel 0
+for_window [class="phone-cam"] floating enable
+for_window [class="phone-cam"] sticky enable
+for_window [class="phone-cam"] floating_minimum_size 670 x 378
+for_window [class="phone-cam"] floating_maximum_size 670 x 378
+no_focus   [class="phone-cam"] 
+
+for_window [title="QtWebFlix"] floating enable
+for_window [title="QtWebFlix"] sticky enable
+for_window [title="QtWebFlix"] floating_maximum_size 300 x 250
+for_window [title="QtWebFlix"] floating_minimum_size 300 x 250
+
+#assign [class="URxvt"]          2
+assign [class="TelegramDesktop"] 2
+assign [class="Franz"]           2
+assign [class="Trello"]          9
+assign [class="Signal"]          2
+assign [class="WhatsApp"]        2
+assign [class="Mail"]            2
+assign [class="discord"]         2
+assign [class="Gitter"]          2
+assign [class="Slack"]           2
+assign [class="pycharm"]        3
+assign [class="intellij"]       4
+assign [class="music"]           5
+assign [class="spotify"]         5
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Monitor configuration (workspace -> monitor)
+# ----------------------------------------------------------------------------------------------------------------------
+
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output eDP1
+workspace 4 output HDMI1
+workspace 5 output eDP1
+workspace 6 output HDMI1
+workspace 7 output HDMI1
+workspace 8 output HDMI1
+workspace 9 output eDP1
+
+#workspace "10" output HDMI1
+#workspace 3 output VIRTUAL1
+#workspace 4 output VIRTUAL1
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# bindings keys
+# ----------------------------------------------------------------------------------------------------------------------
+
+set $mod mod4
+#set $app 133
+set $term --no-startup-id urxvt
+floating_modifier $mod
+
+#media keys
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle
+bindsym XF86AudioPlay         exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev         exec --no-startup-id playerctl previous
+bindsym XF86AudioNext         exec --no-startup-id playerctl next
+bindsym XF86MonBrightnessDown exec xbacklight      -dec 5 
+bindsym XF86MonBrightnessUp   exec xbacklight      -inc 10
+bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set 1 
+bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set 100
+bindsym $mod+q                kill
+bindsym $mod+Return           exec --no-startup-id urxvt
+bindsym $mod+b                exec brave
+#bindsym $mod+b                exec firefox
+#bindsym $mod+x                exex --no-startup-id thunar
+
+# kill focused window
+#bindsym $mod+Shift+q kill
+
+# screenshotting ability
+bindsym --release $mod+Ctrl+4 exec --no-startup-id "maim -s > ~/Pictures/Screenshots/`date +%Y-%m-%d_%H-%M-%S`.jpg"
+bindsym --release $mod+Ctrl+5 exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
+bindsym           Shift+$mod+p exec --no-startup-id passmenu
+
+# start dmenu (a program launcher)
+#bindsym $mod+d exec dmenu_run
+
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Mod1+space exec dmenu_extended_run
+bindsym $mod+d exec rofi -show combi
+#clipboard history manager
+bindsym control+$mod+space exec /home/pascalwhoop/.config/clipmenu/run.sh
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# moving windows with the arrow keys will move them between outputs
+bindsym $mod+Shift+Left  move workspace to output left
+bindsym $mod+Shift+Down  move workspace to output down
+bindsym $mod+Shift+Up    move workspace to output up
+bindsym $mod+Shift+Right move workspace to output right
+
+
+# split in horizontal orientation
+bindsym $mod+n split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# ----------------------------------------------------------------------------------------------------------------------
+# quick open many typical application scenarios
+# ----------------------------------------------------------------------------------------------------------------------
+
+#set $quick_start [t]hesis [p]owertac [w]ebsite
+#bindsym $mod+c mode "$quick_start"
+#
+#mode "$quick_start" {
+#    bindsym t exec $term -e vim ~/Documents/Code/University/masterthesis
+#    bindsym p exec $term -e cd ~/Documents/Code/University/powerTAC/ ; ranger
+#    bindsym w exec $term -e vim ~/dotfiles/.Xresources
+#    bindsym Escape mode "default"
+#    bindsym Return mode "default"
+#}
+#---set $monitor_config Monitor Config: [g]ui [m]obile [1]uhd-USBC [2]uhd-HDMI [3]hd-USB [4]hd-HDMI [o]ff
+#---bindsym $mod+m mode "$monitor_config"
+
+#---mode "$monitor_config" {
+
+#---    bindsym g      exec arandr           ;mode "default"
+#---    bindsym m      exec screens   mobile ;mode "default"; restart
+#---    bindsym 1      exec screens   4k     ;mode "default"; restart
+#---    bindsym 2      exec screens   h4k    ;mode "default"; restart
+#---    bindsym 3      exec screens   hd     ;mode "default"; restart
+#---    bindsym 4      exec screens   hhd    ;mode "default"; restart
+#---    bindsym Escape                       ;mode "default"
+#---    bindsym Return                       ;mode "default"
+
+#---}
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# quick edit many config settings
+# ----------------------------------------------------------------------------------------------------------------------
+
+#---set $quick_config Quick Config: [b]menu [f]ish [v]imrc [i]3 [r]anger [c]onky [p]olybar [x]resources [a]pply
+#---bindsym $mod+c mode "$quick_config"
+
+#---mode "$quick_config" {
+
+#---    bindsym b exec $term -e bmenu                                      ;mode "default"
+#---    bindsym v exec $term -e vim ~/.vim/startup                         ;mode "default"
+#---    bindsym f exec $term -e vim ~/.config/fish/                        ;mode "default"
+#---    bindsym i exec $term -e vim ~/.config/i3/config                    ;mode "default"
+#---    bindsym x exec $term -e vim ~/.Xresources                          ;mode "default"
+#---    bindsym c exec $term -e vim ~/.config/conky/pascalwhoop            ;mode "default"
+#---    bindsym p exec $term -e vim ~/.config/polybar/config               ;mode "default"
+#---    bindsym r exec $term -e vim ~/.config/ranger/rc.conf               ;mode "default"
+#---    bindsym a exec ~/.config/i3/apply.sh ;mode "default"
+#---    bindsym Escape mode "default"        ;mode "default"
+#---    bindsym Return mode "default"        ;mode "default"
+
+#---}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# quick launch many applications
+# ----------------------------------------------------------------------------------------------------------------------
+
+#---set $mode_launcher Launch: [e]mail [m]usic [n]otes
+#---bindsym $mod+o mode "$mode_launcher"
+
+#---mode         "$mode_launcher" {
+
+#---    bindsym  e      exec mailspring ;mode "default"
+#---    bindsym  m      exec $term       -e    ncmpcpp ;mode "default"
+#---    #bindsym p
+#---    bindsym  x      exec thunar      ;mode "default"
+#---    bindsym  r      exec $term       -e    ranger  "/"   ;mode "default"
+#---    bindsym n exec --no-startup-id code /home/pascalwhoop/Documents/Syncthing/Default\ Folder/Notebooks ;mode "default"
+#---    bindsym  Escape mode "default"
+#---    bindsym  Return mode "default"
+
+#---}
+
+# ----------------------------------------------------------------------------------------------------------------------
+# quick power menu
+# ----------------------------------------------------------------------------------------------------------------------
+#
+#---set $mode_system System [d]ark [l]ock, [s]uspend, [h]ibernate, [r]eboot, [p]owerdown
+#---mode "$mode_system" {
+#---    bindsym d exec --no-startup-id xset dpms force off, mode "default"
+#---    bindsym l exec --no-startup-id i3exit lock, mode "default"
+#---    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#---    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+#---    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+#---    bindsym p exec --no-startup-id i3exit shutdown, mode "default"
+
+#---    # back to normal: Enter or Escape
+#---    bindsym Return mode "default"
+#---    bindsym Escape mode "default"
+#---}
+#---bindsym $mod+P mode "$mode_system"
+
+# ----------------------------------------------------------------------------------------------------------------------
+# quick VM menu... TODO 
+# ----------------------------------------------------------------------------------------------------------------------
+#
+#---set $mode_vm vm [w]indows [m]anjaro 
+#---mode "$mode_vm" {
+#---    bindsym w exec --no-startup-id sudo virsh start win10, sudo virt-viewer -f win10, mode "default"
+#---    bindsym m exec --no-startup-id sudo virsh start manjaro, sudo virt-viewer -f manjaro, mode "default"
+
+#---    # back to normal: Enter or Escape
+#---    bindsym Return mode "default"
+#---    bindsym Escape mode "default"
+#---}
+#---bindsym $mod+i mode "$mode_vm"
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# workspaces
+# ----------------------------------------------------------------------------------------------------------------------
+
+# switch to workspace
+#---bindsym $mod+1 workspace 1
+#---bindsym $mod+2 workspace 2
+#---bindsym $mod+3 workspace 3
+#---bindsym $mod+4 workspace 4
+#---bindsym $mod+5 workspace 5
+#---bindsym $mod+6 workspace 6
+#---bindsym $mod+7 workspace 7
+#---bindsym $mod+8 workspace 8
+#---bindsym $mod+9 workspace 9
+#---bindsym $mod+0 workspace 10
+
+# ----------------------------------------------------------------------------------------------------------------------
+# resizing configuration
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# move focused container to workspace
+#---bindsym $mod+Shift+1 move container to workspace 1
+#---bindsym $mod+Shift+2 move container to workspace 2
+#---bindsym $mod+Shift+3 move container to workspace 3
+#---bindsym $mod+Shift+4 move container to workspace 4
+#---bindsym $mod+Shift+5 move container to workspace 5
+#---bindsym $mod+Shift+6 move container to workspace 6
+#---bindsym $mod+Shift+7 move container to workspace 7
+#---bindsym $mod+Shift+8 move container to workspace 8
+#---bindsym $mod+Shift+9 move container to workspace 9
+#---bindsym $mod+Shift+0 move container to workspace 10
+
+#---bindsym $mod+Ctrl+h resize shrink width 3 px or 3 ppt
+#---bindsym $mod+Ctrl+j    resize grow height 3 px or 3 ppt
+#---bindsym $mod+Ctrl+k  resize shrink height 3 px or 3 ppt
+#---bindsym $mod+Ctrl+l  resize grow width 3 px or 3 ppt

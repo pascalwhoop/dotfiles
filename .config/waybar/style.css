@@ -1,0 +1,126 @@
+* {
+	font-size: 11px;
+	font-family: SauceCodePro Nerd Font Mono;
+}
+
+window * {
+	font-size: 14px;
+}
+
+window#waybar {
+	/*background: #2e3440;*/
+	background: #282C36;
+	color: #d8dee9;
+}
+
+#custom-pacman,
+#disk.1,
+#disk.2,
+#pulseaudio,
+#memory,
+#cpu {
+	font-family: "Symbols Nerd Font";
+}
+
+#workspaces,
+#mode,
+#window,
+#taskbar,
+#idle_inhibitor,
+#custom-weather,
+#pulseaudio,
+#memory,
+#cpu,
+#clock,
+#battery,
+#backlight,
+#disk,
+#custom-pacman,
+#custom-aur,
+#custom-swap,
+#custom-spotify,
+#tray {
+	padding: 0px 7px 0px 7px;
+	/*margin-top: 6px;*/
+	background: #282C36;
+	text-shadow: 1px 1px 1px #3b4252;
+}
+
+#tray {
+}
+
+#workspaces {
+}
+
+#mode {
+	background: #bf616a;
+}
+
+#disk.1,
+#memory {
+	padding-right: 3px;
+}
+#disk.2,
+#custom-swap {
+	padding-left: 3px;
+}
+
+#battery,
+#pulseaudio,
+#memory,
+#taskbar,
+#custom-swap,
+#custom-pacman {
+	background: #4c566a;
+}
+
+#custom-spotify {
+	background: #3b4252;
+}
+
+#cpu {
+}
+
+#clock {
+	margin-right: 0px;
+	padding-right: 5px;
+}
+#custom-pacman {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#custom-weather,
+#idle_inhibitor {
+	margin-left: 0px;
+}
+
+#workspaces {
+	padding: 0px;
+}
+#workspaces button {
+	padding: 0px 5px 0px 5px;
+}
+#workspaces button.focused {
+	background: #81a1c1;
+    border-radius: 0;
+}
+#workspaces button:hover {
+	background: #81a1c1;
+	border: #5e81ac;
+}
+#workspaces button#sway-workspace-1 {
+}
+
+#taskbar {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#taskbar button {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 7px;
+	padding-right: 3px;
+}
+#taskbar button.active {
+	background: #b48ead;
+}
