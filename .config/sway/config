@@ -234,7 +234,7 @@ bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
 
-    bindsym  e      exec thunderbird   ;mode "default"
+    bindsym  e      exec MOZ_ENABLE_WAYLAND=1 thunderbird   ;mode "default"
     bindsym  m      exec spotify        ;mode "default"
     #bindsym p
     bindsym  x      exec thunar      ;mode "default"
