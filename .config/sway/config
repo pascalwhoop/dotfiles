@@ -67,9 +67,9 @@ focus_follows_mouse yes
 # Read `man 5 sway-input` for more information about this section.
 input * {
     xkb_layout "us,de"
-    xkb_options "caps:ctrl_modifier"
-    #xkb_options "caps:escape"
-    xkb_options "grp:alt_shift_toggle"
+    #xkb_options "caps:ctrl_modifier"
+    xkb_options "caps:escape"
+    #xkb_options "grp:alt_shift_toggle"
 }
 input type:touchpad {
     tap enabled

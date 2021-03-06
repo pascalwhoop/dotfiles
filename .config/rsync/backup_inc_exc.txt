@@ -4,6 +4,9 @@
 - /home/pascalwhoop/.local/share/gnome-boxes
 - /home/pascalwhoop/Documents/Syncthing
 - /home/pascalwhoop/Downloads
+- /home/pascalwhoop/.config/Code - OSS/Cache
+- /home/pascalwhoop/.config/Code - OSS/Cache*
+- /home/pascalwhoop/.glide/cache
 - /home/pascalwhoop/Music
 - /home/pascalwhoop/PC
 - /home/pascalwhoop/VirtualBox\ VMs
@@ -17,3 +20,4 @@
 - /var/log
 - /var/tmp
 - /var/lib/docker/image
+- /sys/kernel/debug/

@@ -12,12 +12,13 @@
 	"modules-center": [
 		"clock",
 		"custom/pacman",
-		"custom/weather"
 	],
 	"modules-right": [
+        "temperature",
+        "battery",
 		"cpu",
 		"memory",
-		"custom/swap",
+		//"custom/swap",
 		"disk#1",
 		"pulseaudio",
 		"tray"
@@ -146,5 +147,12 @@
 		"exec": "~/.config/waybar/modules/spotify.sh",
 		"exec-if": "pgrep spotify",
 		"escape": true
-	}
+	},
+    "temperature": {
+   	// "thermal-zone": 2,
+   	// "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
+   	// "critical-threshold": 80,
+   	// "format-critical": "{temperatureC}°C ",
+   	"format": " {temperatureC}°C "
+    }
 }
