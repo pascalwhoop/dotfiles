@@ -13,3 +13,4 @@ export TERM="xterm-256color"
 #make FZF even better
 export FZF_DEFAULT_COMMAND='fd -H'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export HOMEBREW_NO_AUTO_UPDATE=1
