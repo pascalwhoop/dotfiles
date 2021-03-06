@@ -21,15 +21,17 @@ SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_conduktor:java\x20\x2djar\x20\x7e/Apps/conduktor/Conduktor\x2ejar
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add
+SETUVAR _fish_abbr_gac:git\x20add\x20\x2e/\x20\x3band\x20git\x20commit
 SETUVAR _fish_abbr_gc:git\x20commit
+SETUVAR _fish_abbr_gca:git\x20commit\x20\x2d\x2damend
 SETUVAR _fish_abbr_gcnb:git\x20checkout\x20\x2db\x20
 SETUVAR _fish_abbr_gcp:git\x20cherry\x2dpick
 SETUVAR _fish_abbr_gd:git\x20diff
 SETUVAR _fish_abbr_gird:git\x20rebase\x20\x2di\x20origin/develop
 SETUVAR _fish_abbr_girm:git\x20rebase\x20\x2di\x20origin/master
-SETUVAR _fish_abbr_gitacp:git\x20add\x20\x2e/\x3b\x20and\x20git\x20commit\x3b\x20and\x20git\x20push
 SETUVAR _fish_abbr_gitcm:git\x20commit\x20\x2dm\x20\x27
 SETUVAR _fish_abbr_gitgo:git\x20add\x20\x2e/\x20\x3band\x20git\x20commit\x20\x3band\x20git\x20push
+SETUVAR _fish_abbr_gitnb:git\x20checkout\x20develop\x20\x3band\x20git\x20pull\x20\x3band\x20git\x20checkout\x20\x2db\x20
 SETUVAR _fish_abbr_gitpbb:git\x20stash\x20\x3band\x20git\x20pull\x20\x2d\x2drebase\x20\x3band\x20git\x20stash\x20pop
 SETUVAR _fish_abbr_gitpnb:git\x20push\x20\x2du\x20origin\x20HEAD
 SETUVAR _fish_abbr_gitroot:cd\x20\x28git\x20rev\x2dparse\x20\x2d\x2dshow\x2dtoplevel\x29
@@ -46,9 +48,6 @@ SETUVAR _fish_abbr_pacmanstale:find\x20\x2e/\x20\x7c\x20xargs\x20pacman\x20\x2dQ
 SETUVAR _fish_abbr_pud:pushd\x20\x2e/
 SETUVAR _fish_abbr_r:ranger
 SETUVAR _fish_abbr_remove:sudo\x20pacman\x20\x2dRcnsu
-SETUVAR _fish_abbr_ssh_2D_telenet_2D_prod:ssh\x20\x2dJ\x20pascalwhoop\x40localhost\x3a2222\x20pbrokmei\x40tele1297\x2eprd\x2ebigd\x2etelenet\x2ebe\x20\x2di\x20\x7e/\x2essh/id_rsa_telenet
-SETUVAR _fish_abbr_ssh_2D_telenet_2D_sab:ssh\x20\x2dJ\x20pascalwhoop\x40localhost\x3a2222\x20pbrokmei\x40tele8060\x2edint\x2etelenet\x2ebe\x20\x2di\x20\x7e/\x2essh/id_rsa_telenet
-SETUVAR _fish_abbr_ssh_2D_telenet_2D_uat:ssh\x20\x2dJ\x20pascalwhoop\x40localhost\x3a2222\x20pbrokmei\x40tele1890\x2enprd\x2ebigd\x2etelenet\x2ebe\x20\x2di\x20\x7e/\x2essh/id_rsa_telenet
 SETUVAR _fish_abbr_t:terraform
 SETUVAR _fish_abbr_t_2E_apt:terraform\x20apply\x20\x2d\x2dtarget\x3dmodule\x2e
 SETUVAR _fish_abbr_v:vim
@@ -78,7 +77,7 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell
-SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
