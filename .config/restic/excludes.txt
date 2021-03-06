@@ -1,0 +1,3 @@
+/Applications/Symantec Authentication
+/Users/pascal_brokmeier/Virtual Machines.localized/
+**/venv/
