@@ -1,3 +1,24 @@
-/Applications/Symantec Authentication
-/Users/pascal_brokmeier/Virtual Machines.localized/
-**/venv/
+**/pascal_brokmeier/Virtual Machines/
+**/pascal_brokmeier/Pictures/
+**/pascal_brokmeier/Downloads/
+**/pascal_brokmeier/Library/Caches/
+**/pascal_brokmeier/.Trash/
+**/pascal_brokmeier/.cache/
+**/*.log/
+/dev/
+/cores/
+/System/
+/tmp/
+/Volumes/
+pascal_brokmeier/Documents/**/venv/
+pascal_brokmeier/Documents/**/node_modules/
+pascal_brokmeier/**/Calendar Cache-wal
+pascal_brokmeier/Library/Containers/com.apple*
+
+**/Logs/
+**/Cache/
+**/Cache*/
+**/cache/
+**/Caches/
+**/cache*/
+/private/var/vm/sleepimage
