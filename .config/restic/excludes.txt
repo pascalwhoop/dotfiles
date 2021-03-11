@@ -1,0 +1,30 @@
+/dev
+/home/pascalwhoop/.cache/
+/home/pascalwhoop/.local/share/Trash/
+/home/pascalwhoop/.local/share/gnome-boxes
+/home/pascalwhoop/Documents/Syncthing
+/home/pascalwhoop/Downloads
+/home/pascalwhoop/.config/Code - OSS/Cache
+/home/pascalwhoop/.config/Code - OSS/Cache*
+/home/pascalwhoop/.glide/cache
+/home/pascalwhoop/Music
+/home/pascalwhoop/PC
+/home/pascalwhoop/VirtualBox\ VMs
+/media
+/proc
+/root/.cache/
+/run
+/tmp
+/var/cache
+/var/lib/libvirt/images
+/var/log
+/var/tmp
+/var/lib/docker/image
+/sys/kernel/debug/
+/sys
+
+**/Cache*/
+**/cache*/
+**/Code Cache/
+**/ScriptCache/
+**/CacheStorage/
