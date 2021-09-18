@@ -72,7 +72,7 @@
 #               an EOL character signifies the end of the bind.
 #
 
-shift + cmd - p: pazz
+shift + alt - p: pazz
 
 # ############################################################### #
 # THE FOLLOWING SECTION CONTAIN SIMPLE MAPPINGS DEMONSTRATING HOW #
