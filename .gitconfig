@@ -21,3 +21,5 @@
 	helper = cache --timeout=43200
 [gpg]
 	program = gpg2
+[init]
+	defaultBranch = main
