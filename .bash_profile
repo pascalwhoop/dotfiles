@@ -1,8 +1,3 @@
-# start sway on login
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-  export WLR_NO_HARDWARE_CURSORS=1
-  XKB_DEFAULT_LAYOUT=us exec sway
-fi
 
 export MOZ_ENABLE_WAYLAND=1
 export CM_DIR="/home/pascalwhoop/.config/clipmenu"
@@ -35,3 +30,9 @@ export NOTES="/home/pascalwhoop/Documents/Notebooks"
 #export NVM_VERSIONS_PATH=$HOME/.nvm/versions/node
 #export NPM_PATH=$NVM_VERSIONS_PATH/v$(cat /home/pascalwhoop/.nvm/alias/default)/bin
 #export PATH=$NPM_PATH:$PATH
+
+# start sway on login
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  export WLR_NO_HARDWARE_CURSORS=1
+  XKB_DEFAULT_LAYOUT=us exec sway
+fi

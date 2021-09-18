@@ -24,7 +24,7 @@
 	"telemetry.enableTelemetry": false,
 	"terraform.telemetry.enabled": false,
 	"vim.textwidth": 100,
-	"workbench.colorTheme": "Better Solarized Dark",
+	"workbench.colorTheme": "Visual Studio Light",
 	"workbench.tree.indent": 13,
 	"[markdown]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",

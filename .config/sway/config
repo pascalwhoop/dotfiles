@@ -31,7 +31,7 @@ exec --no-startup-id        /usr/lib/polkit-gnome/polkit-gnome-authentication-ag
 #exec --no-startup-id        dunst
 exec --no-startup-id        gnome-keyring-daemon
 exec --no-startup-id        nextcloud
-#exec --no-startup-id        nm-applet
+exec --no-startup-id        nm-applet --indicator
 #exec --no-startup-id        pa-applet
 
 #exec_always --no-startup-id ~/.config/polybar/launch
