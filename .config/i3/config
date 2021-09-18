@@ -32,9 +32,11 @@ exec --no-startup-id        nm-applet
 exec --no-startup-id        pa-applet
 exec --no-startup-id        picom
 exec --no-startup-id        urxvtd
+exec --no-startup-id        vmware-user
 exec --no-startup-id        wal -R
 exec --no-startup-id        ~/.scripts/mbp16_res.sh
-exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
+exec --no-startup-id        xmodmap -e "add Mod4 = Super_L"
+exec_always --no-startup-id feh --bg-fill ~/.config/background.jpg
 #exec_always --no-startup-id ~/.config/conky/pascalwhoop/launch
 exec_always --no-startup-id ~/.config/polybar/launch
 exec_always --no-startup-id ~/.scripts/bin/keyboard
@@ -183,9 +185,10 @@ workspace 9 output eDP1
 # bindings keys
 # ----------------------------------------------------------------------------------------------------------------------
 
+# option key
 set $mod mod4
 #set $app 133
-set $term --no-startup-id urxvt
+set $term --no-startup-id kitty
 floating_modifier $mod
 
 #media keys
