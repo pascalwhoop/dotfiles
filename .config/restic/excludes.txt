@@ -7,6 +7,7 @@
 **/*.log/
 /dev/
 /cores/
+/private/
 /System/
 /tmp/
 /Volumes/
@@ -22,3 +23,4 @@ pascal_brokmeier/Library/Containers/com.apple*
 **/Caches/
 **/cache*/
 /private/var/vm/sleepimage
+/usr/local/Caskroom/
