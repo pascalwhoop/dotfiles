@@ -1,3 +1,3 @@
 function ls
-	command ls -l  $argv
+	command lsd -l  $argv
 end
