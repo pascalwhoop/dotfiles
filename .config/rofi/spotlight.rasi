@@ -4,7 +4,7 @@
     background-color: transparent;
     background: #fdf6e3;
     foreground: #657b83;
-    background-alt: #2D6AD6;
+    background-alt: #bdb6b3;
     foreground-alt: #FFFFFF;
     border-color: @background;
     border-color: @background;
