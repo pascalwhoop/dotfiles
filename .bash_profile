@@ -1,6 +1,6 @@
 #CUDA environment variables
 #setting display env variable for tmux
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 
 #adding home brewed binaries and scripts
