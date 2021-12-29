@@ -1,6 +1,6 @@
 #!/bin/sh
 set -xe
-FILE="$NOTES/diary/diary.gpg"
+FILE=/home/pascalwhoop/Nextcloud/Documents/Notebooks/diary/diary.gpg
 cat "$FILE"  | gpg --decrypt > /tmp/diary.md
 vim /tmp/diary.md
 cat /tmp/diary.md | gpg --encrypt -r mail@pascalbrokmeier.de > "$FILE"
