@@ -13,10 +13,11 @@ if [[ $1 == 'h4k' ]]; then
     i3 restart
 fi
 if [[ $1 == '4k' ]]; then
-    xrandr --output DP1 --auto --pos 0x0 --dpi 115  
-    xrandr --output eDP1 --off
-    hidpi
-    i3 restart
+    xrandr --newmode "3008x1692_60.00"  433.69  3008 3240 3568 4128  1692 1693 1696 1751  -HSync +Vsync
+    xrandr --addmode "Virtual-1" "3008x1692_60.00"
+    xrandr --output Virtual-1 --mode "3008x1692_60.00"
+    #hidpi
+    #i3 restart
 fi
 if [[ $1 == 'mobile' ]]; then
     xrandr --output eDP1 --auto

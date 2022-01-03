@@ -204,7 +204,7 @@ bindsym $mod+XF86MonBrightnessDown exec xbacklight      -set      1
 bindsym $mod+XF86MonBrightnessUp   exec xbacklight      -set      100
 bindsym $mod+q                     kill
 bindsym $mod+Return                exec $term
-bindsym $mod+b                     exec --no-startup-id firefox
+bindsym $mod+b                     exec --no-startup-id brave
 #bindsym $mod+t                     exec --no-startup-id TogglDesktop
 #bindsym $mod+b                exec firefox
 #bindsym $mod+x                exex --no-startup-id thunar
@@ -336,13 +336,14 @@ mode "$quick_config" {
 # quick launch many applications
 # ----------------------------------------------------------------------------------------------------------------------
 
-set $mode_launcher Launch: [e]mail [m]usic [n]otes
+set $mode_launcher Launch: [e]mail [m]usic [n]otes [f]iles
 bindsym $mod+o mode "$mode_launcher"
 
 mode         "$mode_launcher" {
 
     bindsym  e      exec thunderbird   ;mode "default"
     bindsym  m      exec spotify        ;mode "default"
+    bindsym  f      exec pcmanfm        ;mode "default"
     #bindsym p
     bindsym  x      exec thunar      ;mode "default"
     bindsym  r      exec $term       -e    ranger  "/"   ;mode "default"
