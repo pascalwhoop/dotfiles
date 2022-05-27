@@ -25,7 +25,7 @@
 
 * {
   border-color: @border-color;
-  text-color:   @foreground;
+  //text-color:   @foreground;
   spacing:      0;
   width:        1000px;
   font:         "SauceCodePro Nerd Font Mono 15";
