@@ -24,7 +24,9 @@ for_window [class="^.*"] border pixel 2
 #######################################################################
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/wall.png fill
+output * {
+bg ~/.config/wall.png fill
+}
 
 exec --no-startup-id        /usr/bin/xrdb /home/pascalwhoop/.Xresources
 exec --no-startup-id        /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 #popup that listens to SU requests and shows a UI
@@ -92,7 +94,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # Custom:
 #
 bindsym Shift+$mod+p exec --no-startup-id passmenu
-bindsym $mod+b       exec --no-startup-id GDK_BACKEND=wayland MOZ_ENABLE_WAYLAND=1 firefox
+bindsym $mod+b       exec --no-startup-id brave
+#bindsym $mod+b       exec --no-startup-id GDK_BACKEND=wayland MOZ_ENABLE_WAYLAND=1 brave
 bindsym $mod+ctrl+d exec /home/pascalwhoop/.scripts/bin/rofi_finder
 bindsym $mod+d exec /home/pascalwhoop/.scripts/bin/i3-rofi
 bindsym control+$mod+space exec /home/pascalwhoop/.scripts/bin/i3-clipmenu
