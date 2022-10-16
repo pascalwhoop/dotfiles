@@ -185,7 +185,7 @@ workspace 9 output eDP1
 
 set $mod mod4
 #set $app 133
-set $term --no-startup-id urxvt
+set $term --no-startup-id alacritty
 floating_modifier $mod
 
 #media keys
