@@ -4,6 +4,7 @@
 /home/pascalwhoop/.local/share/gnome-boxes
 /home/pascalwhoop/Documents/Syncthing
 /home/pascalwhoop/Downloads
+/home/pascalwhoop/.virtualenvs/
 /home/pascalwhoop/.config/Code - OSS/Cache
 /home/pascalwhoop/.config/Code - OSS/Cache*
 /home/pascalwhoop/.glide/cache

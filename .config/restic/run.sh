@@ -5,4 +5,4 @@ cd "$DIR"
 export RESTIC_PASSWORD="$(pass show general/restic_repository)"
 export RESTIC_REPOSITORY="sftp:pi@raspberrypi:/mnt/vault/Backup/restic"
 set -xe
-sudo -E restic backup --one-file-system --exclude-file=./excludes.txt $@
+sudo -E restic backup --one-file-system --exclude-file=./excludes.txt $@ /
