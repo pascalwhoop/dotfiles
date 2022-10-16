@@ -65,7 +65,7 @@ configuration                   {
 	kb-remove-char-back:        "BackSpace,Control+h";
 	kb-remove-to-eol:           "Control+n";
 	kb-remove-to-sol:           "Control+u";
-	kb-accept-entry:            "Control+p,Control+m,Return,KP_Enter";
+	kb-accept-entry:            "Control+m,Return,KP_Enter";
 	kb-accept-custom:           "Control+Return";
 	kb-accept-alt:              "Shift+Return";
 	kb-delete-entry:            "Shift+Delete";
@@ -73,9 +73,8 @@ configuration                   {
 	kb-mode-previous:           "Shift+Left,Control+ISO_Left_Tab";
 	kb-row-left:                "Control+Page_Up";
 	kb-row-right:               "Control+Page_Down";
-	kb-row-up:                  "Up,Control+k,ISO_Left_Tab";
+	kb-row-up:                  "Up,Control+k";
 	kb-row-down:                "Down,Control+j";
-	kb-row-tab:                 "Tab";
 	kb-page-prev:               "Page_Up";
 	kb-page-next:               "Page_Down";
 	kb-row-first:               "Home,KP_Home";
