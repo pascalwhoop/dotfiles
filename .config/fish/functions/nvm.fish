@@ -1,4 +1,3 @@
 function nvm
-      bass source /usr/share/nvm/init-nvm.sh ';' nvm $argv
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
-

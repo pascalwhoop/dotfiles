@@ -1,4 +1,3 @@
-#CUDA environment variables
 #setting display env variable for tmux
 export EDITOR=/usr/local/bin/vim
 

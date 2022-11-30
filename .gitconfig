@@ -13,13 +13,14 @@
 	editor = vim
 	autocrlf = input
 	excludesFile = /Users/pascal_brokmeier/.config/git/gitignore
-[url "ssh://git@gitlab.com/"]
-  insteadOf = https://gitlab.com/
-[url "ssh://git@bitbucket.org/"]
-  insteadOf = https://bitbucket.org/
 [credential]
 	helper = cache --timeout=43200
 [gpg]
 	program = gpg2
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
