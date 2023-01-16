@@ -1,0 +1,21 @@
+/host/Virtual Machines/
+/host/Virtual Machines.localized//
+/host/.minikube
+/host/Box Sync/
+/host/Pictures/
+/host/Library/Caches/
+/host/.Trash/
+/host/.cache/
+/host/.virtualenvs/
+/host/Documents/**/venv/
+/host/Documents/**/venv/
+/host/Documents/**/node_modules/
+/host/**/Calendar Cache-wal
+/host/Library/Containers/com.apple*
+/host/Library/Containers/com.docker.docker/
+**/Logs/
+**/Cache/
+**/Cache*/
+**/cache/
+**/Caches/
+**/cache*/

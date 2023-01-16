@@ -1,0 +1,5 @@
+#!/bin/bash
+cd ~/.password-store
+pass_path=$(fd . ./ | choose | sed 's/\.gpg//' | sed 's/^\.\///')
+pass show $pass_path | choose | pbcopy
+
