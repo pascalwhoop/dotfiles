@@ -7,7 +7,10 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 sudo apt install -y tmux htop bmon fzf wget curl
 
 # get brew working
-curl https://gist.githubusercontent.com/pascalwhoop/4d01bb179132118c565b3db56c4ce68e/raw/fa0ab508cac760efaa399442047256a36578c62e/tmux.conf > ~/.tmux.conf
+git clone https://github.com/pascalwhoop/dotfiles
+cd dotfiles
+# stow all the things
+
 
 # fish shell
 brew install fish fzf bottom tldr exa dust duf fd jq dog
