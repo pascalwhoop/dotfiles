@@ -1,0 +1,26 @@
+[user]
+	email = git@pascalbrokmeier.de
+	name  = Pascal Brokmeier
+	signingkey = BB6E506D63C258297A2ADA481C49A27D63A8B5A0
+[includeIf "gitdir:~/Documents/Code/work/"]
+    path = ~/.config/git/gitconfig-work
+[includeIf "gitdir:~/Documents/Code/play/"]
+    path = ~/.config/git/gitconfig-play
+[commit]
+    gpgSign = true
+
+[core]
+	editor = vim
+	autocrlf = input
+	excludesFile = /Users/pascal_brokmeier/.config/git/gitignore
+[credential]
+	helper = cache --timeout=43200
+[gpg]
+	program = gpg2
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

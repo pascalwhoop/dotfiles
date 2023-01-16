@@ -1,0 +1,31 @@
+/Users/pascal_brokmeier/Virtual Machines/
+/Users/pascal_brokmeier/Virtual Machines.localized//
+/Users/pascal_brokmeier/.minikube
+/Users/pascal_brokmeier/Box Sync/
+/Users/pascal_brokmeier/Pictures/
+/Users/pascal_brokmeier/Library/Caches/
+/Users/pascal_brokmeier/.Trash/
+/Users/pascal_brokmeier/.cache/
+**/*.log/
+/dev/
+/cores/
+/private/
+/System/
+/tmp/
+/Volumes/
+**/pascal_brokmeier/.virtualenvs/
+/Users/pascal_brokmeier/Documents/**/venv/
+/Users/pascal_brokmeier/Documents/**/venv/
+/Users/pascal_brokmeier/Documents/**/node_modules/
+/Users/pascal_brokmeier/**/Calendar Cache-wal
+/Users/pascal_brokmeier/Library/Containers/com.apple*
+/Users/pascal_brokmeier/Library/Containers/com.docker.docker/
+
+**/Logs/
+**/Cache/
+**/Cache*/
+**/cache/
+**/Caches/
+**/cache*/
+/private/var/vm/sleepimage
+/usr/local/Caskroom/
