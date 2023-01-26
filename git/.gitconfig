@@ -12,7 +12,7 @@
 [core]
 	editor = vim
 	autocrlf = input
-	excludesFile = /Users/pascal_brokmeier/.config/git/gitignore
+	excludesFile = ~/.config/git/gitignore
 [credential]
 	helper = cache --timeout=43200
 [gpg]

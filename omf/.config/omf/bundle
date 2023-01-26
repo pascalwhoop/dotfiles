@@ -1,3 +1,4 @@
+package autojump
 package bass
 package foreign-env
 package fzf

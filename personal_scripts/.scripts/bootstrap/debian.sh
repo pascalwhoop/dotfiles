@@ -9,19 +9,19 @@ echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/$USER/.profile
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$USER/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew analytics off
-sudo apt install -y tmux htop bmon fzf wget curl
+sudo apt install -y tmux htop bmon fzf wget curl stow ranger lsd
 
 # get brew working
 # ----------------
 git clone https://github.com/pascalwhoop/dotfiles
 cd dotfiles
 # stow all the things
-cat server.stows | xargs -I {} stow -t ~ {}
+cat debian.stows | xargs -I {} stow -t ~ {}
 
 
 
 # fish shell
-brew install fish fzf bottom tldr exa dust duf fd jq dog
+brew install fish fzf bottom tldr exa dust duf fd jq dog gh terraform kubectl
 # oh my fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
