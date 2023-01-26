@@ -59,4 +59,4 @@ else
 fi
 
 ## stows the moved file
-stow $1
+stow _$1
