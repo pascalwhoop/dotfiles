@@ -37,7 +37,7 @@ fi
 
 ## In this setup the target folder is /
 ## so realpath is used to get the full folder hierarchy of arg 2
-filepath=$(realpath $2)
+filepath=$(realpath $2 | sed "s/\/Users\/$USER\///")
 
 ## Checks if argument 2 (folder or file) already exists
 ## in order to prevent accidntal overwriting
