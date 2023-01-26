@@ -1,0 +1,26 @@
+{
+  "title": "i3 style opening",
+  "rules": [
+    {
+      "description": "terminal",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_alt"
+              ]
+            },
+            "key_code": "return_or_enter"
+          },
+          "to": [
+            {
+              "shell_command": "open '/Applications/iTerm.app'"
+            }
+          ]
+        },
+      ]
+    },
+  ]
+}
