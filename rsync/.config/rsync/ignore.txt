@@ -1,0 +1,21 @@
+# an ignore file for rsync that ignores common software 
+# dependency folders like node_modules or cache folders
+
+- **/node_modules
+- **/bower_components
+- **/vendor
+- **/cache
+- **/logs
+- **/tmp
+- **/sessions
+- **/.sass-cache
+- **/.vagrant
+- **/.DS_Store
+- **/nbproject
+- **/ehthumbs.db
+- **/composer.lock
+- **/composer.phar
+
+# also ignore terraform files
+- **/.terraform
+

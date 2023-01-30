@@ -1,7 +1,7 @@
 [user]
-	email = git@pascalbrokmeier.de
-	name  = Pascal Brokmeier
-	signingkey = BB6E506D63C258297A2ADA481C49A27D63A8B5A0
+    email = git@pascalbrokmeier.de
+    name  = Pascal Brokmeier
+    signingkey = BB6E506D63C258297A2ADA481C49A27D63A8B5A0
 [includeIf "gitdir:~/Documents/Code/work/"]
     path = ~/.config/git/gitconfig-work
 [includeIf "gitdir:~/Documents/Code/play/"]
@@ -24,3 +24,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[filter "fish_ignore_dict"]
+	clean = sed '/SETUVAR LAST_WORKING_DIR.*/d'
