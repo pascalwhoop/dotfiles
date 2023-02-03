@@ -21,12 +21,17 @@
 /Users/pascal_brokmeier/Library/Containers/com.apple*
 /Users/pascal_brokmeier/Library/Containers/com.docker.docker/
 /Users/pascal_brokmeier/Library/CloudStorage/
+/Users/pascal_brokmeier/Documents/Code/play/amsterdam-real-estate/**
 
 **/Logs/
 **/.m2/repository
 **/Cache/
+**/.cache/
 **/Cache*/
+**/.npm/
+**/.gem/
 **/cache/
+**/.vscode/extensions/
 **/Caches/
 **/cache*/
 /private/var/vm/sleepimage
