@@ -6,6 +6,7 @@ export EDITOR=/usr/local/bin/vim
 export PATH="$HOME/.scripts/bin:$PATH"
 export PATH="$HOME/.scripts/macos:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"
 export TERM="xterm-256color"
 #export GDK_SCALE=2
 
