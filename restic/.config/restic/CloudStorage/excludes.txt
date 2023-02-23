@@ -1,11 +1,11 @@
-/Users/pascal_brokmeier/Virtual Machines/
-/Users/pascal_brokmeier/Virtual Machines.localized//
-/Users/pascal_brokmeier/.minikube
-/Users/pascal_brokmeier/Box Sync/
-/Users/pascal_brokmeier/Pictures/
-/Users/pascal_brokmeier/Library/Caches/
-/Users/pascal_brokmeier/.Trash/
-/Users/pascal_brokmeier/.cache/
+/Users/pascalwhoop/Virtual Machines/
+/Users/pascalwhoop/Virtual Machines.localized//
+/Users/pascalwhoop/.minikube
+/Users/pascalwhoop/Box Sync/
+/Users/pascalwhoop/Pictures/
+/Users/pascalwhoop/Library/Caches/
+/Users/pascalwhoop/.Trash/
+/Users/pascalwhoop/.cache/
 **/*.log/
 /dev/
 /cores/
@@ -13,15 +13,15 @@
 /System/
 /tmp/
 /Volumes/
-**/pascal_brokmeier/.virtualenvs/
-/Users/pascal_brokmeier/Documents/**/venv/
-/Users/pascal_brokmeier/Documents/**/venv/
-/Users/pascal_brokmeier/Documents/**/node_modules/
-/Users/pascal_brokmeier/**/Calendar Cache-wal
-/Users/pascal_brokmeier/Library/Containers/com.apple*
-/Users/pascal_brokmeier/Library/Containers/com.docker.docker/
-/Users/pascal_brokmeier/Library/CloudStorage/
-/Users/pascal_brokmeier/Documents/Code/play/amsterdam-real-estate/**
+**/pascalwhoop/.virtualenvs/
+/Users/pascalwhoop/Documents/**/venv/
+/Users/pascalwhoop/Documents/**/venv/
+/Users/pascalwhoop/Documents/**/node_modules/
+/Users/pascalwhoop/**/Calendar Cache-wal
+/Users/pascalwhoop/Library/Containers/com.apple*
+/Users/pascalwhoop/Library/Containers/com.docker.docker/
+/Users/pascalwhoop/Library/CloudStorage/
+/Users/pascalwhoop/Documents/Code/play/amsterdam-real-estate/**
 
 **/Logs/
 **/.m2/repository
