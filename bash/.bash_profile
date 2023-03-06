@@ -1,5 +1,5 @@
 #setting display env variable for tmux
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/opt/homebrew/bin/vim
 
 
 #adding home brewed binaries and scripts
@@ -14,3 +14,5 @@ export TERM="xterm-256color"
 export FZF_DEFAULT_COMMAND='fd -H'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
