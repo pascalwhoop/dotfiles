@@ -1,55 +1,56 @@
 "------------------------------------------------------------
-" VUNDLE
+" PLUG
 "------------------------------------------------------------
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
 
-" let Vundle manage Vundle, required
-" add vim plugins here
-"
-"Plugin 'dbmrq/vim-ditto'
-"Plugin 'jceb/vim-orgmode'
-"Plugin 'powerman/vim-plugin-autosess'
-"Plugin 'xolox/vim-easytags'
-"Plugin 'ActivityWatch/aw-watcher-vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'Konfekt/FastFold' "a speed improvement for manual folds
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'abolish.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'ap/vim-css-color'
-Plugin 'ctrlp.vim'
-Plugin 'dag/vim-fish'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'dbeniamine/todo.txt-vim'
-Plugin 'honza/vim-snippets'
-Plugin 'junegunn/goyo.vim',
-Plugin 'junegunn/vim-easy-align'
-Plugin 'lervag/vimtex'
-Plugin 'majutsushi/tagbar'
-Plugin 'plasticboy/vim-markdown',
-"Plugin 'python-mode/python-mode'
-Plugin 'reedes/vim-wordy'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'repeat.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'surround.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-speeddating'
-Plugin 'dense-analysis/ale'
-Plugin 'xolox/vim-misc'
-Plugin 'fatih/vim-go'
-Plugin 'chriskempson/base16-vim'
+call plug#begin()
+"Plug 'dbmrq/vim-ditto'
+"Plug 'jceb/vim-orgmode'
+"Plug 'powerman/vim-plugin-autosess'
+"Plug 'xolox/vim-easytags'
+"Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'Konfekt/FastFold' "a speed improvement for manual folds
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe'
+Plug 'VundleVim/Vundle.vim'
+"Plug 'abolish.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'ap/vim-css-color'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dag/vim-fish'
+Plug 'davidhalter/jedi-vim'
+Plug 'dbeniamine/todo.txt-vim'
+Plug 'honza/vim-snippets'
+Plug 'junegunn/goyo.vim',
+Plug 'junegunn/vim-easy-align'
+Plug 'lervag/vimtex'
+Plug 'majutsushi/tagbar'
+Plug 'plasticboy/vim-markdown',
+"Plug 'python-mode/python-mode'
+Plug 'reedes/vim-wordy'
+Plug 'sheerun/vim-polyglot'
+"Plug 'repeat.vim'
+Plug 'scrooloose/nerdtree'
+"Plug 'surround.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-speeddating'
+Plug 'dense-analysis/ale'
+Plug 'xolox/vim-misc'
+Plug 'fatih/vim-go'
+Plug 'chriskempson/base16-vim'
 
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
