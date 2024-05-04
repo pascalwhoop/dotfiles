@@ -3,7 +3,6 @@ package bass
 package foreign-env
 package fzf
 package last-working-dir
-package virtualfish
 theme batman
 theme bobthefish
 theme budspencer

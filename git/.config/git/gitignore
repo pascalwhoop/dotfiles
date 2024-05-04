@@ -2,3 +2,6 @@
 Untitled.ipynb
 **/.DS_Store
 pascalwhoop.nb.py
+_pascal/**
+
+src/cost-service/tests/assets/dlq/

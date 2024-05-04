@@ -26,3 +26,5 @@
 	required = true
 [filter "fish_ignore_dict"]
 	clean = sed '/SETUVAR LAST_WORKING_DIR.*/d'
+[push]
+	autoSetupRemote = true
