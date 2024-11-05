@@ -1,4 +1,6 @@
 # Define the stow target
+CI ?= 1
+
 stow:
 	cat unix.stows | xargs -I {} stow -t ~ {}
 brew:
