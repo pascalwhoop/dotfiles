@@ -5,3 +5,6 @@ pascalwhoop.nb.py
 _pascal/**
 
 src/cost-service/tests/assets/dlq/
+**/_workbench.py
+**/_scratchpad/*
+**/.venv/

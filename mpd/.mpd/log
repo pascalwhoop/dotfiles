@@ -1,0 +1,46 @@
+Jun 18 11:21 : exception: Failed to open '/Users/pascalwhoop/.mpd/state': No such file or directory
+Jun 18 11:21 : config: inotify: auto_update was disabled. enable during compilation phase
+Jun 18 11:21 : update: added sets/MÉTARAPH ｜ Boiler Room： Cologne [EMJg8Q7kEv8].opus
+Jun 18 11:21 : update: added sets/Liva K at Diego, Athens (23 September 2023) [Hjp1XznoxHg].opus
+Jun 18 11:21 : config: inotify: auto_update was disabled. enable during compilation phase
+Jun 18 11:22 : config: inotify: auto_update was disabled. enable during compilation phase
+Jun 18 11:22 : config: inotify: auto_update was disabled. enable during compilation phase
+Jun 18 11:24 : player: played "sets/MÉTARAPH ｜ Boiler Room： Cologne [EMJg8Q7kEv8].opus"
+Jun 18 11:24 : config: inotify: auto_update was disabled. enable during compilation phase
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : player: played "sets/Liva K at Diego, Athens (23 September 2023) [Hjp1XznoxHg].opus"
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:24 : player: problems opening audio device while playing "sets/MÉTARAPH ｜ Boiler Room： Cologne [EMJg8Q7kEv8].opus"
+Jun 18 11:25 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:25 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:25 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:25 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:25 : player: played "sets/Liva K at Diego, Athens (23 September 2023) [Hjp1XznoxHg].opus"
+Jun 18 11:25 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:25 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:25 : player: problems opening audio device while playing "sets/Liva K at Diego, Athens (23 September 2023) [Hjp1XznoxHg].opus"
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : player: played "sets/MÉTARAPH ｜ Boiler Room： Cologne [EMJg8Q7kEv8].opus"
+Jun 18 11:26 : config: inotify: auto_update was disabled. enable during compilation phase
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : player: problems opening audio device while playing "sets/Liva K at Diego, Athens (23 September 2023) [Hjp1XznoxHg].opus"
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:26 : exception: Failed to enable output "My OS X Device" (osx); Found no audio device with name 'Built-in Output'
+Jun 18 11:33 : player: played "sets/Liva K at Diego, Athens (23 September 2023) [Hjp1XznoxHg].opus"

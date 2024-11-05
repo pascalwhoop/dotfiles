@@ -5,9 +5,9 @@ package fzf
 package last-working-dir
 theme batman
 theme bobthefish
-theme budspencer
 theme default
 theme fishbone
 theme gentoo
+theme gitstatus
 theme harleen
 theme zish

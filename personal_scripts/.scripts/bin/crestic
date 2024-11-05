@@ -6,5 +6,5 @@
 #   exit 1
 #fi
 
-source ~/.config/restic_key/CloudStorage/.env
+source ~/.config/restic/NAS/.env
 restic $@

@@ -1,12 +1,12 @@
 bash
 git
 htop
-lsd
 omf
 personal_scripts
 ranger
 rsync
 tmux
 vim
+nvim
 vscode
 wget

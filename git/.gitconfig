@@ -2,9 +2,9 @@
     email = git@pascalbrokmeier.de
     name  = Pascal Brokmeier
     signingkey = BB6E506D63C258297A2ADA481C49A27D63A8B5A0
-[includeIf "gitdir:~/Documents/Code/work/"]
+[includeIf "gitdir:~/Code/everycure/"]
     path = ~/.config/git/gitconfig-work
-[includeIf "gitdir:~/Documents/Code/play/"]
+[includeIf "gitdir:~/Code/play/"]
     path = ~/.config/git/gitconfig-play
 [commit]
     gpgSign = true
