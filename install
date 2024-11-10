@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# adapter to Github Codespaces automatic installation abilities
+# https://docs.github.com/en/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account#dotfiles
+make
