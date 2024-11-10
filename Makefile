@@ -19,9 +19,9 @@ brew:
 bootstrap:
 	# install brew
 	/bin/bash -c "CI=1 $$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo >> /home/$$USER/.bashrc
-    echo 'eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$$USER/.bashrc
-    eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	echo >> /home/$$USER/.bashrc
+	echo 'eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$$USER/.bashrc
+	eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 brew_base:
 	brew bundle install --file Brewfile.base
