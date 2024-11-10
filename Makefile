@@ -3,7 +3,7 @@ SUBFOLDERS := $(wildcard */)
 # ensures all make targets run in one shell (rather than line by line in new shell)
 .ONESHELL: 
 
-default: bootstrap stow brew_base
+default: bootstrap brew_base stow fish
 	echo "Done installing"
 stow:
 	@for folder in $(SUBFOLDERS); do \
@@ -22,6 +22,9 @@ bootstrap:
 	echo >> /home/$$USER/.bashrc
 	echo 'eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$$USER/.bashrc
 	eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+fish:
+	curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
 brew_base:
 	brew bundle install --file Brewfile.base

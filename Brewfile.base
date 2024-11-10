@@ -40,3 +40,4 @@ brew "trivy"              # Vulnerability scanner
 brew "choose-gui"         # GUI selection tool
 brew "openjdk@11"         # Java runtime
 brew "openjdk@17"         # Java runtime
+brew "tig"               # Terminal UI for git
