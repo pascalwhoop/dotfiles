@@ -1,0 +1,43 @@
+cask "aldente"            # Battery limiter
+cask "anki"               # Flashcard app
+cask "appcleaner"         # App uninstaller
+cask "balenaetcher"       # USB writer
+cask "bitwarden"          # Password manager
+cask "calibre"            # E-book manager
+cask "chatgpt"            # AI chat
+cask "coconutbattery"     # Battery monitor
+cask "discord"            # Chat
+cask "docker"             # Container platform
+cask "drawio"             # Diagramming
+cask "google-chrome"      # Browser
+cask "google-cloud-sdk"   # Cloud tools
+cask "google-drive"       # File sync
+cask "gpg-suite"          # Encryption
+cask "iterm2"             # Terminal
+cask "karabiner-elements" # Keyboard customizer
+cask "lm-studio"          # AI platform
+cask "logseq"             # Note-taking
+cask "lulu"               # Firewall
+cask "macfuse"            # Filesystem
+cask "microsoft-edge"     # Browser
+cask "microsoft-outlook"  # Email
+cask "notion"             # Workspace
+cask "notion-calendar"    # Calendar
+cask "obsidian"           # Note-taking
+cask "orion"              # Browser
+cask "plex"               # Media server
+cask "postman"            # API tool
+cask "proton-drive"       # File sync
+cask "proton-mail"        # Email
+cask "protonvpn"         # VPN
+cask "raycast"           # Launcher
+cask "setapp"            # App suite
+cask "signal"            # Messaging
+cask "slack"             # Team chat
+cask "stats"             # System monitor
+cask "tailscale"         # VPN
+cask "todoist"           # Task manager
+cask "utm"               # Virtual machines
+cask "visual-studio-code" # Code editor
+cask "vmware-fusion"     # Virtual machines
+cask "zoom"              # Video calls

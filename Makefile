@@ -1,7 +1,10 @@
-# List all subfolders
 SUBFOLDERS := $(wildcard */)
 
-# Define the stow target
+# ensures all make targets run in one shell (rather than line by line in new shell)
+.ONESHELL: 
+
+default: bootstrap stow brew_base
+	echo "Done installing"
 stow:
 	@for folder in $(SUBFOLDERS); do \
 		stow -v -d . -t ~ $$folder; \
@@ -19,5 +22,15 @@ bootstrap:
     echo >> /home/$$USER/.bashrc
     echo 'eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$$USER/.bashrc
     eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-default: bootstrap stow
-	echo "nothing yet"
+
+brew_base:
+	brew bundle install --file Brewfile.base
+
+brew_extra:
+	brew bundle install --file Brewfile.extra
+
+brew_casks:
+	brew bundle install --file Brewfile.casks
+
+brew_macos:
+	brew bundle install --file Brewfile.macos

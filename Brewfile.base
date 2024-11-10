@@ -1,0 +1,42 @@
+brew "ack"                 # Text search tool
+brew "autossh"            # SSH automation
+brew "bmon"               # Bandwidth monitor
+brew "bottom"             # System monitor
+brew "docker-compose"     # Container orchestration
+brew "dog"                # DNS lookup tool
+brew "duf"                # Disk usage utility
+brew "dust"               # Disk usage analyzer
+brew "fd"                 # Find alternative
+brew "fish"               # Shell
+brew "fzf"                # Fuzzy finder
+brew "gcc"                # Compiler
+brew "git"                # Version control
+brew "git-crypt"          # Git encryption
+brew "git-lfs"            # Git large file storage
+brew "go"                 # Go language
+brew "gzip"               # Compression
+brew "jq"                 # JSON processor
+brew "nmap"               # Network scanner
+brew "node"               # JavaScript runtime
+brew "nvm"                # Node version manager
+brew "python"             # Python language
+brew "rclone"             # File sync tool
+brew "renameutils"        # File renaming utilities
+brew "restic"             # Backup tool
+brew "rsync"              # File sync tool
+brew "stow"               # Symlink farm manager
+brew "stress"             # System stress tester
+brew "tmux"               # Terminal multiplexer
+brew "wget"               # File downloader
+brew "argocd"             # Kubernetes CD
+brew "helm"               # Kubernetes package manager
+brew "kind"               # Kubernetes in Docker
+brew "kustomize"          # Kubernetes config
+brew "terraform"          # Infrastructure as code
+brew "terragrunt"         # Terraform wrapper
+brew "terrascan"          # Security scanner
+brew "tflint"             # Terraform linter
+brew "trivy"              # Vulnerability scanner
+brew "choose-gui"         # GUI selection tool
+brew "openjdk@11"         # Java runtime
+brew "openjdk@17"         # Java runtime
