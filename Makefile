@@ -32,5 +32,5 @@ brew_extra:
 brew_casks:
 	brew bundle install --file Brewfile.casks
 
-brew_macos:
+brew_macos: brew_base brew_extra brew_casks
 	brew bundle install --file Brewfile.macos
