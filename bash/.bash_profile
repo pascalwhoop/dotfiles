@@ -95,3 +95,5 @@ export NVM_DIR="$HOME/.nvm"
 #     ;;
 #   esac
 # }
+
+alias gam="/Users/pascalwhoop/bin/gam7/gam"
