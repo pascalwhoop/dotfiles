@@ -1,4 +1,3 @@
-cask "aldente"            # Battery limiter
 cask "anki"               # Flashcard app
 cask "appcleaner"         # App uninstaller
 cask "balenaetcher"       # USB writer
@@ -20,16 +19,11 @@ cask "logseq"             # Note-taking
 cask "lulu"               # Firewall
 cask "macfuse"            # Filesystem
 cask "microsoft-edge"     # Browser
-cask "microsoft-outlook"  # Email
 cask "notion"             # Workspace
 cask "notion-calendar"    # Calendar
 cask "obsidian"           # Note-taking
 cask "orion"              # Browser
-cask "plex"               # Media server
 cask "postman"            # API tool
-cask "proton-drive"       # File sync
-cask "proton-mail"        # Email
-cask "protonvpn"         # VPN
 cask "raycast"           # Launcher
 cask "setapp"            # App suite
 cask "signal"            # Messaging
@@ -39,5 +33,7 @@ cask "tailscale"         # VPN
 cask "todoist"           # Task manager
 cask "utm"               # Virtual machines
 cask "visual-studio-code" # Code editor
+cask "neovide"		# nvim UI
 cask "vmware-fusion"     # Virtual machines
 cask "zoom"              # Video calls
+cask "lens"              # K8S IDE

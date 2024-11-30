@@ -12,9 +12,8 @@ stow:
 	@echo "Stowing complete!"
 
 # Apply Brewfile
-brew:
-	brew update
-	brew bundle install
+macos: brew_update brew_base brew_extra brew_casks
+
 
 bootstrap:
 	# install brew
@@ -26,6 +25,8 @@ bootstrap:
 fish:
 	curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
+brew_update: 
+	brew update
 brew_base:
 	brew bundle install --file Brewfile.base
 
