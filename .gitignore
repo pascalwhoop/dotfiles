@@ -1,3 +1,4 @@
 **/.env
 **/*.swp
 karabiner/.config/karabiner/automatic_backups/
+nushell/Library/Application Support/nushell/history.txt

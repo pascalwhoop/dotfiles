@@ -1,3 +1,0 @@
-exit
-clear
-exit
