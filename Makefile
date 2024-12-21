@@ -13,6 +13,7 @@ stow:
 
 # Apply Brewfile
 macos: brew_update brew_base brew_extra brew_casks
+	bash -c bootstrap_macos.sh
 
 
 bootstrap:
