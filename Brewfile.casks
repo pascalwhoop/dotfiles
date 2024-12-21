@@ -37,3 +37,4 @@ cask "neovide"		# nvim UI
 cask "vmware-fusion"     # Virtual machines
 cask "zoom"              # Video calls
 cask "lens"              # K8S IDE
+cask "boosteroid"       # gaming
