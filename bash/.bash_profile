@@ -97,6 +97,3 @@ export NVM_DIR="$HOME/.nvm"
 # }
 
 alias gam="/Users/pascalwhoop/bin/gam7/gam"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/pascalwhoop/.cache/lm-studio/bin"
