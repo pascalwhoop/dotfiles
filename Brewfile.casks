@@ -1,3 +1,10 @@
+# browsers
+#cask "google-chrome"      # Browser
+#cask "microsoft-edge"     # Browser
+#cask "orion"              # Browser
+cask "brave-browser"
+cask "tor-browser"
+
 cask "anki"               # Flashcard app
 cask "appcleaner"         # App uninstaller
 cask "balenaetcher"       # USB writer
@@ -8,7 +15,6 @@ cask "coconutbattery"     # Battery monitor
 cask "discord"            # Chat
 cask "docker"             # Container platform
 cask "drawio"             # Diagramming
-cask "google-chrome"      # Browser
 cask "google-cloud-sdk"   # Cloud tools
 cask "google-drive"       # File sync
 cask "gpg-suite"          # Encryption
@@ -18,11 +24,9 @@ cask "lm-studio"          # AI platform
 cask "logseq"             # Note-taking
 cask "lulu"               # Firewall
 cask "macfuse"            # Filesystem
-cask "microsoft-edge"     # Browser
 cask "notion"             # Workspace
 cask "notion-calendar"    # Calendar
-cask "obsidian"           # Note-taking
-cask "orion"              # Browser
+#cask "obsidian"           # Note-taking
 cask "postman"            # API tool
 cask "raycast"           # Launcher
 cask "setapp"            # App suite
@@ -31,13 +35,12 @@ cask "slack"             # Team chat
 cask "stats"             # System monitor
 cask "tailscale"         # VPN
 cask "todoist"           # Task manager
-cask "utm"               # Virtual machines
+#cask "utm"               # Virtual machines
 cask "visual-studio-code" # Code editor
 cask "neovide"		# nvim UI
-cask "vmware-fusion"     # Virtual machines
+#cask "vmware-fusion"     # Virtual machines
 cask "zoom"              # Video calls
 cask "lens"              # K8S IDE
 cask "boosteroid"       # gaming
 cask "reader"
-cask "tor-browser"
 cask "gitbutler"

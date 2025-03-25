@@ -43,3 +43,4 @@ brew "openjdk@17"         # Java runtime
 brew "tig"               # Terminal UI for git
 brew "luarocks"         # lua rocks, for neovim
 brew "nushell"
+brew "git-filter-repo"
