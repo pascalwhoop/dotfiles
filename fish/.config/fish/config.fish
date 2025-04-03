@@ -27,7 +27,6 @@ abbr -a -- x exit
 abbr -a -- d docker
 abbr -a -- gl 'git log'
 abbr -a -- gcnb 'git checkout -b '
-abbr -a -- gco 'git checkout '
 abbr -a -- k kubectl
 abbr -a -- activate 'source ./venv/bin/activate.fish'
 abbr -a -- N nerdctl
@@ -56,7 +55,7 @@ abbr -a -- r ranger
 abbr -a -- gpfwl 'git push --force-with-lease'
 abbr -a -- hili 'highlight --out-format=xterm256 --syntax='
 abbr -a -- jcb jira_close_biontech
-abbr -a -- n nvim ~/notes
+abbr -a -- n notes
 abbr -a -- nvpn nordvpn
 abbr -a -- conduktor 'java -jar ~/Apps/conduktor/Conduktor.jar'
 abbr -a -- remove 'sudo pacman -Rcnsu'
@@ -72,6 +71,3 @@ abbr -a -- dlset 'yt-dlp -x --audio-format mp3'
 abbr -a -- ghisc 'gh issue create -t'
 abbr -a -- st 'source ./.venv/bin/activate.fish'
 abbr -a -- dive 'docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest '
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/pascalwhoop/.cache/lm-studio/bin

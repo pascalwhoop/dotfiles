@@ -1,0 +1,8 @@
+[project]
+name = "dotfiles"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pre-commit>=4.2.0",
+]
+

@@ -1,2 +1,5 @@
 brew "ffmpeg"             # Media handler
 brew "terraformer"        # Infrastructure importer
+brew "supabase/tap/supabase"
+
+

@@ -18,7 +18,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export BW_USER='<YOUR-USER>'
-source "$HOME/Library/Application Support/base/bin/activate"
 
 
 export NVM_DIR="$HOME/.nvm"

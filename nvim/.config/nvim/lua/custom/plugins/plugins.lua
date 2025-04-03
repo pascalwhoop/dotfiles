@@ -16,9 +16,6 @@ return {
 		"HakonHarnes/img-clip.nvim",
 		event = "VeryLazy",
 		opts = {
-			default = {
-				copy_images = true,
-			},
 			-- add options here
 			-- or leave it empty to use the default settings
 		},
@@ -27,41 +24,7 @@ return {
 			{ "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
 		},
 	},
-	{
-		"nvim-neorg/neorg",
-		lazy = false,
-		version = "*",
-		config = function()
-			require("neorg").setup({
-				load = {
-					["core.defaults"] = {},
-					["core.concealer"] = {},
-					["core.dirman"] = {
-						config = {
-							workspaces = {
-								notes = "~/notes",
-							},
-							default_workspace = "notes",
-						},
-					},
-				},
-			})
-
-			vim.wo.foldlevel = 99
-			vim.wo.conceallevel = 2
-		end,
-	},
-	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		lazy = true,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-	},
-	{
-		"nvim-tree/nvim-web-devicons",
-	},
+	{ "nvim-neorg/neorg" },
 
 	-- Add more plugins here
 }

@@ -1,9 +1,10 @@
 brew "ack"                 # Text search tool
 brew "autossh"            # SSH automation
+brew "autojump"
 brew "bmon"               # Bandwidth monitor
 brew "bottom"             # System monitor
 brew "docker-compose"     # Container orchestration
-brew "dog"                # DNS lookup tool
+#brew "dog"                # DNS lookup tool
 brew "duf"                # Disk usage utility
 brew "dust"               # Disk usage analyzer
 brew "fd"                 # Find alternative
@@ -19,6 +20,8 @@ brew "jq"                 # JSON processor
 brew "nmap"               # Network scanner
 brew "node"               # JavaScript runtime
 brew "nvm"                # Node version manager
+brew "neovim"
+brew "vim"
 brew "python"             # Python language
 brew "rclone"             # File sync tool
 brew "renameutils"        # File renaming utilities
@@ -26,11 +29,16 @@ brew "restic"             # Backup tool
 brew "rsync"              # File sync tool
 brew "stow"               # Symlink farm manager
 brew "stress"             # System stress tester
+brew "pnpm"
+brew "gh"
 brew "tmux"               # Terminal multiplexer
 brew "wget"               # File downloader
 brew "argocd"             # Kubernetes CD
 brew "helm"               # Kubernetes package manager
 brew "kind"               # Kubernetes in Docker
+brew "kubectl"
+brew "k9s"
+brew "ranger"
 brew "kustomize"          # Kubernetes config
 brew "terraform"          # Infrastructure as code
 brew "terragrunt"         # Terraform wrapper
@@ -41,6 +49,6 @@ brew "choose-gui"         # GUI selection tool
 brew "openjdk@11"         # Java runtime
 brew "openjdk@17"         # Java runtime
 brew "tig"               # Terminal UI for git
-brew "luarocks"         # lua rocks, for neovim
-brew "nushell"
-brew "git-filter-repo"
+brew "git-filter-repo"    # Git filter repository
+brew "nushell"    # Git filter repository
+brew "luarocks"

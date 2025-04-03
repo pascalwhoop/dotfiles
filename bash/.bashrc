@@ -26,4 +26,3 @@ shopt -s checkwinsize
 
 source ~/.bash_profile
 
-

@@ -13,7 +13,6 @@ stow:
 
 # Apply Brewfile
 macos: brew_update brew_base brew_extra brew_casks
-	bash -c bootstrap_macos.sh
 
 
 bootstrap:
@@ -22,7 +21,12 @@ bootstrap:
 	echo >> /home/$$USER/.bashrc
 	echo 'eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/$$USER/.bashrc
 	eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	# installs hooks
+	brew install uv
+	uv sync
+	uv run pre-commit install
 
+.PHONY: fish
 fish:
 	curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 

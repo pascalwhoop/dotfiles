@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# === CONFIGURATION ===
+HOST_A="100.121.133.51"
+USERNAME_A="pascalwhoop"
+HOME_A="/Users/pascalwhoop/"
+HOME_B="/Users/pascal/"
+
+# === INPUT CHECK ===
+if [ "$#" -eq 0 ]; then
+  echo "Usage: $0 <relative_path1> [relative_path2 ...]"
+  exit 1
+fi
+
+# === SYNC LOOP ===
+for REL_PATH in "$@"; do
+  echo "copying: $REL_PATH"
+  rsync -a --info=progress2 --delete --no-inc-recursive "${USERNAME_A}@${HOST_A}:${HOME_A}/${REL_PATH}/" "${HOME_B}/${REL_PATH}/"
+done

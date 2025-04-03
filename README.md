@@ -53,3 +53,21 @@ This btw is also a great way to store secrets in git and share them with other p
 ```
 a very simple way to share secrets with colleagues if one doesn't have a password vault etc. 
 
+## Applications Configuration
+
+## Notes
+
+Overall flow
+- Brew install
+- Install all brew packages and casks
+- set up dotfiles with stow and make
+- [ ] sync settings from previous device that are not in config files
+    - cleanshot
+    - brave browser
+    - karabiner elements
+    - bitwarden
+    - setapp
+    - chatgpt
+    - bartender
+    - raycast: Export settings left, copy over to right via iCloud drive 
+    - Cursor: export profile & import again through dotfiles-private
