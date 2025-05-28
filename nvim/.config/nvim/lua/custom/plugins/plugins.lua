@@ -1,5 +1,11 @@
 return {
-	{ "mateuszwieloch/automkdir.nvim" },
+	{
+		"mateuszwieloch/automkdir.nvim",
+		keys = {
+			{ "ga", '<Plug>(EasyAlign)', mode = { 'n', 'x' }, desc = "EasyAlign" },
+		},
+	},
+	{ "junegunn/vim-easy-align" },
 	{
 		"rmagatti/auto-session",
 		lazy = false,

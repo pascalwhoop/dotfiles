@@ -643,6 +643,9 @@ require("lazy").setup({
 				-- ts_ls = {},
 				--
 
+
+        pyright = {},
+        ts_ls = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},

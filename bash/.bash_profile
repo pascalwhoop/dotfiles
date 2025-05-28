@@ -96,3 +96,4 @@ export NVM_DIR="$HOME/.nvm"
 # }
 
 alias gam="/Users/pascalwhoop/bin/gam7/gam"
+. "$HOME/.cargo/env"

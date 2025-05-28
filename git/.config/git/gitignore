@@ -8,3 +8,5 @@ src/cost-service/tests/assets/dlq/
 **/_workbench.py
 **/_scratchpad/*
 **/.venv/
+
+**/_workbench/

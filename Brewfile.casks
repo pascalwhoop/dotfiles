@@ -26,7 +26,6 @@ cask "microsoft-edge"     # Browser
 cask "linear-linear"
 cask "notion"             # Workspace
 cask "notion-calendar"    # Calendar
-cask "tableplus"
 cask "obsidian"           # Note-taking
 cask "orion"              # Browser
 cask "postman"            # API tool
