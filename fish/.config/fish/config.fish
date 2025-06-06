@@ -1,18 +1,36 @@
 #!/usr/bin/fish
-
 [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
-
-#sourcing functions / aliases / ...
-for file in (command ls ~/.config/fish/files)
-    source ~/.config/fish/files/$file
-end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-# function fish_right_prompt
-#   #intentionally left blank
-# end
+# Set EDITOR
+set -gx EDITOR /opt/homebrew/bin/vim
 
+# Extend PATH
+set -gx PATH $HOME/.scripts/bin $PATH
+set -gx PATH $HOME/.scripts/macos $PATH
+set -gx PATH /usr/local/opt/openjdk/bin $PATH
+set -gx PATH $HOME/.rd/bin $PATH
+
+# Terminal type
+# set -gx TERM xterm-256color
+# set -gx GDK_SCALE 2  # Uncomment if needed
+
+# FZF improvements
+set -gx FZF_DEFAULT_COMMAND 'fd -H'
+set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+
+# Homebrew shellenv
+eval (/opt/homebrew/bin/brew shellenv)
+
+# Source cargo env
+source "$HOME/.cargo/env.fish"
+
+
+# ---------------------------------------
+# ------------ ABBREVIATIONS ------------
+# ---------------------------------------
 
 abbr -a -- bac_r2e 'bass source ~/.scripts/bin/role_to_env'
 abbr -a -- t.apt 'terraform apply --target=module.'
