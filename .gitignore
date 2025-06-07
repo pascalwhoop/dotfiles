@@ -1,3 +1,5 @@
 **/.env
 **/*.swp
 karabiner/.config/karabiner/automatic_backups/
+
+**/credentials.json

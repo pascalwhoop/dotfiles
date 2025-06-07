@@ -1,0 +1,54 @@
+# =============================
+# System and Virtual Filesystems
+# =============================
+/dev
+/proc
+/sys/
+/run
+/tmp
+/tmp/
+/mnt
+/media
+
+# =============================
+# User Cache, Trash, and Downloads
+# =============================
+/home/*/.cache/
+/home/*/Downloads
+/root/.cache/
+/home/*/.local/share/Trash/
+.thumbnails/
+
+# =============================
+# Media and Large Folders
+# =============================
+/mnt/vault/Media
+/mnt/vault/Technology
+Videos/
+Music/
+Pictures/
+
+# =============================
+# System Binaries and Standard Libraries
+# =============================
+*/bin/
+*/sbin/
+*/lib/
+*/lib64/
+*/usr/bin/
+*/usr/sbin/
+*/usr/lib/
+
+# =============================
+# Docker, Libvirt, and System Images
+# =============================
+/var/cache
+/var/lib/libvirt/images
+/var/lib/docker/image
+/var/log
+/var/tmp
+
+# =============================
+# Exclude Everything Under /mnt
+# =============================
+/mnt/**

@@ -1,0 +1,21 @@
+- /dev
+- /mnt
+- /home/pi/.cache/
+- /home/pi/.local/share/Trash/
+- /home/pi/.local/share/gnome-boxes
+- /home/pi/Documents/Syncthing
+- /home/pi/Downloads
+- /home/pi/Music
+- /home/pi/PC
+- /home/pi/VirtualBox\ VMs
+- /media
+- /proc
+- /root/.cache/
+- /run
+- /tmp
+- /var/cache
+- /var/lib/libvirt/images
+- /var/log
+- /var/tmp
+- /var/lib/docker/image
+

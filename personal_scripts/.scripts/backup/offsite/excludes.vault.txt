@@ -1,0 +1,7 @@
+# =============================
+# Media and Large Folders
+# =============================
+/mnt/vault/Media
+/mnt/vault/Music
+/mnt/vault/Technology
+/mnt/vault/Backup

@@ -14,6 +14,8 @@ stow:
 # Apply Brewfile
 macos: brew_update brew_base brew_extra brew_casks
 
+pre-commit:
+	uv run pre-commit install
 
 bootstrap:
 	# install brew
@@ -24,7 +26,7 @@ bootstrap:
 	# installs hooks
 	brew install uv
 	uv sync
-	uv run pre-commit install
+	make pre-commit
 
 .PHONY: fish
 fish:

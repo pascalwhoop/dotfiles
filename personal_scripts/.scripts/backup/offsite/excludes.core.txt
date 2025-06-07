@@ -1,0 +1,28 @@
+# =============================
+# Application and Build Artifacts
+# =============================
+**/.vscode-server
+**/.cursor-server
+**/.cargo
+**/.node_modules
+**/.venv/
+**/.virtualenvs
+build/
+dist/
+target/
+.hg/
+
+# =============================
+# Cache and Log Patterns
+# =============================
+**/.cache/*
+**/.cache/
+**/Cache/*
+**/Cache/
+**/Cache*/
+**/cache/*
+**/cache/
+**/*cache/
+**/Caches/
+**/Logs/
+**/*.gguf
