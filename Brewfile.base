@@ -38,6 +38,7 @@ brew "helm"               # Kubernetes package manager
 brew "kind"               # Kubernetes in Docker
 brew "kubectl"
 brew "k9s"
+brew "bat"                # Cat alternative
 brew "ranger"
 brew "kustomize"          # Kubernetes config
 brew "terraform"          # Infrastructure as code

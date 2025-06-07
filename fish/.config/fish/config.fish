@@ -16,16 +16,16 @@ set -gx PATH $HOME/.rd/bin $PATH
 # set -gx TERM xterm-256color
 # set -gx GDK_SCALE 2  # Uncomment if needed
 
-# FZF improvements
-set -gx FZF_DEFAULT_COMMAND 'fd -H'
-set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+# homebrew
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
-
-# Homebrew shellenv
 eval (/opt/homebrew/bin/brew shellenv)
 
 # Source cargo env
 source "$HOME/.cargo/env.fish"
+
+# fzf configurations
+fzf_configure_bindings --directory=\ct --variables=\cv --git_status=\cs
+
 
 
 # ---------------------------------------
