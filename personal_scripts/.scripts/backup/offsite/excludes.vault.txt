@@ -4,4 +4,6 @@
 /mnt/vault/Media
 /mnt/vault/Music
 /mnt/vault/Technology
-/mnt/vault/Backup
+/mnt/vault/Backup/raspberrypi
+/mnt/vault/Backup/photos.photoslibrary
+/mnt/vault/Backup/Giorgia
