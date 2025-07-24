@@ -1,4 +1,4 @@
-directory: "/home/pascalwhoop/tank/Music/"
+directory: "~/Music/library/"
 import:
     move: yes
     write: yes
@@ -8,16 +8,7 @@ import:
     bell: yes
     from_scrath: yes
     group_albums: yes
-plugins: lastgenre fromfilename scrub plexupdate duplicates chroma
-plex:
-    host: "localhost"
-    port: 32400
-    token: "BnY3AvppWhYNN66jaVkF"
-    #chroma:
-    #    auto: yes
-    #musicbrainz:
-    #    host: localhost:5000
-    #    ratelimit: 1000
+plugins: lastgenre fromfilename scrub duplicates #chroma
 match:
     strong_rec_thresh: 0.15 #means 70% at least
     distance_weights:

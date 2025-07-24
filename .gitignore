@@ -3,3 +3,7 @@
 karabiner/.config/karabiner/automatic_backups/
 
 **/credentials.json
+*.db
+*.db.lock
+**/*.pickle
+*.tmp.*

@@ -97,3 +97,8 @@ export NVM_DIR="$HOME/.nvm"
 
 alias gam="/Users/pascalwhoop/bin/gam7/gam"
 . "$HOME/.cargo/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/pascal/.lmstudio/bin"
+# End of LM Studio CLI section
+

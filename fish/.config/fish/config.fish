@@ -89,3 +89,8 @@ abbr -a -- dlset 'yt-dlp -x --audio-format mp3'
 abbr -a -- ghisc 'gh issue create -t'
 abbr -a -- st 'source ./.venv/bin/activate.fish'
 abbr -a -- dive 'docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest '
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/pascal/.lmstudio/bin
+# End of LM Studio CLI section
+

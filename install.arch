@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# assumes user exists, is in %wheel, has sudo permission
+command -v sudo >/dev/null 2>&1 || { echo "sudo not found"; exit 1; }
+
+# get yay
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+yay -S uv i3-gaps hyprland kitty

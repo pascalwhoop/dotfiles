@@ -27,3 +27,8 @@ shopt -s checkwinsize
 source ~/.bash_profile
 
 . "$HOME/.cargo/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/pascal/.lmstudio/bin"
+# End of LM Studio CLI section
+
