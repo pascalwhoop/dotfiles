@@ -1,10 +1,9 @@
 #!/usr/bin/fish
-[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
 # Set EDITOR
-set -gx EDITOR /opt/homebrew/bin/vim
+set -gx EDITOR nvim
 
 # Extend PATH
 set -gx PATH $HOME/.scripts/bin $PATH
@@ -17,11 +16,18 @@ set -gx PATH $HOME/.rd/bin $PATH
 # set -gx GDK_SCALE 2  # Uncomment if needed
 
 # homebrew
-set -gx HOMEBREW_NO_AUTO_UPDATE 1
-eval (/opt/homebrew/bin/brew shellenv)
+if test (uname) = "Darwin"
+    set -gx HOMEBREW_NO_AUTO_UPDATE 1
+    eval (/opt/homebrew/bin/brew shellenv)
+    [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
+end
 
-# Source cargo env
-source "$HOME/.cargo/env.fish"
+if status is-interactive; and not set -q FISHER_BOOTSTRAPPED; and not functions -q fisher
+    set -gx FISHER_BOOTSTRAPPED 1
+    echo 'bootstrapping fisher for the first time on a new system'
+    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+    fisher install jorgebucaran/fisher
+end
 
 # fzf configurations
 fzf_configure_bindings --directory=\ct --variables=\cv --git_status=\cs
