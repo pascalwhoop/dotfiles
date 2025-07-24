@@ -26,3 +26,19 @@ target/
 **/Caches/
 **/Logs/
 **/*.gguf
+
+
+# =============================
+# Various system directories
+# =============================
+/dev
+/mnt
+/**/Downloads
+/media
+/proc
+/run
+/tmp
+/var/lib/libvirt/images
+/var/log
+/var/tmp
+/var/lib/docker/image

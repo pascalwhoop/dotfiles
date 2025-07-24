@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd ~/Documents/Syncthing/Default\ Folder/_ALL
-xdg-open $(find ./ | rofi -dmenu -i -matching regex)  

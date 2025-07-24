@@ -1,5 +1,0 @@
-#!/bin/bash
-#running through script to get env variables in here
-export CM_DIR=/home/pascalwhoop/.config/clipmenu
-clipmenu -matching regex
-
