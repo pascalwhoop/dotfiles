@@ -1,1 +1,1 @@
-this folder is heavily reliant on crestic and the `.config.cfg` in there. The files in this folder are just used to store passwords and credentials.
+this folder is heavily reliant on crestic and the `.config.cfg` in there. The files in this folder are just used to store ignore files 

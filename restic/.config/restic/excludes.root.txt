@@ -29,22 +29,12 @@ Music/
 Pictures/
 
 # =============================
-# System Binaries and Standard Libraries
-# =============================
-*/bin/
-*/sbin/
-*/lib/
-*/lib64/
-*/usr/bin/
-*/usr/sbin/
-*/usr/lib/
-
-# =============================
 # Docker, Libvirt, and System Images
 # =============================
 /var/cache
 /var/lib/libvirt/images
 /var/lib/docker/image
+/var/lib/docker/
 /var/log
 /var/tmp
 

@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily crestic %I backup
+
+[Timer]
+OnCalendar=weekly
+AccuracySec=1m
+RandomizedDelaySec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

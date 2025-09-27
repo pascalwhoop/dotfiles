@@ -1,0 +1,8 @@
+[Unit]
+Description=crestic %I backup
+
+[Service]
+Nice=19
+IOSchedulingClass=idle
+KillSignal=SIGINT
+ExecStart=/bin/sh -c '%h/dotfiles/.venv/bin/crestic'

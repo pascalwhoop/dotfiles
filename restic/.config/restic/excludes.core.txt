@@ -27,12 +27,12 @@ target/
 **/Logs/
 **/*.gguf
 
+**/.ivy2/*
 
 # =============================
 # Various system directories
 # =============================
 /dev
-/mnt
 /**/Downloads
 /media
 /proc
