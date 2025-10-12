@@ -1,0 +1,8 @@
+# TODO change this to gcs based
+[repository]
+repository = "opendal:sftp"
+
+[repository.options]
+user = "pascalwhoop"
+endpoint = "192.168.1.99"
+root = "/mnt/vault/Backup/restic"

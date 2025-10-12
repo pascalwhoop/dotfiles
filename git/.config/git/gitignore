@@ -10,3 +10,5 @@ src/cost-service/tests/assets/dlq/
 **/.venv/
 
 **/_workbench/
+
+**/pascal.todo

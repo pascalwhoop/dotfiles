@@ -1,0 +1,183 @@
+# =============================
+# Application and Build Artifacts
+# =============================
+!**/.vscode-server
+!**/.cursor-server
+!**/.cargo
+!**/.node_modules
+!**/.venv/
+!**/.virtualenvs
+!build/
+!dist/
+!target/
+!.hg/
+
+# =============================
+# MacOS specific paths
+# =============================
+!**/Library/Containers/com.docker.docker/
+!**/Library/Containers/com.utmapp.UTM/
+!**/Library/Containers/com.apple.podcasts/
+!**/Library/Containers/com.apple.wallpaper.agent/
+!**/Library/**/CacheStorage/
+!**/Library/Caches/
+!**/Library/Logs/
+!**/Library/pnpm/
+!/Users/*/Nextcloud/ #we ignore this because it's backed up by the server already
+!/Users/*/Downloads/ #downloads aren't backed up. move them elsewhere if they are valuable
+!/Users/*/.local/** # on macos, this folder only contains cached stuff, e.g. uv python runtimes, nvim plugins
+!/Users/*/Library/CloudStorage/
+!/Users/*/Library/Mobile Documents/
+
+# MacOS System-Protected Directories (Permission Denied)
+!/Users/*/.Trash
+!/Users/*/Library/Accounts
+!/Users/*/Library/AppleMediaServices
+!/Users/*/Library/Application Support/AddressBook
+!/Users/*/Library/Application Support/CallHistoryDB
+!/Users/*/Library/Application Support/CallHistoryTransactions
+!/Users/*/Library/Application Support/CloudDocs
+!/Users/*/Library/Application Support/DifferentialPrivacy
+!/Users/*/Library/Application Support/FaceTime
+!/Users/*/Library/Application Support/FileProvider
+!/Users/*/Library/Application Support/Knowledge
+!/Users/*/Library/Application Support/MobileSync
+!/Users/*/Library/Application Support/com.apple.TCC
+!/Users/*/Library/Application Support/com.apple.avfoundation/Frecents
+!/Users/*/Library/Application Support/com.apple.sharedfilelist
+!/Users/*/Library/Assistant/SiriVocabulary
+!/Users/*/Library/Autosave Information
+!/Users/*/Library/Biome
+!/Users/*/Library/Calendars
+!/Users/*/Library/ContainerManager
+!/Users/*/Library/Containers/com.apple.CloudDocs.MobileDocumentsFileProvider
+!/Users/*/Library/Containers/com.apple.Home
+!/Users/*/Library/Containers/com.apple.Maps/Data/Maps
+!/Users/*/Library/Containers/com.apple.MobileSMS
+!/Users/*/Library/Containers/com.apple.Notes
+!/Users/*/Library/Containers/com.apple.Safari
+!/Users/*/Library/Containers/com.apple.Safari.WebApp
+!/Users/*/Library/Containers/com.apple.VoiceMemos
+!/Users/*/Library/Containers/com.apple.archiveutility
+!/Users/*/Library/Containers/com.apple.corerecents.recentsd/Data/Library/Recents
+# NOTE: Mail container requires Full Disk Access permission
+# !/Users/*/Library/Containers/com.apple.mail
+!/Users/*/Library/Containers/com.apple.stocks
+!/Users/*/Library/Cookies
+!/Users/*/Library/CoreFollowUp
+!/Users/*/Library/Daemon Containers
+!/Users/*/Library/DoNotDisturb
+!/Users/*/Library/DuetExpertCenter
+!/Users/*/Library/Group Containers
+!/Users/*/Library/HomeKit
+!/Users/*/Library/IdentityServices
+!/Users/*/Library/IntelligencePlatform
+!/Users/*/Library/Messages
+# NOTE: Mail requires Full Disk Access permission for rustic to back it up
+# !/Users/*/Library/Mail
+!/Users/*/Library/Metadata/CoreSpotlight
+!/Users/*/Library/Metadata/com.apple.IntelligentSuggestions
+!/Users/*/Library/PersonalizationPortrait
+!/Users/*/Library/Safari
+!/Users/*/Library/Sharing
+!/Users/*/Library/Shortcuts
+!/Users/*/Library/StatusKit
+!/Users/*/Library/Suggestions
+!/Users/*/Library/Trial
+!/Users/*/Library/Weather
+!/Users/*/Library/com.apple.aiml.instrumentation
+
+# Exclude all container metadata files (sandboxed app metadata - causes permission errors)
+!/Users/*/Library/Containers/**/.com.apple.containermanagerd.metadata.plist
+!/Users/*/Library/Daemon Containers/**/.com.apple.containermanagerd.metadata.plist
+
+# Other user directories with permission issues
+!/Users/ripplingadmin/**
+
+# MacOS Previously Relocated Items (System Upgrades)
+!/Users/Shared/Previously Relocated Items*
+!/Users/Shared/Relocated Items
+
+# =============================
+# Cache and Log Patterns
+# =============================
+!**/.cache/*
+!**/.cache/
+!**/Cache/*
+!**/Cache/
+!**/Cache*/
+!**/cache/*
+!**/cache/
+!**/*cache/
+!**/Caches/
+!**/Logs/
+!**/*.gguf
+
+!**/.ivy2/*
+
+# =============================
+# Various system directories
+# =============================
+!/dev
+!/**/Downloads
+!/media
+!/proc
+!/run
+!/tmp
+!/var/lib/libvirt/images
+!/var/log
+!/var/tmp
+!/var/lib/docker/image
+# =============================
+# System and Virtual Filesystems
+# =============================
+!/dev
+!/proc
+!/sys/
+!/run
+!/tmp
+!/tmp/
+!/mnt
+!/media
+
+# =============================
+# User Cache, Trash, and Downloads
+# =============================
+!/home/*/.cache/
+!/home/*/Downloads
+!/root/.cache/
+!/home/*/.local/share/Trash/
+!.thumbnails/
+
+# =============================
+# Media and Large Folders
+# =============================
+!/mnt/vault/Media
+!/mnt/vault/Technology
+!Videos/
+!Music/
+!Pictures/
+
+# =============================
+# Docker, Libvirt, and System Images
+# =============================
+!/var/cache
+!/var/lib/libvirt/images
+!/var/lib/docker/image
+!/var/lib/docker/
+!/var/log
+!/var/tmp
+
+# =============================
+# Exclude Everything Under /mnt
+# =============================
+!/mnt/**
+# =============================
+# Media and Large Folders
+# =============================
+!/mnt/vault/Media/**
+!/mnt/vault/Music/**
+!/mnt/vault/Technology/**
+!/mnt/vault/Backup/**
+!/mnt/vault/.snapraid.content
+!**/.snapraid.content

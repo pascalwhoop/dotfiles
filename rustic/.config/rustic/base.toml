@@ -1,0 +1,16 @@
+[global]
+log-level = 'warn'
+
+[forget]
+keep-daily = 7
+keep-weekly = 4
+keep-yearly = 3
+
+[backup]
+iglob-files = ["/Users/pascal/.config/rustic/ignore.iglob"]
+one-file-system = true
+
+[[backup.snapshots]]
+name = "home"
+sources = ["/Users/"]
+git-ignore = true

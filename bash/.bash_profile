@@ -1,7 +1,6 @@
 #setting display env variable for tmux
 export EDITOR=/opt/homebrew/bin/vim
 
-
 #adding home brewed binaries and scripts
 export PATH="$HOME/.scripts/bin:$PATH"
 export PATH="$HOME/.scripts/macos:$PATH"
@@ -19,32 +18,31 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export BW_USER='<YOUR-USER>'
 
-
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # BITWARDEN SUDO PROTECTION
 # bw() {
 #   bw_exec=$(sh -c "which bw")
 #   local -r bw_session_file='/var/root/.bitwarden.session' # Only accessible as root
-# 
+#
 #   _read_token_from_file() {
-# 
+#
 #     local -r err_token_not_found="Token not found, please run bw --regenerate-session-key"
 #     case $1 in
 #     '--force')
 #       unset bw_session
 #       ;;
 #     esac
-# 
+#
 #     if [ "$bw_session" = "$err_token_not_found" ]; then
 #       unset bw_session
 #     fi
-# 
+#
 #     # If the session key env variable is not set, read it from the file
 #     # if file it not there, ask user to regenerate it
-# 
+#
 #     if [ -z "$bw_session" ]; then
 #       bw_session="$(
 #         sh -c "sudo cat $bw_session_file 2> /dev/null"
@@ -56,7 +54,7 @@ export NVM_DIR="$HOME/.nvm"
 #         fi
 #         sudo -k # De-elevate privileges
 #       )"
-# 
+#
 #       # shellcheck disable=SC2181
 #       if [ "$bw_session" = "$err_token_not_found" ]; then
 #         echo "$err_token_not_found"
@@ -64,41 +62,35 @@ export NVM_DIR="$HOME/.nvm"
 #       fi
 #     fi
 #   }
-# 
+#
 #   case $1 in
 #   '--regenerate-session-key')
 #     echo "Regenerating session key, this has invalidated all existing sessions..."
 #     sudo rm -f /var/root/.bitwarden.session && ${bw_exec} logout 2>/dev/null # Invalidate all existing sessions
-# 
+#
 #     ${bw_exec} login "${BW_USER}" --raw | sudo tee /var/root/.bitwarden.session &>/dev/null # Generate new session key
-# 
+#
 #     _read_token_from_file --force # Read the new session key for immediate use
 #     sudo -k                       # De-elevate privileges, only doing this now so _read_token_from_file can resuse the same sudo session
 #     ;;
-# 
+#
 #   'login' | 'logout' | 'config')
 #     ${bw_exec} "$@"
 #     ;;
-# 
-# 
+#
+#
 #   '--help' | '-h' | '')
 #     ${bw_exec} "$@"
 #     echo "To regenerate your session key type:"
 #     echo "  bw --regenerate-session-key"
 #     ;;
-# 
+#
 #   *)
 #     _read_token_from_file
-# 
+#
 #     ${bw_exec} "$@" --session "$bw_session"
 #     ;;
 #   esac
 # }
 
-alias gam="/Users/pascalwhoop/bin/gam7/gam"
 . "$HOME/.cargo/env"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/pascal/.lmstudio/bin"
-# End of LM Studio CLI section
-

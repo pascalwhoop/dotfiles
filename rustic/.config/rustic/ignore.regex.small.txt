@@ -1,0 +1,7 @@
+.*Library/Mobile Documents/.*
+.*Library/CloudDocs/.*
+.*Library/Application Support/CloudDocs/.*
+.*Library/Containers/.*
+.*Library/Caches/.*
+.*Library/Group Containers/.*
+.*Library/CloudStorage/.*

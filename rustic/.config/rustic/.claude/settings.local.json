@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__tavily-search__tavily_search",
+      "mcp__tavily-search__tavily_extract",
+      "WebFetch(domain:rustic.cli.rs)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:restic.readthedocs.io)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

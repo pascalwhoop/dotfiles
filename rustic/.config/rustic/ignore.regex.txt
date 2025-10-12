@@ -1,0 +1,151 @@
+# =============================
+# Application and Build Artifacts
+# =============================
+\.vscode-server(/|$)
+\.cursor-server(/|$)
+\.cargo(/|$)
+\.node_modules(/|$)
+node_modules(/|$)
+\.venv(/|$)
+\.virtualenvs(/|$)
+/build(/|$)
+/dist(/|$)
+/target(/|$)
+\.hg(/|$)
+
+# =============================
+# MacOS specific paths
+# =============================
+/Library/Containers/com\.docker\.docker(/|$)
+/Library/Containers/com\.utmapp\.UTM(/|$)
+/Library/Containers/com\.apple\.podcasts(/|$)
+/Library/Containers/com\.apple\.wallpaper\.agent(/|$)
+/Library/.*/CacheStorage(/|$)
+/Library/Caches(/|$)
+/Library/Logs(/|$)
+/Library/pnpm(/|$)
+/Nextcloud(/|$) # we ignore this because it's backed up by the server already
+/Downloads(/|$) # downloads aren't backed up. move them elsewhere if they are valuable
+\.local/share(/|$) # on macos, this folders only contains cached stuff, e.g. uv python runtimes
+/Library/CloudStorage(/|$)
+
+# MacOS System-Protected Directories (Permission Denied)
+\.Trash(/|$)
+/Library/Accounts(/|$)
+/Library/AppleMediaServices(/|$)
+/Library/Application Support/AddressBook(/|$)
+/Library/Application Support/CallHistoryDB(/|$)
+/Library/Application Support/CallHistoryTransactions(/|$)
+/Library/Application Support/CloudDocs(/|$)
+/Library/Application Support/DifferentialPrivacy(/|$)
+/Library/Application Support/FaceTime(/|$)
+/Library/Application Support/FileProvider(/|$)
+/Library/Application Support/Knowledge(/|$)
+/Library/Application Support/MobileSync(/|$)
+/Library/Application Support/com\.apple\.TCC(/|$)
+/Library/Application Support/com\.apple\.avfoundation/Frecents(/|$)
+/Library/Application Support/com\.apple\.sharedfilelist(/|$)
+/Library/Assistant/SiriVocabulary(/|$)
+/Library/Autosave Information(/|$)
+/Library/Biome(/|$)
+/Library/Calendars(/|$)
+/Library/ContainerManager(/|$)
+/Library/Containers/com\.apple\.CloudDocs\.MobileDocumentsFileProvider(/|$)
+/Library/Containers/com\.apple\.Home(/|$)
+/Library/Containers/com\.apple\.Maps/Data/Maps(/|$)
+/Library/Containers/com\.apple\.MobileSMS(/|$)
+/Library/Containers/com\.apple\.Notes(/|$)
+/Library/Containers/com\.apple\.Safari(/|$)
+/Library/Containers/com\.apple\.Safari\.WebApp(/|$)
+/Library/Containers/com\.apple\.VoiceMemos(/|$)
+/Library/Containers/com\.apple\.archiveutility(/|$)
+/Library/Containers/com\.apple\.corerecents\.recentsd/Data/Library/Recents(/|$)
+/Library/Containers/com\.apple\.mail(/|$)
+/Library/Containers/com\.apple\.stocks(/|$)
+/Library/Cookies(/|$)
+/Library/CoreFollowUp(/|$)
+/Library/Daemon Containers(/|$)
+/Library/DoNotDisturb(/|$)
+/Library/DuetExpertCenter(/|$)
+/Library/Group Containers(/|$)
+/Library/HomeKit(/|$)
+/Library/IdentityServices(/|$)
+/Library/IntelligencePlatform(/|$)
+/Library/Messages(/|$)
+/Library/Metadata/CoreSpotlight(/|$)
+/Library/Metadata/com\.apple\.IntelligentSuggestions(/|$)
+/Library/PersonalizationPortrait(/|$)
+/Library/Safari(/|$)
+/Library/Sharing(/|$)
+/Library/Shortcuts(/|$)
+/Library/StatusKit(/|$)
+/Library/Suggestions(/|$)
+/Library/Trial(/|$)
+/Library/Weather(/|$)
+/Library/com\.apple\.aiml\.instrumentation(/|$)
+
+# Other user directories with permission issues
+/ripplingadmin/
+
+# MacOS Previously Relocated Items (System Upgrades)
+/Previously Relocated Items
+/Relocated Items(/|$)
+
+# =============================
+# Cache and Log Patterns
+# =============================
+/\.cache(/|$)
+/Cache(/|$)
+/cache(/|$)
+cache(/|$)
+/Caches(/|$)
+/Logs(/|$)
+\.gguf$
+
+/\.ivy2(/|$)
+
+# =============================
+# System and Virtual Filesystems
+# =============================
+^/dev(/|$)
+^/proc(/|$)
+^/sys(/|$)
+^/run(/|$)
+^/tmp(/|$)
+^/mnt(/|$)
+^/media(/|$)
+^/var/lib/libvirt/images(/|$)
+^/var/log(/|$)
+^/var/tmp(/|$)
+^/var/lib/docker(/|$)
+
+# =============================
+# User Cache, Trash, and Downloads (Linux)
+# =============================
+/home/[^/]+/\.cache(/|$)
+/home/[^/]+/Downloads(/|$)
+/root/\.cache(/|$)
+\.local/share/Trash(/|$)
+\.thumbnails(/|$)
+
+# =============================
+# Media and Large Folders
+# =============================
+/Videos(/|$)
+/Music(/|$)
+/Pictures(/|$)
+
+# =============================
+# Docker, Libvirt, and System Images
+# =============================
+^/var/cache(/|$)
+
+# =============================
+# Specific server paths to exclude
+# =============================
+^/mnt/
+/mnt/vault/Media/
+/mnt/vault/Music/
+/mnt/vault/Technology/
+/mnt/vault/Backup/
+\.snapraid\.content$
