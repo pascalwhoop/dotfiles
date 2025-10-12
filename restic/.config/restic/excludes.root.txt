@@ -18,6 +18,7 @@
 /root/.cache/
 /home/*/.local/share/Trash/
 .thumbnails/
+/home/**/files_trashbin/*
 
 # =============================
 # Media and Large Folders
