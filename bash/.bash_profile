@@ -16,6 +16,10 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# fix for gpg on macos
+GPG_TTY=$(tty)
+export GPG_TTY
+
 export BW_USER='<YOUR-USER>'
 
 export NVM_DIR="$HOME/.nvm"

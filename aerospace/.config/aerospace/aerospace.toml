@@ -9,7 +9,7 @@ after-startup-command = []
 start-at-login = false
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
-enable-normalization-flatten-containers = true
+enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = true
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
@@ -59,37 +59,27 @@ automatically-unhide-macos-hidden-apps = false
     outer.right =      3
 
 
-[[on-window-detected]]
-    if.app-id = 'com.apple.finder'
-    run = ['layout floating']
-[[on-window-detected]]
-    if.app-id = 'com.brave.Browser'
-    run = 'move-node-to-workspace 3' # mnemonics T - Terminal
+# make things float
 [[on-window-detected]]
     if.app-id = 'com.todesktop.230313mzl4w4u92'
-    run = 'move-node-to-workspace 4' # mnemonics T - Terminal
+    run = 'move-node-to-workspace 4'
 
-[[on-window-detected]] #slack
-    if.app-id = 'com.tinyspeck.slackmacgap'
-    run = 'move-node-to-workspace 2' # mnemonics T - Terminal
-[[on-window-detected]] #gmail
-    if.app-id = 'com.brave.Browser.app.fmgjjmmmlfnkbppncabfkddbjimcfncm'
-    run = 'move-node-to-workspace 2' # mnemonics T - Terminal
-
-# [[on-window-detected]]
-#     if.app-id = 'com.github.wez.wezterm'
-#     run = 'move-node-to-workspace 5' # mnemonics T - Terminal
-# [[on-window-detected]]
-#     if.app-id = 'org.alacritty'
-#     run = 'move-node-to-workspace T' # mnemonics T - Terminal
-# 
-# [[on-window-detected]]
-#     if.app-id = 'com.google.Chrome'
-#     run = 'move-node-to-workspace W' # mnemonics W - Web browser
-# 
-# [[on-window-detected]]
-#     if.app-id = 'com.jetbrains.intellij'
-#     run = 'move-node-to-workspace I' # mnemonics I - IDE
+#assign to workspaces
+[[on-window-detected]]
+    if.app-name-regex-substring = ".*(voiceink|finder|cleanmymac).*"
+    run = ['layout floating']
+[[on-window-detected]]
+    if.app-name-regex-substring = ".*(calendar|notion|obsidian|todoist).*"
+    run = ['move-node-to-workspace 1']
+[[on-window-detected]]
+    if.app-name-regex-substring = '.*(slack|whatsapp|gmail|mail|linear)'
+    run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+    if.app-name-regex-substring = '.*(cursor)'
+    run = 'move-node-to-workspace 4'
+[[on-window-detected]]
+    if.app-name-regex-substring = '.*(spotify|zoom)'
+    run = 'move-node-to-workspace 0'
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -129,8 +119,12 @@ automatically-unhide-macos-hidden-apps = false
     alt-slash = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
     # alt-enter = 'open-external io.wez.wezterm' # open wezterm terminal
-    alt-enter = 'exec-and-forget wezterm'
-    alt-b = ['exec-and-forget open /Applications/Brave Browser.app', 'workspace 3']
+    # alt-enter = 'exec-and-forget wezterm'
+    alt-enter = 'exec-and-forget kitty -1'
+# alt-b = ['exec-and-forget open -n /Applications/Brave Browser.app', 'workspace 3']
+    alt-b = ['exec-and-forget open -na "/Applications/Brave Browser.app" --args --new-window --profile-directory="Profile 2"']
+
+    alt-v = 'split vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus --boundaries-action wrap-around-the-workspace left'
@@ -166,6 +160,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
+    alt-0 = 'workspace 0'
 #     alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 #     alt-b = 'workspace B'
 #     alt-c = 'workspace C'
@@ -199,6 +194,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
+    alt-shift-0 = 'move-node-to-workspace 0'
 #     alt-shift-a = 'move-node-to-workspace A'
 #     alt-shift-b = 'move-node-to-workspace B'
 #     alt-shift-c = 'move-node-to-workspace C'
@@ -229,6 +225,7 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
+    alt-o = 'mode open'
 
 
 
@@ -236,6 +233,29 @@ automatically-unhide-macos-hidden-apps = false
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main'] # reset layout
+    f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+    backspace = ['close-all-windows-but-current', 'mode main']
+
+    # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
+    #s = ['layout sticky tiling', 'mode main']
+
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']
+
+    down = 'volume down'
+    up = 'volume up'
+    shift-down = ['volume set 0', 'mode main']
+
+# open binding mode. Used to open various things quickly
+[mode.open.binding]
+    # work tools
+    w = ['exec-and-forget open -na "/Applications/Brave Browser.app" --args --new-window --profile-directory="Profile 1"', 'mode main']
+    s = ['exec-and-forget open "/Applications/Slack.app"', 'mode main']
+    #c = ['exec-and-forget open "/Applications/Slack.app"', 'mode main']
+    c = ['exec-and-forget open "/Applications/Notion Calendar.app"', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main']
