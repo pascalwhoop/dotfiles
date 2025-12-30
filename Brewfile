@@ -21,6 +21,7 @@ brew "fish"               # Shell
 brew "fzf"                # Fuzzy finder
 brew "gcc"                # Compiler
 brew "gnupg"              # Encryption
+brew "libgpg-error"              # Encryption
 brew "git"                # Version control
 brew "git-crypt"          # Git encryption
 brew "git-lfs"            # Git large file storage
