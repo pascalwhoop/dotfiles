@@ -1,0 +1,15 @@
+# =============================
+# Rustic Backup Configuration for MacBook to GCS
+# =============================
+# Inspired by homeserver crestic config
+# This backs up MacBook to Google Cloud Storage
+
+[repository]
+repository = "opendal:gcs"
+
+[repository.options]
+bucket = "curiloo-home-backup"
+root = "/restic"
+credential_path = "/Users/pascal/.config/restic/gcs-credentials.json"
+# service_account = 'curiloo-backup-gcs-sa'
+
