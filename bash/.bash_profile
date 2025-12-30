@@ -6,7 +6,6 @@ export PATH="$HOME/.scripts/bin:$PATH"
 export PATH="$HOME/.scripts/macos:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="$HOME/.rd/bin:$PATH"
-export TERM="xterm-256color"
 #export GDK_SCALE=2
 
 #make FZF even better
@@ -98,3 +97,7 @@ export NVM_DIR="$HOME/.nvm"
 # }
 
 . "$HOME/.cargo/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/pascal/.lmstudio/bin"
+# End of LM Studio CLI section

@@ -16,7 +16,7 @@
 [credential]
 	helper = cache --timeout=43200
 [gpg]
-	program = gpg2
+	program = gpg
 [init]
 	defaultBranch = main
 [filter "lfs"]

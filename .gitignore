@@ -7,3 +7,6 @@ karabiner/.config/karabiner/automatic_backups/
 *.db.lock
 **/*.pickle
 *.tmp.*
+
+Brewfile.lock*
+Brewfile.casks.lock*
